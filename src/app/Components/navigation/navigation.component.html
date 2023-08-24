@@ -18,10 +18,10 @@
     <a *ngIf="showAdminButton && router.url.indexOf('admin')==-1" routerLink="/admin/orders">
       <p>Admin</p>
     </a>
-    <a *ngIf="showAdminButton" routerLink="/logout">
+    <a *ngIf="isLoggedIn" routerLink="/logout">
         <p>Logout</p>
     </a>
-    <a *ngIf="!showAdminButton" routerLink="/login">
+    <a *ngIf="!isLoggedIn" routerLink="/login">
         <p>Login</p>
     </a>
   </div>

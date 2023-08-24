@@ -11,10 +11,12 @@ import { LoginService } from 'src/app/Services/login.service';
 export class NavigationComponent implements OnInit {
   public totalBooksInCart = 0;
   public showAdminButton = false;
+  public isLoggedIn = false;
 
   constructor(private _cartService:CartService, private _loginService: LoginService, public router: Router){
     this._loginService.isLoggedIn$.subscribe(x=>{
-      this.showAdminButton=x;
+      console.log(this.isLoggedIn);
+      this.isLoggedIn=x;
     })
   }
 

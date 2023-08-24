@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VWPSQKX5dQu5ux8HdDdOXaepqOf5PrmsUKpU+5SIy1dORVMtD+bhcZQiNqEYeUDYlsQEJwL+SyhyW/RP2uLkug==",
+  "dgSpecHash": "KQAZtK+zdKxjiZK5YaVPvZn9XZIEg33gG7cMXpam8iJg4rt4bVowwOhJ2u5BJYvLqGT3e940NLcwhCINCUqohA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\berix-library\\ASP.NET-projekat\\BerixLibrary\\Implementation\\Implementation.csproj",
+  "projectFilePath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Implementation\\Implementation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

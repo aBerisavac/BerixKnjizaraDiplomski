@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8Z32Dkqq5Abcf2wioBg+KkzzjIsJE5M4g8MqcHaCZHxQ6GCNHBLEOSbLJ+oXP/0TZA+J7lVRJhFMBLjGsPrDIA==",
+  "dgSpecHash": "RqI8TBq75XCX6AebC/ciJtSzsXXDWaMZARHcshkp/MfTEHi7VSyH69wl/xUfzH1I624KL7hQhAlbWzHW3ujeng==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\berix-library\\ASP.NET-projekat\\BerixLibrary\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

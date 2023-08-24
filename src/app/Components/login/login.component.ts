@@ -1,29 +1,40 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { LoginService } from 'src/app/Services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent  {
-  constructor(
-    private _loginService: LoginService,
-  ) {}
+export class LoginComponent implements OnInit {
+  public errors: Array<string> = [];
+
+  constructor(private _loginService: LoginService, private _router: Router) {}
 
   @ViewChild('passwordInput') passwordInput: ElementRef | undefined;
   @ViewChild('emailInput') emailInput: ElementRef | undefined;
+
+  ngOnInit(): void {
+      this._loginService.errors$.subscribe(x=>{
+        console.log(x)
+        this.errors=x;
+      })
+  }
 
   public login() {
     let password = this.passwordInput!.nativeElement.value;
     let email = this.emailInput!.nativeElement.value;
     if (
       password != undefined &&
-      password != '' &&
+      password.trim() != '' &&
       email != undefined &&
-      email != ''
+      email.trim() != ''
     ) {
-      this._loginService.tryLogin(email, password);
+      this._loginService.tryLogin(email.trim(), password.trim());
+    } else {
+      this.errors = [];
+      this.errors.push('You need to enter both email and password.');
     }
   }
 }

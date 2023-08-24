@@ -14,6 +14,20 @@ main {
     box-shadow: -2px 2px 4px rgb(136, 136, 136);
     background-color: #eecda9;
     padding: 20px;
+
+    #error-output{
+      width:100%;
+      background-color: #f5e6d6;
+
+      h4{
+        color: rgb(211, 22, 22)
+      }
+
+      p, h4 {
+        margin-left: 10px;
+      }
+    }
+
     label {
       align-self: flex-start;
       margin-bottom: 2px;
