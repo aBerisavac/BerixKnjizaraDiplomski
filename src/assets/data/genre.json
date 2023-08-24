@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "Name": "Science Fiction"
+    },
+    {
+        "id": 2,
+        "Name": "Fantasy"
+    },
+    {
+        "id": 3,
+        "Name": "Mystery"
+    },
+    {
+        "id": 4,
+        "Name": "Thriller"
+    },
+    {
+        "id": 5,
+        "Name": "Romance"
+    },
+    {
+        "id": 6,
+        "Name": "Historical Fiction"
+    },
+    {
+        "id": 7,
+        "Name": "Horror"
+    },
+    {
+        "id": 8,
+        "Name": "Crime"
+    },
+    {
+        "id": 9,
+        "Name": "Adventure"
+    },
+    {
+        "id": 10,
+        "Name": "Young Adult"
+    },
+    {
+        "id": 11,
+        "Name": "Dystopian"
+    },
+    {
+        "id": 12,
+        "Name": "Paranormal"
+    },
+    {
+        "id": 13,
+        "Name": "Contemporary"
+    },
+    {
+        "id": 14,
+        "Name": "Literary Fiction"
+    },
+    {
+        "id": 15,
+        "Name": "Humor"
+    },
+    {
+        "id": 16,
+        "Name": "Suspense"
+    },
+    {
+        "id": 17,
+        "Name": "Western"
+    },
+    {
+        "id": 18,
+        "Name": "Chick Lit"
+    },
+    {
+        "id": 19,
+        "Name": "Urban Fantasy"
+    },
+    {
+        "id": 20,
+        "Name": "Women's Fiction"
+    },
+    {
+        "id": 21,
+        "Name": "Action and Adventure"
+    },
+    {
+        "id": 22,
+        "Name": "Memoir"
+    },
+    {
+        "id": 23,
+        "Name": "Biography"
+    },
+    {
+        "id": 24,
+        "Name": "Self-Help"
+    },
+    {
+        "id": 25,
+        "Name": "True Crime"
+    },
+    {
+        "id": 26,
+        "Name": "Business and Finance"
+    },
+    {
+        "id": 27,
+        "Name": "Science and Technology"
+    },
+    {
+        "id": 28,
+        "Name": "Travel and Exploration"
+    },
+    {
+        "id": 29,
+        "Name": "Art and Photography"
+    },
+    {
+        "id": 30,
+        "Name": "Children's"
+    }
+]

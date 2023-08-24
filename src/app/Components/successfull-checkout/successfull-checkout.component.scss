@@ -1,0 +1,17 @@
+div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    p{
+        a{
+            color: #ff6f68;
+                text-decoration: none;
+                border-bottom: 1px dashed #ff6f68;
+                border-radius: 2px;
+        
+                &:hover{
+                    color: #fa1105;
+                }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+main {
+  width: 100%;
+  #buttons-holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    #show-insert-entity-button {
+      border-radius: 100%;
+      cursor: pointer;
+      box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.596);
+      background-color: rgb(221, 155, 94);
+      color: rgb(29, 20, 9);
+      margin-top: 10px;
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      transition: all ease-in-out 0.3s;
+
+      height: 40px;
+      width: 40px;
+
+      &:hover, &.active{
+        color: rgb(29, 20, 9);
+        background-color: rgb(212, 126, 28);
+    }
+    }
+
+    input {
+      min-width: 200px;
+      padding: 5px 10px;
+      margin-top: 10px;
+      margin-left: 10px;
+
+      background-color: rgb(85, 30, 25);
+      color: rgb(230, 177, 126);
+      font-size: large;
+
+      transition: all ease-in-out 0.3s;
+
+      &:hover,
+      &.active {
+        cursor: pointer;
+        color: rgb(29, 20, 9);
+        background-color: rgb(212, 126, 28);
+      }
+    }
+  }
+}

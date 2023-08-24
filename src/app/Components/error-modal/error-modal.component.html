@@ -1,0 +1,17 @@
+<div *ngIf="showErrorModal" id="error-modal">
+  <div id="error-modal-holder">
+    <div id="message-holder">
+      <h2>Errors:</h2>
+      <div *ngFor="let error of errors" class="error-message">
+        <mat-icon> warning </mat-icon>
+        <p>
+          {{ error }}
+        </p>
+      </div>
+    </div>
+
+    <div id="buttons-holder">
+      <input (click)="closeDialog()" type="button" value="Ok" />
+    </div>
+  </div>
+</div>

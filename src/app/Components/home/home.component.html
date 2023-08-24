@@ -1,0 +1,13 @@
+<main>
+    <div id="home-images-holder">
+        <img id="image-of-an-old-man-reading" src="/assets/images/LibrarySomeoneReading.jpg"/>
+        <img id="image-of-a-woman-reading" src="/assets/images/LibrarySomeoneReadingGraphicDesign.jpg"/>
+        <img id="image-of-a-library" src="/assets/images/Library.jpg"/>
+    </div>
+    <div id="text-information-holder">
+        <h1>About us</h1>
+        <p *ngFor="let paragraph of paragraphs">
+            {{paragraph.Paragraph}}
+        </p>
+    </div>
+</main>

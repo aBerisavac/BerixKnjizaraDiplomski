@@ -1,0 +1,54 @@
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    #author-card-holder{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width:80%;
+
+        padding:15px;
+        box-shadow: -3px 3px 9px rgba(0, 0, 0, 0.664);
+
+        #align-left{
+            align-self: flex-start;
+            box-shadow: -1px 1px 3px black;
+            background-color: rgb(85, 30, 25);
+            padding: 5px 8px;
+            color: #e6b17e;
+        }
+
+        p{
+            margin:0px;
+            padding:5px;
+        }
+        
+        .books-holder{
+            margin-top:20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width:100%;
+           
+            .book-holder{
+                margin-top:15px;
+                padding:10px;
+                box-shadow: -3px 3px 9px rgba(0, 0, 0, 0.308);
+                transition: all ease-in-out .3s;
+
+                &:hover{
+                    background-color: #ebc7a6;
+                    border-radius: 10px;
+                }
+
+                img{
+                    height:200px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+$color_1: transparent;
+$color_3: #fff;
+$font-family_1: kanit,sans-serif;
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	padding: 0;
+	margin: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#notfound {
+	position: relative;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.notfound {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%,-50%);
+		-ms-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+	}
+}
+.notfound {
+	max-width: 767px;
+	width: 100%;
+	line-height: 1.4;
+	text-align: center;
+	padding: 15px;
+	.notfound-404 {
+		position: relative;
+		height: 220px;
+		h1 {
+			font-family: $font-family_1;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%,-50%);
+			-ms-transform: translate(-50%,-50%);
+			transform: translate(-50%,-50%);
+			font-size: 186px;
+			margin: 0;
+			background: linear-gradient(130deg,#ccab88, rgb(85, 30, 25));
+			color: $color_1;
+			-webkit-background-clip: text;
+			background-clip: text;
+			text-transform: uppercase;
+		}
+	}
+	h2 {
+		font-family: $font-family_1;
+		font-size: 33px;
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 25px;
+		letter-spacing: 3px;
+	}
+	p {
+		font-family: $font-family_1;
+		font-size: 16px;
+		margin-top: 0;
+		margin-bottom: 25px;
+	}
+	a {
+		font-family: $font-family_1;
+		color: #ff6f68;
+		text-decoration: none;
+		border-bottom: 1px dashed #ff6f68;
+		border-radius: 2px;
+
+        &:hover{
+		    color: #fa1105;
+        }
+	}
+}
+.notfound-social {
+	>a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-self: center;
+		height: 40px;
+		line-height: 40px;
+		width: 40px;
+		font-size: 14px;
+		color: rgb(85, 30, 25);
+		border: 1px solid #efefef;
+		border-radius: 50%;
+		margin: 3px;
+		-webkit-transition: .2s all;
+		transition: .2s all;
+		&:hover {
+			color: #efefef;
+			background-color: rgb(85, 30, 25);
+			border-color: #efefef;
+		}
+	}
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+@media only screen and (max-width: 480px) {
+	.notfound {
+		.notfound-404 {
+			position: relative;
+			height: 168px;
+			h1 {
+				font-size: 142px;
+			}
+		}
+		h2 {
+			font-size: 22px;
+		}
+	}
+}

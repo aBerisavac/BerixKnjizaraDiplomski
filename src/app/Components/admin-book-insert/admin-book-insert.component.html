@@ -1,0 +1,42 @@
+<div id="book-insert-form-holder">
+    <form id="book-insert-form" (submit)="formSubmitted($event)" >
+
+        <label for="title">Book Title:</label>
+        <input id="title"  name="title" type="text"/>
+
+        <label for="description">Book Description:</label>
+        <input id="description"  name="description" type="text"/>
+
+        <label for="price">Book Price:</label>
+        <input id="price" name="price" type="text"/>
+
+        <label for="image-src">Book ImageSrc:</label>
+        <input id="image-src"  name="image-src" type="text"/>
+
+        <label for="release-date">Book Release Date:</label>
+        <input id="release-date"  name="release-date" type="date"/>
+
+        <label for="authors">Select book authors:</label>
+        <select id="authors" name="authors" multiple="multiple">
+            <option [value]="author.id" *ngFor="let author of authors">
+                {{author.FirstName}} {{author.LastName}}
+            </option>
+        </select>
+
+        <label for="genres">Select book genres:</label>
+        <select id="genres" name="genres" multiple="multiple">
+            <option [value]="genre.id" *ngFor="let genre of genres">
+                {{genre.Name}}
+            </option>
+        </select>
+
+        <label for="languages">Select book languages:</label>
+        <select id="languages" name="languages" multiple="multiple">
+            <option [value]="language.id" *ngFor="let language of languages">
+                {{language.Name}}
+            </option>
+        </select>
+        
+        <input type="submit" value="Insert" >
+    </form>
+</div>

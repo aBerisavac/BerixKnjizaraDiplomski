@@ -1,0 +1,14 @@
+<main>
+  <div id="login-form-holder">
+    <form method="post" action="" id="login-form>" name="login-form">
+      <label for="email"> Email: </label>
+      <input id="email" type="text" placeholder="Enter your E-mail" ngModel #emailInput />
+      <label for="password"> Password: </label>
+      <input id="password" type="text" placeholder="Enter your password" ngModel #passwordInput />
+
+      <div id="form-actions">
+        <input (click)="login()" type="button" value="Login"/>
+      </div>
+    </form>
+  </div>
+</main>

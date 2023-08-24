@@ -1,0 +1,15 @@
+<main>
+    <div id="author-card-holder">
+        <p>{{author.FirstName}} {{author.LastName}}</p>
+        <p>Birth Date: {{formattedDate}}</p>
+        <p id="align-left">Books:</p>
+        <div class="books-holder" >
+            <div class="book-holder" *ngFor="let book of booksByAuthor">
+                <a [routerLink]="'/book/'+book.id">
+                    <img [src]="'assets/images/books/'+book.ImageSrc+'.jpg'"/>
+                </a>
+                <p>{{book.Title}}</p>
+            </div>
+        </div>
+    </div>
+</main>

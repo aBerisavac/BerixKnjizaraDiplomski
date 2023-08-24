@@ -1,0 +1,30 @@
+<div id="table-holder">
+    <p id="empty-entity" *ngIf="columnsCapitalised.length==0 || jsonObjectArrayToDisplay.length==0">There are no entries for this entity</p>
+    <table *ngIf="columnsCapitalised.length>0 && jsonObjectArrayToDisplay.length>0">
+        <thead>
+            <th *ngFor="let column of columnsCapitalised">
+                {{column}}
+            </th>
+            <th *ngIf="editable">
+                /
+            </th>
+            <th *ngIf="deletable">
+                /
+            </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of jsonObjectArrayToDisplay">
+                {{setValuesOfObject(item)}}
+                <td *ngFor="let value of itemValues">
+                    {{value}}
+                </td>
+                <td *ngIf="editable">
+                    <input type="button" (click)="editItem.emit(item)" value="Edit"/>
+                </td>
+                <td *ngIf="deletable">
+                    <input type="button" (click)="deleteItem.emit(item)" value="Delete"/>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

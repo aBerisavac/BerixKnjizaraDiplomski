@@ -1,0 +1,76 @@
+main {
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+  #x-book-holder {
+    #img-and-description-holder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+
+      #image-holder {
+        img {
+          box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      #description-holder {
+        width: 350px;
+      }
+    }
+
+    #x-book-data-holder {
+      p {
+        margin: 5px;
+        text-align: center;
+        cursor: default;
+      }
+
+      .info-holder {
+        text-align: left;
+        box-shadow: -1px 1px 3px black;
+        background-color: rgb(85, 30, 25);
+        padding: 5px;
+        color: #e6b17e;
+      }
+
+      .mat-icon {
+        border-radius: 100%;
+        margin-right: 15px;
+        padding: 7px;
+        color: rgb(85, 30, 25);
+        background-color: rgba(167, 151, 150, 0.404);
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(85, 30, 25);
+          color: #e6b17e;
+        }
+      }
+
+      .price {
+        padding: 5px;
+        margin-left: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .info {
+        margin-left: 15px;
+        text-align: left;
+      }
+
+      .author {
+        cursor: pointer;
+        &:hover {
+          color: rgb(167, 45, 34);
+        }
+      }
+    }
+  }
+}

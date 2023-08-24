@@ -1,0 +1,63 @@
+<main>
+  <div id="x-book-holder">
+    <div id="img-and-description-holder">
+      <p>{{book.Title}}</p>
+      <div id="image-holder">
+        <img
+          height="300px"
+          [src]="'assets/images/books/' + book.ImageSrc + '.jpg'"
+        />
+      </div>
+      <div id="description-holder">
+        <p>{{ book.Description }}</p>
+      </div>
+    </div>
+
+    <div id="x-book-data-holder">
+      <div>
+        <p class="info-holder">Release date:</p>
+        <p class="info">
+          {{formattedDate}}
+        </p>
+      </div>
+
+      <div>
+        <p class="info-holder">Price:</p>
+        <div class="price">
+          <p>{{ book.BookPrices[0].Price }}$</p>
+          <div>
+            <mat-icon
+              *ngIf="currentBookExistsInCart"
+              (click)="removeFromCart(book)"
+              >remove_circle_outline</mat-icon
+            >
+            <mat-icon (click)="addToCart(book)">add_shopping_cart</mat-icon>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="info-holder">Authors:</p>
+        <p class="info author" *ngFor="let author of book.Authors; index as i">
+          <a [routerLink]="'/author/' + author.id">
+            {{ i + 1 }}. {{ author.FirstName }} {{ author.LastName }}
+          </a>
+        </p>
+      </div>
+
+      <div>
+        <p class="info-holder">Genres:</p>
+        <p class="info" *ngFor="let genre of book.Genres; index as i">
+          {{ i + 1 }}. {{ genre.Name }}
+        </p>
+      </div>
+
+      <div>
+        <p class="info-holder">Available in languages:</p>
+        <p class="info" *ngFor="let language of book.Languages; index as i">
+          {{ i + 1 }}. {{ language.Name }}
+        </p>
+      </div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,11 @@
+<main >
+    <div #buttonsHolder id="buttons-holder">
+        <input [routerLink]="'books'" (click)="addActiveClass($event)" type="button" value="Books"/>
+        <input [routerLink]="'genres'" (click)="addActiveClass($event)" type="button" value="Genres"/>
+        <input [routerLink]="'authors'" (click)="addActiveClass($event)" type="button" value="Authors"/>
+        <input [routerLink]="'shipping_methods'" (click)="addActiveClass($event)" type="button" value="Shipping Methods"/>
+        <input [routerLink]="'orders'" (click)="addActiveClass($event)" type="button" value="Orders"/>
+        <a id="show-insert-entity-button" *ngIf="isInsertable" [routerLink]="getPath()" (click)="addActiveClassToInsertButton($event)"><mat-icon >add</mat-icon></a>
+    </div>
+    <router-outlet></router-outlet>
+</main>

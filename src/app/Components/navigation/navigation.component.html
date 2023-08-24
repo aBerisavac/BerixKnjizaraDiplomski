@@ -1,0 +1,28 @@
+<div id="navigation">
+  <div id="navigation-logo-holder">
+    <img src="/assets/images/BerixLogo.png" />
+  </div>
+  <div id="navigation-menu-items">
+    <a routerLink="/home">
+        <p>Home</p>
+    </a>
+    <a routerLink="/books">
+        <p>Books</p>
+    </a>
+    <a routerLink="/shopping_cart">
+      <mat-icon>shopping_cart</mat-icon><span *ngIf="totalBooksInCart>0">{{totalBooksInCart}}</span>
+    </a>
+    <a [routerLink]="['/assets/docs/docs.pdf']" target="_blank">
+      <p>Docs</p>
+    </a>
+    <a *ngIf="showAdminButton && router.url.indexOf('admin')==-1" routerLink="/admin/orders">
+      <p>Admin</p>
+    </a>
+    <a *ngIf="showAdminButton" routerLink="/logout">
+        <p>Logout</p>
+    </a>
+    <a *ngIf="!showAdminButton" routerLink="/login">
+        <p>Login</p>
+    </a>
+  </div>
+</div>

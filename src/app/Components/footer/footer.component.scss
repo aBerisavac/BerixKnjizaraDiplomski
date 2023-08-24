@@ -1,0 +1,18 @@
+footer{
+    background-color: rgb(85, 30, 25);
+    box-shadow: -1px -1px 3px  black;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #footer-author{
+        padding: 3px 30px;
+        background-color: #e6b17e;
+        color: rgb(85, 30, 25);
+
+        cursor: default;
+    }
+}

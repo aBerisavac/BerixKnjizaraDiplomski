@@ -1,0 +1,55 @@
+<app-checkout-dialog
+  (successfullCheckout)="successfullCheckout($event)"
+  (closeDialog)="showCheckoutFormBool = false"
+  *ngIf="showCheckoutFormBool"
+></app-checkout-dialog>
+<main>
+  <h1>
+    Your Shopping Cart:
+    <div (click)="showCheckoutForm()" id="checkout-button-holder" *ngIf="totalQuantity > 0">
+      <mat-icon>shopping_cart_checkout</mat-icon>
+      <p>
+        Checkout (<span *ngIf="totalQuantity > 0">{{ totalPrice }}$</span>)
+      </p>
+    </div>
+  </h1>
+  <div id="cart-holder">
+    <table *ngIf="totalQuantity > 0">
+      <thead>
+        <th>Art</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Total Price</th>
+        <th>Quantity</th>
+        <th>Remove</th>
+        <th>Add</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>
+            <img [src]="'/assets/images/books/' + item.ImageSrc + '.jpg'" />
+          </td>
+          <td>{{ item.Title }}</td>
+          <td>{{ item.BookPrices[0].Price }}$</td>
+          <td>{{ item.BookPrices[0].Price * item.Quantity }}$</td>
+          <td>#{{ item.Quantity }}</td>
+          <td>
+            <mat-icon (click)="removeFromCart(item)"
+              >remove_circle_outline</mat-icon
+            >
+          </td>
+          <td>
+            <mat-icon (click)="addToCart(item)">add_shopping_cart</mat-icon>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p *ngIf="totalQuantity == 0">
+      There are currently no items in your cart.
+      <a routerLink="/books">
+        You can go to the books page and see what you like.
+      </a>
+    </p>
+  </div>
+</main>

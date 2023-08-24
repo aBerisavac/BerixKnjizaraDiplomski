@@ -1,0 +1,107 @@
+.book-holder {
+  margin-left: 20px;
+  margin-top: 15px;
+  box-shadow: -2px 2px 9px rgba(0, 0, 0, 0.459);
+  padding: 5px;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    
+    img {
+      max-height: 250px;
+
+      border-radius: 10px;
+    }
+  }
+
+  p {
+    &.info-holder {
+      position: relative;
+      text-align: left;
+      margin-top: 0px;
+      z-index:2;
+      box-shadow: -1px 1px 3px black;
+      background-color: rgb(85, 30, 25);
+      padding: 5px;
+      color: #e6b17e;
+    }
+
+    margin: 5px;
+    text-align: center;
+    cursor: default;
+  }
+
+  .list-holder {
+    position: relative;
+    top: 0px;
+    height: fit-content;
+    overflow: hidden;
+    padding-bottom:0px;
+    transition: all ease-in-out .3s;
+
+    .list {
+      transition: all ease-in-out .3s;
+      position: absolute;
+      top: 0px;
+      z-index: 1;
+    }
+
+    .info-holder {
+      position: relative;
+      text-align: left;
+      margin-top: 0px;
+      z-index:2;
+      box-shadow: -1px 1px 3px black;
+      background-color: rgb(85, 30, 25);
+      padding: 5px;
+      color: #e6b17e;
+      cursor: pointer;
+
+      &:hover{
+        background-color: rgb(207, 120, 62);
+        color: rgb(85, 30, 25);
+      }
+    }
+  }
+
+  .mat-icon {
+    border-radius: 100%;
+    margin-right: 15px;
+    padding: 7px;
+    color: rgb(85, 30, 25);
+    background-color: rgba(167, 151, 150, 0.404);
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(85, 30, 25);
+      color: #e6b17e;
+    }
+  }
+
+  .price {
+    padding: 5px;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .info {
+    margin-left: 15px;
+    text-align: left;
+  }
+
+  .clickable{
+    &.info {
+      margin-left: 15px;
+      text-align: left;
+      cursor: pointer;
+      &:hover {
+        color: rgb(167, 45, 34);
+      }
+    }
+  }
+}

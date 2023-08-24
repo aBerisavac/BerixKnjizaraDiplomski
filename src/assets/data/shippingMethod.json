@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "Name": "Standard",
+        "Cost": 33
+    },
+    {
+        "id": 2,
+        "Name": "Express",
+        "Cost": 48
+    },
+    {
+        "id": 3,
+        "Name": "Urgent",
+        "Cost": 72
+    }
+]

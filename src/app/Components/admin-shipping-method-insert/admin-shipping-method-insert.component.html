@@ -1,0 +1,9 @@
+<div id="shipping-method-insert-form-holder">
+    <form id="shipping-method-insert-form" (submit)="formSubmitted($event)" >
+        <label for="name">Shipping Method Name:</label>
+        <input id="name"  name="name" type="text"/>
+        <label for="name">Shipping Method Cost:</label>
+        <input id="cost" name="cost" placeholder="Type a number for cost in $" type="text"/>
+        <input type="submit" value="Insert" >
+    </form>
+</div>
