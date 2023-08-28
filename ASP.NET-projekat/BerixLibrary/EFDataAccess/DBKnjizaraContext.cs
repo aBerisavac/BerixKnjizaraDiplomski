@@ -1,4 +1,4 @@
-﻿using Domain;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFDataAccess
@@ -16,6 +16,7 @@ namespace EFDataAccess
 
             modelBuilder.Entity<BookAuthor>().HasKey(x => new { x.BookId, x.AuthorId });
             modelBuilder.Entity<BookGenre>().HasKey(x => new { x.BookId, x.GenreId });
+            modelBuilder.Entity<BookLanguage>().HasKey(x => new { x.BookId, x.LanguageId });
             modelBuilder.Entity<RoleUseCase>().HasKey(x => new { x.RoleId, x.UseCaseId });
 
             modelBuilder.Entity<Book>().HasQueryFilter(e => !e.IsDeleted);
@@ -29,6 +30,7 @@ namespace EFDataAccess
             modelBuilder.Entity<ShippingMethod>().HasQueryFilter(e => !e.IsDeleted);
             modelBuilder.Entity<UseCase>().HasQueryFilter(e => !e.IsDeleted);
             modelBuilder.Entity<BookPrice>().HasQueryFilter(e => !e.IsDeleted);
+            modelBuilder.Entity<BookLanguage>().HasQueryFilter(e => !e.IsDeleted);
         }
 
         public override int SaveChanges()
@@ -59,6 +61,8 @@ namespace EFDataAccess
         public DbSet<Book> Books { get; set; }
         public DbSet<BookAuthor> BookAuthors { get; set; }
         public DbSet<BookGenre> BookGenres { get; set; }
+        public DbSet<Language> Languages { get; set; }
+        public DbSet<BookLanguage> BookLanguages { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Log> Logs { get; set; }
         public DbSet<Order> Orders { get; set; }

@@ -1,4 +1,4 @@
-﻿using Application.Commands.Books;
+using Application.Commands.Books;
 using Application.DTOs.Books;
 using Application.Exceptions;
 using AutoMapper;
@@ -66,12 +66,6 @@ namespace Implementation.Commands.Books
             if (book.Description != request.Description)
             {
                 book.Description = request.Description;
-                changed = true;
-            }
-
-            if (book.Language != request.Language)
-            {
-                book.Language = request.Language;
                 changed = true;
             }
 

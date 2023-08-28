@@ -1,7 +1,8 @@
-﻿using Application.DTOs.Authors;
+using Application.DTOs.Authors;
 using Application.DTOs.Books;
 using Application.DTOs.Genres;
 using Application.DTOs.IntersectEntities;
+using Application.DTOs.Languages;
 using Application.DTOs.UseCases;
 using AutoMapper;
 using Domain;
@@ -23,6 +24,11 @@ namespace Implementation.Profiles
                    AuthorId = x.Id,
                    BookId = dto.Id
                })))
+               .ForMember(dto => dto.Languages, opt => opt.MapFrom(dto => dto.Languages.Select(x => new BookLanguage
+               {
+                   LanguageId = x.Id,
+                   BookId = dto.Id
+               })))
                .ForMember(dto => dto.Prices, opt => opt.MapFrom(dto => dto.Prices.Select(x => new BookPrice
                {
                    BookId = dto.Id,
@@ -41,6 +47,11 @@ namespace Implementation.Profiles
                    FirstName = x.Author.FirstName,
                    LastName = x.Author.LastName,
                    Id = x.Author.Id
+               })))
+               .ForMember(bookDto => bookDto.Languages, opt => opt.MapFrom(book => book.Languages.Select(x => new LanguageDTO
+               {
+                   Name = x.Language.Name,
+                   Id = x.Language.Id
                })))
                .ForMember(dto => dto.Prices, opt => opt.MapFrom(dto => dto.Prices.Select(x => new BookPriceDTO
                {

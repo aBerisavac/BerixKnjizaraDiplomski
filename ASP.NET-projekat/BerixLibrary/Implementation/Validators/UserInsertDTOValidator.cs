@@ -1,4 +1,4 @@
-﻿using Application.DTOs.Users;
+using Application.DTOs.Users;
 using EFDataAccess;
 using FluentValidation;
 using System;
@@ -29,7 +29,7 @@ namespace Implementation.Validators
                 .MaximumLength(50)
                 .WithMessage("User Email must not be greater then 50 characters.")
                 .Must(email => !dbContext.Users.Any(y => y.Email == email))
-                .WithMessage("Genre name must be unique");
+                .WithMessage("User Email must be unique");
             RuleFor(x => x.Password)
                 .NotEmpty()
                 .WithMessage("User Password must not be empty.")

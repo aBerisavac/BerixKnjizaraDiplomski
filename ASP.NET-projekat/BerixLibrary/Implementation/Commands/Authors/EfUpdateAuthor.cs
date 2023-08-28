@@ -1,4 +1,4 @@
-﻿using Application.Commands.Authors;
+using Application.Commands.Authors;
 using Application.DTOs.Authors;
 using Application.Exceptions;
 using AutoMapper;
@@ -38,10 +38,6 @@ namespace Implementation.Commands.Authors
             {
                 throw new EntityNotFoundException(Id, typeof(Author));
             }
-
-            /*
-        virtual public ICollection<BookAuthor>? Books { get; set; } = new List<BookAuthor>();
-             */
 
             _validator.ValidateAndThrow(request);
 

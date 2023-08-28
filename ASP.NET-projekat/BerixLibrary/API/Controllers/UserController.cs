@@ -1,4 +1,4 @@
-﻿using Application;
+using Application;
 using Application.Commands.Books;
 using Application.Commands.Users;
 using Application.DTOs.Books;
@@ -48,7 +48,7 @@ namespace API.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] UserInsertDTO dto, [FromServices] IAddUserCommand command)
         {
-            if (_actor.RoleId == 3)
+            if (_actor.RoleId==null || _actor.RoleId != 1)
             {
                 dto.RoleId = 2;
             }

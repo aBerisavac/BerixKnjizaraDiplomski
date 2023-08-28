@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDataAccess.Migrations
 {
     [DbContext(typeof(DBKnjizaraContext))]
-    [Migration("20230821070403_InitialDatabaseSchema")]
-    partial class InitialDatabaseSchema
+    [Migration("20230828185746_InitialiseDatabaseSchema")]
+    partial class InitialiseDatabaseSchema
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -94,11 +94,6 @@ namespace EFDataAccess.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Language")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
-
                     b.Property<DateTime?>("ModifiedAt")
                         .HasColumnType("datetime2");
 
@@ -111,8 +106,6 @@ namespace EFDataAccess.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Language");
 
                     b.HasIndex("Title");
 
@@ -147,6 +140,39 @@ namespace EFDataAccess.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("BookGenres");
+                });
+
+            modelBuilder.Entity("Domain.BookLanguage", b =>
+                {
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LanguageId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("BookId", "LanguageId");
+
+                    b.HasIndex("LanguageId");
+
+                    b.ToTable("BookLanguage");
                 });
 
             modelBuilder.Entity("Domain.BookPrice", b =>
@@ -221,6 +247,41 @@ namespace EFDataAccess.Migrations
                         .IsUnique();
 
                     b.ToTable("Genres");
+                });
+
+            modelBuilder.Entity("Domain.Language", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name");
+
+                    b.ToTable("Language");
                 });
 
             modelBuilder.Entity("Domain.Log", b =>
@@ -573,6 +634,25 @@ namespace EFDataAccess.Migrations
                     b.Navigation("Genre");
                 });
 
+            modelBuilder.Entity("Domain.BookLanguage", b =>
+                {
+                    b.HasOne("Domain.Book", "Book")
+                        .WithMany("Languages")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Language", "Language")
+                        .WithMany("Books")
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Language");
+                });
+
             modelBuilder.Entity("Domain.BookPrice", b =>
                 {
                     b.HasOne("Domain.Book", "Book")
@@ -682,12 +762,19 @@ namespace EFDataAccess.Migrations
 
                     b.Navigation("Genres");
 
+                    b.Navigation("Languages");
+
                     b.Navigation("OrderInvoices");
 
                     b.Navigation("Prices");
                 });
 
             modelBuilder.Entity("Domain.Genre", b =>
+                {
+                    b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("Domain.Language", b =>
                 {
                     b.Navigation("Books");
                 });

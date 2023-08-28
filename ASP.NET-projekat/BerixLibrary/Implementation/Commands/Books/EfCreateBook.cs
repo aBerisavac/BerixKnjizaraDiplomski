@@ -1,4 +1,4 @@
-﻿using Application.Commands.Books;
+using Application.Commands.Books;
 using Application.DTOs.Books;
 using AutoMapper;
 using Domain;
@@ -34,7 +34,7 @@ namespace Implementation.Commands.Books
         {
             _validator.ValidateAndThrow(request);
 
-            var book = new Book { Title = request.Title, Language = request.Language, Description = request.Description, ReleaseDate = request.ReleaseDate };
+            var book = new Book { Title = request.Title, Description = request.Description, ReleaseDate = request.ReleaseDate };
 
             var authors = _dbContext.Authors.Where(x => request.AuthorIds.Any(y => y == x.Id));
             var bookAuthors = new List<BookAuthor>();
