@@ -6,6 +6,7 @@ export interface IAddOrder {
     "LastName": String,
     "Email": String,
     "Address": String,
+    "Password": String,
     "ShippingMethod": ShippingMethodDTO,
     "items": Array<IBookCart>,
 }

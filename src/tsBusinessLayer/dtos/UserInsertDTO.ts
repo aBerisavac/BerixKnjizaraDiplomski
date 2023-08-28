@@ -1,16 +1,13 @@
-import {IUser} from "../interfaces/IUser"
+import {IUserInsert} from "../interfaces/IUserInsert"
 
-export class UserDTO implements IUser{
-    public id:number;
+export class UserInsertDTO implements IUserInsert{
     public FirstName:String;
     public LastName:String;
     public Email:String;
     public Address:String;
     public Password: String;
-    public Role: { id: number; Name: string; } | undefined;
 
-    constructor(id:number, firstName: String, lastName: String, email: String, address: String, password: String){
-        this.id = id;
+    constructor(firstName: String, lastName: String, email: String, address: String, password: String){
         this.FirstName = firstName;
         this.LastName = lastName;
         this.Email = email;

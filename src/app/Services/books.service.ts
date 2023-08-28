@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AuthorModel } from 'src/tsBusinessLayer/Models/AuthorModel';
 import { BookModel } from 'src/tsBusinessLayer/Models/BookModel';
@@ -17,9 +18,9 @@ import { OrderDTO } from 'src/tsBusinessLayer/dtos/OrderDTO';
 })
 export class BooksService {
 
-  constructor() { }
+  constructor(private _http: HttpClient) { }
 
-  private ordersModel = new OrderModel();
+  private ordersModel = new OrderModel(this._http);
   private bookModel = new BookModel();
   private authorModel = new AuthorModel();
   private genreModel = new GenreModel();
@@ -37,44 +38,25 @@ export class BooksService {
   insertBook(title: String, description: String, imageSrc: String, releaseDate: Date, authorIds:Array<string>, genreIds:Array<string>, languageIds:Array<string>, bookPrice:number): boolean{
     try{
       
-      console.log(authorIds);
       let authors: Array<AuthorDTO>= [];
       for(let id of authorIds){
-        console.log(id);
-        console.log(this.authorModel.get(parseInt(id)))
         authors.push(this.authorModel.get(parseInt(id)))
       }
 
-      console.log(genreIds)
       let genres: Array<GenreDTO>= [];
       for(let id of genreIds){
-        console.log(id)
-        console.log(this.genreModel.get(parseInt(id)))
         genres.push(this.genreModel.get(parseInt(id)))
       }
 
-      console.log(languageIds)
       let languages: Array<LanguageDTO>= [];
       for(let id of languageIds){
-        console.log(id);
-        console.log(this.languageModel.get(parseInt(id)))
         languages.push(this.languageModel.get(parseInt(id)))
       }
 
       this.bookPriceModel.insertBookPrice(bookPrice)
 
       let bookPrices: Array<BookPriceDTO> = [this.bookPriceModel.getAll()[this.bookPriceModel.getAll().length - 1] as BookPriceDTO]
-      
-      console.log({
-        title,
-        description,
-        imageSrc,
-        releaseDate,
-        authors,
-        genres,
-        languages,
-        bookPrices
-      })
+    
       this.bookModel.insertBook(title, description, imageSrc, releaseDate, authors, genres, languages, bookPrices)
       return true;
     } catch(ex){

@@ -2,23 +2,28 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { UsersService } from './users.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoginService {
-  private userToken =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxMDYzODY5Yi1mYTI1LTQ2YTAtOWE5ZC1kYmYwZTdjMmVhYjciLCJpc3MiOiJhc3BfYXBpIiwiaWF0IjoxNjkyODY0NjMyLCJVc2VySWQiOiIxIiwiQWN0b3JEYXRhIjoie1wiRW1haWxcIjpcImFkbWluQGFkbWluLmNvbVwiLFwiVXNlcklkXCI6MSxcIlJvbGVJZFwiOjEsXCJBbGxvd2VkVXNlQ2FzZXNcIjpbMSwyLDMsNCw1LDYsNyw4LDksMTAsMTEsMTIsMTMsMTQsMTUsMTYsMTcsMTgsMTksMjAsMjEsMjIsMjMsMjQsMjUsMjYsMjcsMjgsMjksMzAsMzEsMzIsMzMsMzQsMzUsMzYsMzcsMzgsMzksNDAsNDEsNDIsNDMsNDQsNDVdfSIsIm5iZiI6MTY5Mjg2NDYzMiwiZXhwIjoxNjkyOTUxMDMyLCJhdWQiOiJBbnkifQ.9_OaK1F5ra9sWvcfDGklIaejB1vrLuElnG1hlVm-Jas';
-
-  private isLoggedIn: boolean = false;
-  private loginService = new BehaviorSubject<boolean>(this.isLoggedIn);
-  public isLoggedIn$ = this.loginService.asObservable();
+  private isLoggedInInitial: boolean = false;
+  private isLoggedIn = new BehaviorSubject<boolean>(this.isLoggedInInitial);
+  public isLoggedIn$ = this.isLoggedIn.asObservable();
 
   private errors: Array<string> = [];
   private loginErrors = new BehaviorSubject<Array<string>>(this.errors);
   public errors$ = this.loginErrors.asObservable();
 
-  constructor(private http: HttpClient, private _router: Router) {}
+  private notificationMessage = new BehaviorSubject<String>('');
+  public currentNotifyMessage$ = this.notificationMessage.asObservable();
+
+  constructor(
+    private http: HttpClient,
+    private _router: Router,
+    private _userService: UsersService
+  ) {}
 
   public tryLogin(email: String, password: String) {
     this.http
@@ -26,38 +31,33 @@ export class LoginService {
       .subscribe({
         next: (data) => {
           this.errors = [];
-          this.userToken = data.token;
-          this.isLoggedIn = true;
+          this._userService.setUserToken(data.token);
           this.errors = [];
           this._router.navigateByUrl('/');
-          
-          this.loginService.next(this.isLoggedIn);
+          this.notificationMessage.next('You have successfully logged in.');
+          this.isLoggedIn.next(true);
+          this.loginErrors.next([]);
         },
         error: (error) => {
-          console.log('greska');
           this.errors = [];
           if (error.status == 401) {
-            this.isLoggedIn = false;
             this.errors.push('Incorrect email or password. Please, try again.');
           } else {
-            this.isLoggedIn = false;
             this.errors.push('There was an error. Try again later.');
           }
-          this.loginService.next(this.isLoggedIn);
+          this.isLoggedIn.next(false);
           this.loginErrors.next(this.errors);
         },
       });
   }
 
   public getToken() {
-    return this.userToken;
-  }
-
-  public isAdminLoggedIn() {
-    return this.isLoggedIn;
+    return this._userService.getUserToken();
   }
 
   public logout() {
-    this.loginService.next(false);
+    this._userService.setUserToken('');
+    this.isLoggedIn.next(false);
+    this.notificationMessage.next("You have successfully logged out");
   }
 }

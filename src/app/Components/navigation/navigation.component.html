@@ -15,7 +15,7 @@
     <a [routerLink]="['/assets/docs/docs.pdf']" target="_blank">
       <p>Docs</p>
     </a>
-    <a *ngIf="showAdminButton && router.url.indexOf('admin')==-1" routerLink="/admin/orders">
+    <a *ngIf="isAdminLoggedIn" routerLink="/admin/orders">
       <p>Admin</p>
     </a>
     <a *ngIf="isLoggedIn" routerLink="/logout">

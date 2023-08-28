@@ -46,8 +46,6 @@ export class AdminAuthorInsertComponent {
       errors.push("Birth Date can't be empty.");
     } else {
       try {
-        console.log(Date.parse(authorBirthDate as string));
-
         if (Number.isNaN(Date.parse(authorBirthDate as string))) {
           errors.push('Birth Date is not of correct format.');
         } else{

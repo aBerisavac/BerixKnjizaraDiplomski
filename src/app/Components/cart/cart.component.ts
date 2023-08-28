@@ -4,6 +4,7 @@ import { IBookCart } from 'src/app/Interfaces/IBookCart';
 import { IAddOrder } from 'src/tsBusinessLayer/interfaces/IAddOrder';
 import { OrderModel } from 'src/tsBusinessLayer/Models/OrderModel';
 import { ShippingMethodDTO } from 'src/tsBusinessLayer/dtos/ShippingMethodDTO';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cart',
@@ -16,9 +17,9 @@ export class CartComponent implements OnInit {
   public items: Array<IBookCart> =[]
   public totalPrice:number = 0;
   public totalQuantity:number = 0;
-  private orderModel = new OrderModel();
+  private orderModel = new OrderModel(this._http);
 
-  constructor(private _cartService:CartService) { }
+  constructor(private _cartService:CartService, private _http:HttpClient) { }
 
   ngOnInit() {
     this._cartService.currentDataCart$.subscribe(x=>{
@@ -37,6 +38,7 @@ export class CartComponent implements OnInit {
       "LastName": data.get("LastName") as String,
       "Email": data.get("Email") as String,
       "Address": data.get("Address") as String,
+      "Password": data.get("Password") as String,
       "items": JSON.parse(data.get("items") as string) as Array<IBookCart>,
       "ShippingMethod": JSON.parse(data.get("ShippingMethod") as string) as ShippingMethodDTO,
     }

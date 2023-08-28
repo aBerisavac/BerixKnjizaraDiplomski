@@ -21,6 +21,17 @@ export class AuthorsService {
     return this.authorModel.get(id);
   }
 
+  private capitalizePropertyNames(obj: any) {
+    const newObj: { [key: string]: any } = {};
+
+    for (let key in obj) {
+        const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
+        newObj[capitalizedKey] = obj[key];
+    }
+
+    return newObj;
+  }
+
   getBooksWrittenByAuthor(author: AuthorDTO): Array<BookDTO> {
     let books: Array<BookDTO> = this.bookModel.getAll();
     let booksWithRequestedAutor: Array<BookDTO> = [];
@@ -49,7 +60,6 @@ export class AuthorsService {
   deleteAuthor(id: number): String[] {
     let errors = [];
     let books = this.bookModel.getAll() as Array<BookDTO>;
-    console.log(books);
     for (let book of books) {
       if (book.Authors.filter((x) => x.id == id).length > 0) {
         errors.push('Referential integrity violation.');

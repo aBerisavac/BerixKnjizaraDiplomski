@@ -1,0 +1,1 @@
+export type TErrorMessagesFromBack = {PropertyName: String, ErrorMessage: String }

@@ -35,7 +35,8 @@ import { AdminGenreInsertComponent } from './Components/admin-genre-insert/admin
 import { AdminBookInsertComponent } from './Components/admin-book-insert/admin-book-insert.component';
 import { ErrorModalComponent } from './Components/error-modal/error-modal.component';
 import { LoginComponent } from './Components/login/login.component';
-import { LogoutComponent } from './Components/logout/logout.component'
+import { LogoutComponent } from './Components/logout/logout.component';
+import { RegisterComponent } from './Components/register/register.component'
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { LogoutComponent } from './Components/logout/logout.component'
     AdminBookInsertComponent,
     ErrorModalComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

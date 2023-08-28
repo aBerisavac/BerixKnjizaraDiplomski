@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/Services/login.service';
+import { UsersService } from 'src/app/Services/users.service';
 
 @Component({
   selector: 'app-admin-panel',
@@ -11,19 +12,20 @@ export class AdminPanelComponent implements OnInit {
   @ViewChild('buttonsHolder') buttonsHolder: any;
   private buttonInputs: Array<HTMLInputElement> = [];
   private router: Router;
-  private insertButtonElement: HTMLAnchorElement = document.createElement("a");
+  private insertButtonElement: HTMLAnchorElement = document.createElement('a');
   public isInsertable = false;
 
-  constructor(router: Router, private _loginService: LoginService){
+  constructor(
+    router: Router,
+    private _loginService: LoginService,
+    private _userService: UsersService
+  ) {
     this.router = router;
   }
-  
+
   ngOnInit(): void {
-    if(this._loginService.isAdminLoggedIn()==false){
-      setTimeout(()=>{
-        this.router.navigateByUrl("");
-      }, 1)
-    }
+   if (this._userService.getUserData()== undefined || this._userService.getUserData()!.Role!.id != 1)
+        setTimeout(()=>this.router.navigateByUrl('/'), 1)
   }
 
   public addActiveClass = (e: MouseEvent) => {
@@ -34,11 +36,11 @@ export class AdminPanelComponent implements OnInit {
       }
     }
     clickedButton.classList.add('active');
-    this.insertButtonElement.classList.remove("active");
+    this.insertButtonElement.classList.remove('active');
 
-    setTimeout(()=>{
+    setTimeout(() => {
       this.checkIfEntityIsInsertable(window.location.href);
-    }, 1)
+    }, 1);
   };
 
   public addActiveClassToInsertButton = (e: MouseEvent) => {
@@ -64,6 +66,6 @@ export class AdminPanelComponent implements OnInit {
   }
 
   getPath() {
-    return this.router.url+"/insert"
+    return this.router.url + '/insert';
   }
 }

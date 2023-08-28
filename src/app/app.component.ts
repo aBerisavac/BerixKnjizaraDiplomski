@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { UsersService } from 'src/app/Services/users.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Berix Library';
+
+  constructor(private _usersService: UsersService){}
 
   public onActivate(event: Event) {
     let scrollToTop = window.setInterval(() => {

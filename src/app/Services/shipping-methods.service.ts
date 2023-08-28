@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { OrderModel } from 'src/tsBusinessLayer/Models/OrderModel';
 import { ShippingMethodModel } from 'src/tsBusinessLayer/Models/ShippingMethodModel';
@@ -8,9 +9,9 @@ import { ShippingMethodDTO } from 'src/tsBusinessLayer/dtos/ShippingMethodDTO';
   providedIn: 'root',
 })
 export class ShippingMethodsService {
-  constructor() {}
+  constructor(private _http: HttpClient) {}
 
-  private ordersModel: OrderModel = new OrderModel();
+  private ordersModel: OrderModel = new OrderModel(this._http);
   private shippingMethodModel = new ShippingMethodModel();
 
   getShippingMethods(): ShippingMethodDTO[] {

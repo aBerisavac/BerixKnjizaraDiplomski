@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
         this.paragraphs = data;
       },
       error: err => {
-        console.log(err)
+        console.error(err)
       }
     })
   }

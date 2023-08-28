@@ -1,0 +1,60 @@
+<main>
+  <div id="register-form-holder">
+    <form method="post" action="" id="register-form>" name="register-form">
+      <label for="first-name"> First Name: </label>
+      <input
+        id="first-name"
+        type="text"
+        placeholder="Enter your first name"
+        ngModel
+        #firstNameInput
+      />
+
+      <label for="last-name"> Last Name: </label>
+      <input
+        id="last-name"
+        type="text"
+        placeholder="Enter your last name"
+        ngModel
+        #lastNameInput
+      />
+
+      <label for="email"> Email: </label>
+      <input
+        id="email"
+        type="text"
+        placeholder="Enter your E-mail"
+        ngModel
+        #emailInput
+      />
+
+      <label for="address"> Address: </label>
+      <input
+        id="address"
+        type="text"
+        placeholder="Enter your Address"
+        ngModel
+        #addressInput
+      />
+
+      <label for="password"> Password: </label>
+      <input
+        id="password"
+        type="password"
+        placeholder="Enter your password"
+        ngModel
+        #passwordInput
+      />
+
+      <div id="form-actions">
+        <input (click)="register()" type="button" value="register" />
+      </div>
+    </form>
+    <div *ngIf="errors.length > 0" id="error-output">
+      <h4>{{ errors.length > 1 ? "Errors:" : "Error:" }}</h4>
+      <p *ngFor="let error of errors">
+        {{ error }}
+      </p>
+    </div>
+  </div>
+</main>

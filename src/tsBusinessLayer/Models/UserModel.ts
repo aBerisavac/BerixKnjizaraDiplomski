@@ -1,10 +1,13 @@
+import { Observable, catchError, of } from 'rxjs';
 import { UserDTO } from '../dtos/UserDTO';
+import { UserInsertDTO } from '../dtos/UserInsertDTO';
 import { IEntityGet } from '../interfaces/common/IEntityGet';
+import { HttpClient } from '@angular/common/http';
 
 export class UserModel implements IEntityGet {
   private users: Array<UserDTO>;
 
-  constructor() {
+  constructor(private _http: HttpClient) {
     if (localStorage.getItem('Users') == undefined) {
       localStorage.setItem('Users', JSON.stringify([]));
     }
@@ -20,40 +23,24 @@ export class UserModel implements IEntityGet {
     return this.users.filter((x) => x.Email == email)[0] as UserDTO;
   }
 
-  checkIfUserExists(newUser: UserDTO): boolean {
-    try {
-      let userToInsert: UserDTO;
-      if (this.users.length == 0) {
-        userToInsert = new UserDTO(
-          1,
-          newUser.FirstName,
-          newUser.LastName,
-          newUser.Email,
-          newUser.Address
-        );
 
-        this.users.push(userToInsert);
-        localStorage.setItem('Users', JSON.stringify(this.users));
-      } else {
-        userToInsert = this.getByEmail(newUser.Email as string);
+  insert(newUser: UserInsertDTO){
+    
+    return this._http
+      .post<any>('http://localhost:5111/api/user', newUser)
+      .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
+        // this.errorMessage = error.message;
+        console.error('There was an error!', error);
 
-        if (userToInsert == undefined) {
-          let newId = this.users.sort((x, y) => x.id - y.id)[0].id + 1;
-          userToInsert = new UserDTO(
-            newId,
-            newUser.FirstName,
-            newUser.LastName,
-            newUser.Email,
-            newUser.Address
-          );
-
-          this.users.push(userToInsert);
-          localStorage.setItem('Users', JSON.stringify(this.users));
-        }
-      }
-      return true;
-    } catch (ex) {
-      return false;
-    }
+        // after handling error, return a new observable 
+        // that doesn't emit any values and completes
+        return of();
+    }))
+      // .subscribe({
+      //   next: (data) => {
+      //     console.log("valja baki")
+      //   }
+      // });
   }
+
 }

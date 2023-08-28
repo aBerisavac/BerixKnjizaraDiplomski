@@ -19,6 +19,7 @@ import { AdminGenreInsertComponent } from './Components/admin-genre-insert/admin
 import { AdminBookInsertComponent } from './Components/admin-book-insert/admin-book-insert.component';
 import { LoginComponent } from './Components/login/login.component';
 import { LogoutComponent } from './Components/logout/logout.component';
+import { RegisterComponent } from './Components/register/register.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path:"login",
     component: LoginComponent
+  },
+  {
+    path:"register",
+    component: RegisterComponent
   },
   {
     path:"logout",

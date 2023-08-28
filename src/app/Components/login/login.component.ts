@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { LoginService } from 'src/app/Services/login.service';
-import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -10,14 +10,13 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   public errors: Array<string> = [];
 
-  constructor(private _loginService: LoginService, private _router: Router) {}
+  constructor(private _loginService: LoginService) {}
 
   @ViewChild('passwordInput') passwordInput: ElementRef | undefined;
   @ViewChild('emailInput') emailInput: ElementRef | undefined;
 
   ngOnInit(): void {
       this._loginService.errors$.subscribe(x=>{
-        console.log(x)
         this.errors=x;
       })
   }

@@ -3,5 +3,10 @@ export interface IUser{
     "FirstName": String,
     "LastName": String,
     "Email": String,
-    "Address": String
+    "Address": String,
+    "Password": String,
+    "Role"?: {
+        "id": number,
+        "Name": string
+    }
 }

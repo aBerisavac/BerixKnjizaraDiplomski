@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { BookDTO } from '../dtos/BookDTO';
 import { OrderDTO } from '../dtos/OrderDTO';
 import { OrderInvoiceDTO } from '../dtos/OrderInvoiceDTO';
@@ -14,7 +15,7 @@ export class OrderModel implements IEntityGetAll {
   private bookModel: BookModel;
   private orderInvoiceModel: OrderInvoiceModel;
 
-  constructor() {
+  constructor(private _http: HttpClient) {
     if (localStorage.getItem('Orders') == undefined) {
       localStorage.setItem('Orders', JSON.stringify([]));
     }
@@ -22,7 +23,7 @@ export class OrderModel implements IEntityGetAll {
     this.orders = JSON.parse(
       localStorage.getItem('Orders')!
     ) as Array<OrderDTO>;
-    this.userModel = new UserModel();
+    this.userModel = new UserModel(_http);
     this.bookModel = new BookModel();
     this.orderInvoiceModel = new OrderInvoiceModel();
   }
@@ -43,9 +44,9 @@ export class OrderModel implements IEntityGetAll {
         data.FirstName,
         data.LastName,
         data.Email,
-        data.Address
+        data.Address,
+        data.Password
       );
-      this.userModel.checkIfUserExists(newUser);
 
       user = this.userModel.getByEmail(data.Email as string);
     }
