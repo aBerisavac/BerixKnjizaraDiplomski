@@ -69,6 +69,12 @@ namespace Implementation.Commands.Books
                 changed = true;
             }
 
+            if (book.ImageSrc != request.ImageSrc)
+            {
+                book.ImageSrc = request.ImageSrc;
+                changed = true;
+            }
+
             if (request.Price != _dbContext.BookPrices.Where(x => x.CreatedAt == _dbContext.BookPrices.Max(x => x.CreatedAt)).FirstOrDefault().Price)
             {
                 var newPrice = new BookPrice { Book = book, Price = request.Price };

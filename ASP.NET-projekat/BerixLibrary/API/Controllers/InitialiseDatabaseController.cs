@@ -740,7 +740,7 @@ namespace API.Controllers
       var bookPrices = new List<BookPrice>();
       foreach(var book in books)
       {
-        for (int j = 0; j < rnd.Next(4); j++)
+        for (int j = 0; j <= rnd.Next(4); j++)
         {
           bookPrices.Add(new BookPrice
           {
@@ -753,7 +753,7 @@ namespace API.Controllers
       var bookAuthors = new List<BookAuthor>();
       foreach (var book in books)
       {
-        for (int j = 0; j < rnd.Next(5); j++)
+        for (int j = 0; j <= rnd.Next(5); j++)
         {
           var newAuthor = authors.ElementAt(rnd.Next(50));
           var i = 0;
@@ -802,7 +802,7 @@ namespace API.Controllers
       var bookGenres = new List<BookGenre>();
       foreach (var book in books)
       {
-        for (int j = 0; j < rnd.Next(7); j++)
+        for (int j = 0; j <= rnd.Next(7); j++)
         {
           var newGenre = genres.ElementAt(rnd.Next(30));
           if (j == 0)
@@ -832,7 +832,7 @@ namespace API.Controllers
       var bookLanguages = new List<BookLanguage>();
       foreach (var book in books)
       {
-        for (int j = 0; j < rnd.Next(3); j++)
+        for (int j = 0; j <= rnd.Next(4); j++)
         {
           var newLanguage = languages.ElementAt(rnd.Next(19));
           if (j == 0)
@@ -907,7 +907,7 @@ namespace API.Controllers
       }
 
       //dodavanje nekih prava obicnom korisniku, za pocetak nista
-      var allowedUsecaseIds = new List<int> { 21, 25, 26, 27, 30, 31, 34, 35, 36, 37, 38, 39, 41, 42, 43 }; //niz id-jeva usecase-ova koji su dozvoljeni za ovu rolu
+      var allowedUsecaseIds = new List<int> { 21, 25, 26, 27, 30, 31, 34, 35, 36, 37, 38, 39, 41, 42, 43, 49, 50 }; //niz id-jeva usecase-ova koji su dozvoljeni za ovu rolu
       foreach (var useCaseId in allowedUsecaseIds)
       {
         roleUseCases.Add(

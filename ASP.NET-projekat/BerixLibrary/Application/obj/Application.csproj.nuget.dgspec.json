@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Application\\Application.csproj": {}
+    "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Application\\Application.csproj": {
+    "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Application\\obj\\",
+        "outputPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aleks_eg16h3h\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj"
+              "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj": {
-                "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj"
+              "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj": {
+                "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj": {
+    "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aleks_eg16h3h\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -135,14 +135,14 @@
         }
       }
     },
-    "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj": {
+    "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj",
         "projectName": "EFDataAccess",
-        "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj",
+        "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj",
         "packagesPath": "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\obj\\",
+        "outputPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aleks_eg16h3h\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -159,8 +159,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj"
+              "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj"
               }
             }
           }

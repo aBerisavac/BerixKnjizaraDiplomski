@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+N3QSYdPU6YcuqtK5EzO4E+plAwIBnWHb4fB0eBsztZ/q4uyJ5VJUUFr9OCoZXjKtI3BaQXZpa1mu3fOtOBSbA==",
+  "dgSpecHash": "9DtxuVPOr8vst5zcJqcQxv9gJi9zy/O7HnnfiiGqQDQRQdLkqJE5MYG/QMjSCAvIlaK3gqkmcNMj6t96lbYK1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.16\\microsoft.entityframeworkcore.6.0.16.nupkg.sha512",

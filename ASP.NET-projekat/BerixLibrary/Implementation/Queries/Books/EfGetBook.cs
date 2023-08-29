@@ -34,6 +34,7 @@ namespace Implementation.Queries.Books
             var books = _dbContext.Books
                 .Include(book => book.Authors).ThenInclude(author => author.Author)
                 .Include(book => book.Genres).ThenInclude(genre => genre.Genre)
+                .Include(book=>book.Languages).ThenInclude(language=>language.Language)
                 .Include(book => book.Prices);
             var book = books.Select(x=>x).Where(x=>x.Id==id).FirstOrDefault();
 

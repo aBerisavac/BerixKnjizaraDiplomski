@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vljrx8LVFKD3VRoU+zOucD7TRnqBJqkkZhGiMPqqf2S95XSTb4uA1PgLvBf+Sea3fdK9afiGok7MoSrYGabwHQ==",
+  "dgSpecHash": "gjZxsXCwtbQnw5cUnWIRfdNrWeW7f7nqIhPp3O1q132Sb860Y/d4PCOpxtIq0YaAcRBRNAc7z80hSf3mhHpPqA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aleks_eg16h3h\\Desktop\\Angular\\BerixKnjizaraDiplomski\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj",
+  "projectFilePath": "C:\\Users\\aleks_eg16h3h\\Desktop\\ASP\\Berix-Knjizara, ASP .NET\\ASP.NET-projekat\\BerixLibrary\\EFDataAccess\\EFDataAccess.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\aleks_eg16h3h\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

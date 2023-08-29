@@ -7,7 +7,7 @@
 
 Tema projekta je knjizara, u kojoj se moze obavljati kupovina knjiga. Korpa ne postoji na backendu u vidu tabele i entiteta, vec samo narudzbine. </br></br>
 Progress:
-1. Domain: 99% - Done (Mozda ne bi bilo lose dodati polje "current_price" u order invoice kako bi se cuvala cena po kojoj se knjiga prodavala, preko triggera, kako ne bi moralo da se pretrazuje po datumima. Ovo svakako nece biti implementirano jer bi iziskivalo razlicite dto-e za upis i ispis i nema potreba za svrhe ovog projekta to raditi)
+1. Domain: 100% - Done
 2. EfDataAccess: 100% - Done
 3. Application: 100% - Done
 4. Implementation: 100% - Done
@@ -37,10 +37,10 @@ Uputstvo za pregledaca: </br>
 
 Content:
 1. Baza Podataka:</br>
-1.1. Baza Podataka je redukovana u smislu tabela koje bi sve mogla da ima (na primer odvojena tabela za jezike ciji bi odnos sa knjigom bio vise prema vise). Takodje zbog jednostavnosti: umesto uvodjenja vezivne tabele izmedju korisnika i uloga sto bi omogucilo da jedan korisnik ima istovremeno vise uloga, samim tim i privilegija, jedan korisnik moze imati samo jednu ulogu.</br>
+1.1. Baza Podataka je redukovana zbog jednostavnosti: umesto uvodjenja vezivne tabele izmedju korisnika i uloga sto bi omogucilo da jedan korisnik ima istovremeno vise uloga, samim tim i privilegija, jedan korisnik moze imati samo jednu ulogu.</br>
 Ovo je uradjeno da bi se iole umanjio broj entiteta u projektu, a da se i dalje prikazu sve funkcionalnosti.</br>
 1.2. Izgled baze u MSSMS nakon sto se napravi preko migracija.</br></br>
-![image](https://github.com/AlexB96-git/ASP.NET-projekat/assets/112824193/a014d88a-9e55-4eff-bdb5-7860e211b7d4)
+![image](https://github.com/AlexB96-git/ASP.NET-projekat/assets/112824193/15ed269a-a8f4-4b5d-a68e-b04b83b38938)
 2. Domain:</br>
 2.1. Domain obezbedjuje definisanje entiteta kakvi ce se cuvati u bazi podataka.</br>
 2.2. Struktura domena: </br></br>

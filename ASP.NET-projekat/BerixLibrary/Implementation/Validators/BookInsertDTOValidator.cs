@@ -1,4 +1,5 @@
 using Application.DTOs.Books;
+using EFDataAccess;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,8 @@ using System.Threading.Tasks;
 
 namespace Implementation.Validators
 {
-    public class BookInsertDTOValidator: AbstractValidator<BookInsertDTO>
-    {
+    public class BookInsertDTOValidator: AbstractValidator<BookInsertDTO> { 
+        private DBKnjizaraContext _dbKnjizara = new DBKnjizaraContext();
         public BookInsertDTOValidator()
         {
             RuleFor(x => x.Title)
@@ -34,13 +35,19 @@ namespace Implementation.Validators
                 .WithMessage("Book ReleaseDate must be in the past");
             RuleFor(x => x.AuthorIds)
                 .NotEmpty()
-                .WithMessage("Book Authors must not be empty");
+                .WithMessage("Book Authors must not be empty")
+                .Must(authorIds => authorIds.All(id => _dbKnjizara.Authors.Any(a => a.Id == id)))
+                .WithMessage("One or more Author ids don't exist in database.");
             RuleFor(x => x.GenreIds)
                 .NotEmpty()
-                .WithMessage("Book Authors must not be empty");
+                .WithMessage("Book Authors must not be empty")
+                .Must(genreIds => genreIds.All(id => _dbKnjizara.Genres.Any(a => a.Id == id)))
+                .WithMessage("One or more Author ids don't exist in database."); ;
             RuleFor(x => x.LanguageIds)
                 .NotEmpty()
-                .WithMessage("Book Languages must not be empty");
+                .WithMessage("Book Languages must not be empty")
+                .Must(languageIds => languageIds.All(id => _dbKnjizara.Languages.Any(a => a.Id == id)))
+                .WithMessage("One or more Author ids don't exist in database."); ;
             RuleFor(x => x.Price)
                 .NotEmpty()
                 .WithMessage("Book Price must not be empty");

@@ -31,11 +31,11 @@ namespace Implementation.Commands.Languages
 
     public void Execute(LanguageDTO request)
     {
-      var author = _mapper.Map<LanguageDTO>(request);
+      var language = _mapper.Map<Language>(request);
 
       _validator.ValidateAndThrow(request);
 
-      _dbContext.Add(author);
+      _dbContext.Languages.Add(language);
       _dbContext.SaveChanges();
     }
   }
