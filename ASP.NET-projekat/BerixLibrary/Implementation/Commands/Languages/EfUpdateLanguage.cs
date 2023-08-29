@@ -15,12 +15,12 @@ using System.Threading.Tasks;
 
 namespace Implementation.Commands.Languages
 {
-  public class EfUpdateLanguage: IEditLanguage
+  public class EfUpdateLanguage: IEditLanguageCommand
   {
     private readonly IMapper _mapper;
     private readonly DBKnjizaraContext _dbContext;
     private readonly LanguageDTOValidator _validator;
-    public int Id => 47;
+    public int Id => 48;
 
     public string Name => "Update Language";
 

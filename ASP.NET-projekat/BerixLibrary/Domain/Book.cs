@@ -10,6 +10,7 @@ namespace Domain
     {
         public string Title { get; set; }
         public string Description { get; set; }
+        public string ImageSrc { get; set; }
         public DateTime ReleaseDate { get; set; }
         virtual public ICollection<OrderInvoice>? OrderInvoices { get; set; } = new List<OrderInvoice>();
         virtual public ICollection<BookAuthor> Authors { get; set; } = new List<BookAuthor>();

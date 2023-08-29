@@ -13,7 +13,7 @@ namespace Implementation.Commands.Languages
   public class EfDeleteLanguage: IDeleteLanguageCommand
   {
     private readonly DBKnjizaraContext _dbContext;
-    public int Id => 46;
+    public int Id => 47;
     public string Name => "Delete Language";
 
     public EfDeleteLanguage(DBKnjizaraContext dbContext)

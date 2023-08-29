@@ -16,9 +16,12 @@ namespace EFDataAccess.Configurations
             builder.Property(x => x.Title)
                 .IsRequired()
                 .HasMaxLength(50);
+            builder.Property(x => x.ImageSrc)
+                .IsRequired()
+                .HasMaxLength(50);
             builder.Property(x => x.Description)
                 .IsRequired()
-                .HasMaxLength(200); 
+                .HasMaxLength(2000); 
             builder.Property(x => x.ReleaseDate)
                 .IsRequired();
 

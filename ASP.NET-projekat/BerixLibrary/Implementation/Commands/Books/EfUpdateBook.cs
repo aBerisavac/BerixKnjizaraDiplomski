@@ -95,6 +95,24 @@ namespace Implementation.Commands.Books
                 changed = true;
             }
 
+            if(checkForChangesInLanguages(request.LanguageIds, request, book))
+            {
+                var languages = new List<Language>();
+                foreach(int languageId in request.LanguageIds)
+                {
+                    languages.Add(_dbContext.Languages.Find(languageId));
+                }
+
+                var languageBooks = new List<BookLanguage>();
+                foreach(Language language in languages)
+                {
+                  languageBooks.Add(new BookLanguage { Book=book, Language = language});
+                }
+
+                book.Languages = languageBooks;
+                changed = true;
+            }
+
             if(checkForChangeinGenres(request.GenreIds, request, book))
             {
                 var genres = new List<Genre>();
@@ -130,6 +148,23 @@ namespace Implementation.Commands.Books
                 }
 
                 if(newAuthorIds.Any(x=> !currentBookAuthors.Any(a=>a.Id==x))){
+                    return true;
+                }
+            }
+
+            return false;
+        }
+        private bool checkForChangesInLanguages(IEnumerable<int> newLanguageIds, BookUpdateDTO book, Book currentBook)
+        {
+            for(int i = 0; i < newLanguageIds.Count(); i++)
+            {
+                var currentBookLanguages = _mapper.Map<BookDTO>(currentBook).Authors;
+
+                if(currentBookLanguages.Any(x=> !newLanguageIds.Contains(x.Id))){
+                    return true;
+                }
+
+                if(newLanguageIds.Any(x=> !currentBookLanguages.Any(a=>a.Id==x))){
                     return true;
                 }
             }

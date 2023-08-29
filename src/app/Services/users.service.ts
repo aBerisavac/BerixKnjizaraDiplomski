@@ -34,8 +34,6 @@ export class UsersService {
         let errors =  error.error.errors; 
         this.loginErrors.next(errors)
 
-        // after handling error, return a new observable 
-        // that doesn't emit any values and completes
         return of();
     }))
       .subscribe({

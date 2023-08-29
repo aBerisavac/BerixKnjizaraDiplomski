@@ -83,8 +83,13 @@ namespace EFDataAccess.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<string>("ImageSrc")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
@@ -170,7 +175,7 @@ namespace EFDataAccess.Migrations
 
                     b.HasIndex("LanguageId");
 
-                    b.ToTable("BookLanguage");
+                    b.ToTable("BookLanguages");
                 });
 
             modelBuilder.Entity("Domain.BookPrice", b =>
@@ -279,7 +284,7 @@ namespace EFDataAccess.Migrations
 
                     b.HasIndex("Name");
 
-                    b.ToTable("Language");
+                    b.ToTable("Languages");
                 });
 
             modelBuilder.Entity("Domain.Log", b =>

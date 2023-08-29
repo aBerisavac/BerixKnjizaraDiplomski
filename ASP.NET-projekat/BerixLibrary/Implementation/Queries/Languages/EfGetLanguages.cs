@@ -16,7 +16,7 @@ namespace Implementation.Queries.Languages
     private readonly DBKnjizaraContext _dbContext;
     private readonly IMapper _mapper;
 
-    public int Id => 48;
+    public int Id => 49;
 
     public string Name => "Get Languages";
 

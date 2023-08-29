@@ -32,15 +32,8 @@ export class UserModel implements IEntityGet {
         // this.errorMessage = error.message;
         console.error('There was an error!', error);
 
-        // after handling error, return a new observable 
-        // that doesn't emit any values and completes
         return of();
     }))
-      // .subscribe({
-      //   next: (data) => {
-      //     console.log("valja baki")
-      //   }
-      // });
   }
 
 }

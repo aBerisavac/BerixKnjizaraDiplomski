@@ -16,6 +16,7 @@ namespace Application.DTOs.Books
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public string ImageSrc { get; set; }
         public DateTime ReleaseDate { get; set; }
         public ICollection<GenreDTO> Genres { get; set; } = new List<GenreDTO>();
         public ICollection<AuthorDTO> Authors { get; set; } = new List<AuthorDTO>();

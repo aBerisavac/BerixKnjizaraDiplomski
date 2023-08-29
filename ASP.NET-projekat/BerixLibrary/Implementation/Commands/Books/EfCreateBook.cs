@@ -42,6 +42,12 @@ namespace Implementation.Commands.Books
             {
                 bookAuthors.Add(new BookAuthor { Author=author, Book=book });
             }
+            var languages = _dbContext.Languages.Where(x => request.LanguageIds.Any(y => y == x.Id));
+            var bookLlanguages = new List<BookLanguage>();
+            foreach (var language in languages)
+            {
+              bookLlanguages.Add(new BookLanguage { Language=language, Book=book });
+            }
 
             var genres = _dbContext.Genres.Where(x => request.GenreIds.Any(y => y == x.Id));
             var bookGenres = new List<BookGenre>();

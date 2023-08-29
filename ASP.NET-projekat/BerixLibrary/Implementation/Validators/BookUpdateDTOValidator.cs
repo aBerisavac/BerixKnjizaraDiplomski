@@ -1,4 +1,4 @@
-﻿using Application.DTOs.Books;
+using Application.DTOs.Books;
 using EFDataAccess;
 using FluentValidation;
 using System;
@@ -19,16 +19,16 @@ namespace Implementation.Validators
                 .WithMessage("Book Title must not be empty")
                 .MaximumLength(50)
                 .WithMessage("Book Title must not be longer then 50 characters");
+            RuleFor(x => x.ImageSrc)
+                .NotEmpty()
+                .WithMessage("Book ImageSrc must not be empty")
+                .MaximumLength(50)
+                .WithMessage("Book ImageSrc must not be longer then 50 characters");
             RuleFor(x => x.Description)
                 .NotEmpty()
                 .WithMessage("Book Description must not be empty")
-                .MaximumLength(200)
-                .WithMessage("Book Description must not be longer then 200 characters");
-            RuleFor(x => x.Language)
-                .NotEmpty()
-                .WithMessage("Book Language must not be empty")
-                .MaximumLength(200)
-                .WithMessage("Book Language must not be longer then 30 characters");
+                .MaximumLength(2000)
+                .WithMessage("Book Description must not be longer then 2000 characters");
             RuleFor(x => x.ReleaseDate)
                 .NotEmpty()
                 .WithMessage("Book ReleaseDate must not be empty")
@@ -46,6 +46,9 @@ namespace Implementation.Validators
             RuleFor(x => x.GenreIds)
                 .Must(genreIds => genreIds.All(id => _dbKnjizara.Genres.Any(g => g.Id == id)))
                 .WithMessage("One or more Genre ids don't exist in database.");
+            RuleFor(x => x.LanguageIds)
+                .Must(languageIds => languageIds.All(id => _dbKnjizara.Languages.Any(g => g.Id == id)))
+                .WithMessage("One or more Language ids don't exist in database.");
             RuleFor(x => x.Price)
                 .NotEmpty()
                 .WithMessage("Book Price must not be empty");

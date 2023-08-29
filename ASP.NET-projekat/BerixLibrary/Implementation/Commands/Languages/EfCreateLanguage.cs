@@ -18,7 +18,7 @@ namespace Implementation.Commands.Languages
     private readonly IMapper _mapper;
     private readonly DBKnjizaraContext _dbContext;
     private readonly LanguageDTOValidator _validator;
-    public int Id => 45;
+    public int Id => 46;
 
     public string Name => "Create Language";
 
