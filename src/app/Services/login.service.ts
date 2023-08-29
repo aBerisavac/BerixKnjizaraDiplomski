@@ -27,7 +27,7 @@ export class LoginService {
 
   public tryLogin(email: String, password: String) {
     this.http
-      .post<any>('http://localhost:5111/api/token', { email, password })
+      .post<any>('http://localhost:5000/api/token', { email, password })
       .subscribe({
         next: (data) => {
           this.errors = [];

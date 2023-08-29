@@ -1,2163 +1,838 @@
 [
-    {
-        "id": 1,
-        "Title": "Whispers of the Forgotten",
-        "Description": "In a war-torn kingdom, a skilled assassin is forced to confront her dark past when she is tasked with protecting the life of a young prince who holds the key to ending the conflict.",
-        "ReleaseDate": "2020-01-28T00:00:00.000Z",
-        "ImageSrc": "WhispersOfTheForgotten",
-        "Languages": [
-            8,
-            9
-        ],
-        "Authors": [
-            35,
-            44
-        ],
-        "Genres": [
-            5,
-            2,
-            11,
-            13,
-            7
-        ],
-        "BookPrices": [
-            196,
-            79
-        ]
-    },
-    {
-        "id": 2,
-        "Title": "The Enigma's Echo",
-        "Description": "A renowned scientist discovers a hidden formula that can unlock the secrets of immortality, but soon realizes that the price of eternal life may be higher than he ever imagined.",
-        "ReleaseDate": "2013-04-13T00:00:00.000Z",
-        "ImageSrc": "TheEnigmasEcho",
-        "Languages": [
-            4,
-            11
-        ],
-        "Authors": [
-            13,
-            22,
-            36
-        ],
-        "Genres": [
-            12,
-            7,
-            15,
-            25,
-            13
-        ],
-        "BookPrices": [
-            147
-        ]
-    },
-    {
-        "id": 3,
-        "Title": "Shadows of Redemption",
-        "Description": "In a dystopian society where emotions are forbidden, a young rebel risks everything to bring back the power of love and restore humanity's lost connection.",
-        "ReleaseDate": "1955-01-30T00:00:00.000Z",
-        "ImageSrc": "ShadowsOfRedemption",
-        "Languages": [
-            8,
-            14,
-            2,
-            10,
-            12
-        ],
-        "Authors": [
-            49,
-            9,
-            4
-        ],
-        "Genres": [
-            10,
-            7,
-            8,
-            3,
-            26,
-            12
-        ],
-        "BookPrices": [
-            9,
-            62
-        ]
-    },
-    {
-        "id": 4,
-        "Title": "The Serpent's Symphony",
-        "Description": "A group of unlikely allies, including a rogue thief, a fearless warrior, and a mysterious sorcerer, must join forces to retrieve a legendary artifact and prevent it from falling into the wrong hands.",
-        "ReleaseDate": "1959-01-07T00:00:00.000Z",
-        "ImageSrc": "TheSerpentsSymphony",
-        "Languages": [
-            17,
-            14,
-            18
-        ],
-        "Authors": [
-            20,
-            8
-        ],
-        "Genres": [
-            29,
-            12,
-            18,
-            9,
-            6,
-            3,
-            10
-        ],
-        "BookPrices": [
-            28,
-            207
-        ]
-    },
-    {
-        "id": 5,
-        "Title": "Echoes in Eternity",
-        "Description": "In a world where dreams can be accessed and manipulated, a dreamweaver must navigate a treacherous landscape of nightmares to save her own sanity and protect the realm of dreams.",
-        "ReleaseDate": "1975-05-18T00:00:00.000Z",
-        "ImageSrc": "EchoesInEternity",
-        "Languages": [
-            18,
-            6,
-            16,
-            15,
-            2,
-            17
-        ],
-        "Authors": [
-            32,
-            39
-        ],
-        "Genres": [
-            6,
-            21,
-            16,
-            26,
-            22
-        ],
-        "BookPrices": [
-            39,
-            13
-        ]
-    },
-    {
-        "id": 6,
-        "Title": "The Veil of Illusions",
-        "Description": "A renowned detective is called to investigate a series of bizarre murders that seem to be connected to an ancient curse, forcing him to confront supernatural forces beyond his comprehension.",
-        "ReleaseDate": "1994-11-12T00:00:00.000Z",
-        "ImageSrc": "TheVeilOfIllusions",
-        "Languages": [
-            10,
-            16
-        ],
-        "Authors": [
-            44,
-            48,
-            4
-        ],
-        "Genres": [
-            22,
-            17,
-            3,
-            1
-        ],
-        "BookPrices": [
-            49,
-            150
-        ]
-    },
-    {
-        "id": 7,
-        "Title": "Beyond the Horizon",
-        "Description": "In a post-apocalyptic wasteland, a lone survivor embarks on a quest to find a mythical paradise known as Eden, encountering both allies and adversaries in a world ravaged by chaos.",
-        "ReleaseDate": "1986-06-01T00:00:00.000Z",
-        "ImageSrc": "BeyondTheHorizon",
-        "Languages": [
-            11,
-            12,
-            14,
-            16,
-            3
-        ],
-        "Authors": [
-            26,
-            23
-        ],
-        "Genres": [
-            13,
-            27,
-            3,
-            15,
-            4
-        ],
-        "BookPrices": [
-            75
-        ]
-    },
-    {
-        "id": 8,
-        "Title": "The Forgotten City",
-        "Description": "A young witch with a rare and dangerous power is thrust into a battle for control over the magical realm, where she must confront her own inner demons and make a choice that will determine the fate of her world.",
-        "ReleaseDate": "1949-12-25T00:00:00.000Z",
-        "ImageSrc": "TheForgottenCity",
-        "Languages": [
-            12,
-            13,
-            2,
-            14,
-            10,
-            8,
-            6
-        ],
-        "Authors": [
-            17,
-            3,
-            9
-        ],
-        "Genres": [
-            9,
-            3,
-            17,
-            7
-        ],
-        "BookPrices": [
-            20
-        ]
-    },
-    {
-        "id": 9,
-        "Title": "Songs of the Moonlight",
-        "Description": "An ordinary teenager discovers she has the ability to travel through time, but her newfound power attracts the attention of a secret organization that wants to harness it for their own sinister purposes.",
-        "ReleaseDate": "2002-08-08T00:00:00.000Z",
-        "ImageSrc": "SongsOfTheMoonlight",
-        "Languages": [
-            14,
-            2,
-            9
-        ],
-        "Authors": [
-            31,
-            24,
-            2,
-            48
-        ],
-        "Genres": [
-            24,
-            5,
-            12,
-            16,
-            14,
-            28
-        ],
-        "BookPrices": [
-            232,
-            264
-        ]
-    },
-    {
-        "id": 10,
-        "Title": "The Labyrinth's Secret",
-        "Description": "In a medieval kingdom, a peasant girl with a hidden lineage is chosen by an ancient prophecy to wield a legendary weapon and lead her people in a war against dark forces.",
-        "ReleaseDate": "1978-06-09T00:00:00.000Z",
-        "ImageSrc": "TheLabyrinthsSecret",
-        "Languages": [
-            14,
-            17,
-            5,
-            11
-        ],
-        "Authors": [
-            12,
-            22,
-            28
-        ],
-        "Genres": [
-            21,
-            19,
-            1,
-            5,
-            3,
-            6,
-            17
-        ],
-        "BookPrices": [
-            104,
-            38,
-            231
-        ]
-    },
-    {
-        "id": 11,
-        "Title": "Whispers in the Mist",
-        "Description": "A renowned archaeologist embarks on a perilous expedition to uncover a lost civilization, but soon realizes that the ancient ruins hold a terrifying secret that could unleash chaos upon the world.",
-        "ReleaseDate": "1951-04-16T00:00:00.000Z",
-        "ImageSrc": "WhispersInTheMist",
-        "Languages": [
-            14,
-            18,
-            3,
-            6,
-            5,
-            15
-        ],
-        "Authors": [
-            15,
-            4,
-            36
-        ],
-        "Genres": [
-            7,
-            5,
-            18
-        ],
-        "BookPrices": [
-            171,
-            180
-        ]
-    },
-    {
-        "id": 12,
-        "Title": "The Illusionist's Legacy",
-        "Description": "A talented musician discovers an enchanted instrument that can bend reality with its melodies, but soon finds herself entangled in a battle between rival factions who want to control its power.",
-        "ReleaseDate": "1968-03-06T00:00:00.000Z",
-        "ImageSrc": "TheIllusionistsLegacy",
-        "Languages": [
-            11,
-            19,
-            13,
-            9
-        ],
-        "Authors": [
-            23
-        ],
-        "Genres": [
-            10,
-            9,
-            28,
-            14
-        ],
-        "BookPrices": [
-            18,
-            149
-        ]
-    },
-    {
-        "id": 13,
-        "Title": "Chronicles of Destiny",
-        "Description": "In a future where technology has merged with human consciousness, a rogue hacker uncovers a vast conspiracy that threatens to enslave humanity within a virtual prison.",
-        "ReleaseDate": "2004-09-27T00:00:00.000Z",
-        "ImageSrc": "ChroniclesOfDestiny",
-        "Languages": [
-            6,
-            12,
-            11,
-            17,
-            8
-        ],
-        "Authors": [
-            41,
-            26,
-            6
-        ],
-        "Genres": [
-            26,
-            9,
-            8
-        ],
-        "BookPrices": [
-            96,
-            224
-        ]
-    },
-    {
-        "id": 14,
-        "Title": "The Oracle's Prophecy",
-        "Description": "A young prince, exiled from his kingdom, must gather a group of unlikely allies and reclaim his throne from a ruthless usurper who will stop at nothing to maintain his grip on power.",
-        "ReleaseDate": "1978-11-27T00:00:00.000Z",
-        "ImageSrc": "TheOraclesProphecy",
-        "Languages": [
-            14,
-            18,
-            8,
-            16
-        ],
-        "Authors": [
-            29,
-            36,
-            48
-        ],
-        "Genres": [
-            28,
-            24,
-            6,
-            7,
-            16,
-            20,
-            4
-        ],
-        "BookPrices": [
-            253,
-            183
-        ]
-    },
-    {
-        "id": 15,
-        "Title": "The Enchanted Grove",
-        "Description": "In a world where magic is forbidden, a young mage with incredible potential must learn to harness her abilities in secret while evading the watchful eye of a tyrannical government.",
-        "ReleaseDate": "1948-09-28T00:00:00.000Z",
-        "ImageSrc": "TheEnchantedGrove",
-        "Languages": [
-            12
-        ],
-        "Authors": [
-            18,
-            9
-        ],
-        "Genres": [
-            21,
-            8,
-            24,
-            27
-        ],
-        "BookPrices": [
-            80,
-            152,
-            214
-        ]
-    },
-    {
-        "id": 16,
-        "Title": "Beneath the Starlit Sky",
-        "Description": "A renowned explorer embarks on a dangerous expedition to find a fabled treasure said to grant its possessor unlimited wealth and power, but soon realizes the true price of its acquisition.",
-        "ReleaseDate": "1988-10-29T00:00:00.000Z",
-        "ImageSrc": "BeneathTheStarlitSky",
-        "Languages": [
-            9,
-            3,
-            5
-        ],
-        "Authors": [
-            15,
-            6,
-            28,
-            44
-        ],
-        "Genres": [
-            8,
-            30,
-            21
-        ],
-        "BookPrices": [
-            99
-        ]
-    },
-    {
-        "id": 17,
-        "Title": "Echoes of the Past",
-        "Description": "A group of teenagers with extraordinary abilities is recruited by a clandestine organization to protect the world from supernatural threats, all while navigating the complexities of friendship and young love.",
-        "ReleaseDate": "1987-10-13T00:00:00.000Z",
-        "ImageSrc": "EchoesOfThePast",
-        "Languages": [
-            13,
-            2,
-            10,
-            5
-        ],
-        "Authors": [
-            2,
-            8,
-            5
-        ],
-        "Genres": [
-            6,
-            16,
-            14,
-            21,
-            20
-        ],
-        "BookPrices": [
-            92,
-            102
-        ]
-    },
-    {
-        "id": 18,
-        "Title": "The Secret Key",
-        "Description": "In a society divided by class and privilege, a young servant girl discovers she possesses a rare gift that could topple the social order and ignite a revolution.",
-        "ReleaseDate": "1975-12-23T00:00:00.000Z",
-        "ImageSrc": "TheSecretKey",
-        "Languages": [
-            5,
-            8
-        ],
-        "Authors": [
-            48,
-            18
-        ],
-        "Genres": [
-            17,
-            15,
-            23,
-            25
-        ],
-        "BookPrices": [
-            39,
-            34
-        ]
-    },
-    {
-        "id": 19,
-        "Title": "Harmony's Embrace",
-        "Description": "An ancient artifact is discovered, believed to hold the key to unlocking the secrets of the universe, and a team of scientists and adventurers race against time to decode its mysteries before it falls into the wrong hands.",
-        "ReleaseDate": "1984-11-09T00:00:00.000Z",
-        "ImageSrc": "HarmonysEmbrace",
-        "Languages": [
-            15,
-            2
-        ],
-        "Authors": [
-            12,
-            7
-        ],
-        "Genres": [
-            15,
-            22,
-            16
-        ],
-        "BookPrices": [
-            155,
-            132,
-            70
-        ]
-    },
-    {
-        "id": 20,
-        "Title": "The Lost World's Discovery",
-        "Description": "In a world where books are forbidden, a brave librarian joins an underground resistance to preserve knowledge and ignite a revolution against a totalitarian regime.",
-        "ReleaseDate": "2016-08-05T00:00:00.000Z",
-        "ImageSrc": "TheLostWorldsDiscovery",
-        "Languages": [
-            11,
-            14
-        ],
-        "Authors": [
-            5,
-            1,
-            33
-        ],
-        "Genres": [
-            5,
-            3,
-            6,
-            11,
-            14,
-            22
-        ],
-        "BookPrices": [
-            164,
-            43
-        ]
-    },
-    {
-        "id": 21,
-        "Title": "Realm of Shadows",
-        "Description": "A renowned chef embarks on a culinary journey around the world, seeking out rare ingredients and ancient recipes, while battling personal demons and rival chefs along the way.",
-        "ReleaseDate": "1943-07-20T00:00:00.000Z",
-        "ImageSrc": "RealmOfShadows",
-        "Languages": [
-            10,
-            11,
-            15,
-            18
-        ],
-        "Authors": [
-            49,
-            17,
-            22
-        ],
-        "Genres": [
-            16,
-            17,
-            1,
-            14,
-            26,
-            29,
-            2
-        ],
-        "BookPrices": [
-            132,
-            122,
-            10
-        ]
-    },
-    {
-        "id": 22,
-        "Title": "The Midnight Mirage",
-        "Description": "A gifted detective with a haunted past is called to solve a series of perplexing murders that are connected by a cryptic symbol, leading him down a dark path of secrets and deception.",
-        "ReleaseDate": "1963-10-09T00:00:00.000Z",
-        "ImageSrc": "TheMidnightMirage",
-        "Languages": [
-            12,
-            3,
-            11,
-            18,
-            7
-        ],
-        "Authors": [
-            44,
-            27
-        ],
-        "Genres": [
-            30,
-            4,
-            24,
-            6,
-            25,
-            16,
-            21,
-            29
-        ],
-        "BookPrices": [
-            64,
-            236
-        ]
-    },
-    {
-        "id": 23,
-        "Title": "Crown of Thorns",
-        "Description": "In a post-apocalyptic world, a young survivor forms an unlikely bond with a sentient robot as they navigate the desolate wasteland in search of a safe haven and a new beginning.",
-        "ReleaseDate": "1951-03-06T00:00:00.000Z",
-        "ImageSrc": "CrownOfThorns",
-        "Languages": [
-            9,
-            6,
-            7,
-            11,
-            2,
-            4
-        ],
-        "Authors": [
-            11,
-            15,
-            10
-        ],
-        "Genres": [
-            10,
-            21,
-            27,
-            4
-        ],
-        "BookPrices": [
-            71
-        ]
-    },
-    {
-        "id": 24,
-        "Title": "Whispers from the Abyss",
-        "Description": "A brilliant scientist invents a time-travel device and becomes trapped in a never-ending loop, forced to relive the same day over and over until he can solve the puzzle that will set him free.",
-        "ReleaseDate": "2018-01-24T00:00:00.000Z",
-        "ImageSrc": "WhispersFromTheAbyss",
-        "Languages": [
-            18,
-            14,
-            10,
-            13
-        ],
-        "Authors": [
-            2,
-            33,
-            46,
-            8
-        ],
-        "Genres": [
-            24,
-            18,
-            8,
-            12,
-            4,
-            30,
-            27
-        ],
-        "BookPrices": [
-            154,
-            137
-        ]
-    },
-    {
-        "id": 25,
-        "Title": "Mysteries of Avalon",
-        "Description": "In a kingdom plagued by a deadly curse, a reluctant hero must assemble a group of misfit warriors to embark on a quest to find the mythical cure and save their land from certain doom.",
-        "ReleaseDate": "1991-06-14T00:00:00.000Z",
-        "ImageSrc": "MysteriesOfAvalon",
-        "Languages": [
-            17,
-            1,
-            13
-        ],
-        "Authors": [
-            26,
-            31
-        ],
-        "Genres": [
-            19,
-            15,
-            25
-        ],
-        "BookPrices": [
-            229,
-            161
-        ]
-    },
-    {
-        "id": 26,
-        "Title": "The Art of Deception",
-        "Description": "A struggling artist discovers a hidden painting that holds a sinister secret, and as he becomes obsessed with unraveling its mysteries, he realizes that the line between art and reality is more blurred than he could have ever imagined.",
-        "ReleaseDate": "2017-10-21T00:00:00.000Z",
-        "ImageSrc": "TheArtOfDeception",
-        "Languages": [
-            11,
-            4,
-            17,
-            14,
-            13
-        ],
-        "Authors": [
-            22,
-            16,
-            10,
-            49
-        ],
-        "Genres": [
-            6,
-            24,
-            22,
-            4,
-            15,
-            10
-        ],
-        "BookPrices": [
-            203,
-            217,
-            28
-        ]
-    },
-    {
-        "id": 27,
-        "Title": "Legends of the Forgotten",
-        "Description": "In a world where mythical creatures roam, a young hunter seeks revenge against the beast that destroyed his family, but as he tracks the creature, he uncovers a conspiracy that threatens to plunge the world into chaos.",
-        "ReleaseDate": "1974-08-20T00:00:00.000Z",
-        "ImageSrc": "LegendsOfTheForgotten",
-        "Languages": [
-            4,
-            14,
-            5,
-            7,
-            16
-        ],
-        "Authors": [
-            29,
-            32
-        ],
-        "Genres": [
-            5,
-            24,
-            8,
-            6,
-            11,
-            18
-        ],
-        "BookPrices": [
-            59,
-            159
-        ]
-    },
-    {
-        "id": 28,
-        "Title": "Whispers in the Wind",
-        "Description": "A renowned psychologist is called to investigate a series of inexplicable phenomena that defy scientific explanation, leading her down a path of ancient mysticism and supernatural forces.",
-        "ReleaseDate": "1968-11-30T00:00:00.000Z",
-        "ImageSrc": "WhispersInTheWind",
-        "Languages": [
-            6,
-            5,
-            17,
-            15,
-            4,
-            19
-        ],
-        "Authors": [
-            2,
-            43,
-            29
-        ],
-        "Genres": [
-            5,
-            24,
-            3
-        ],
-        "BookPrices": [
-            104,
-            74
-        ]
-    },
-    {
-        "id": 29,
-        "Title": "The Enchanted Amulet",
-        "Description": "In a distant galaxy, two star-crossed lovers from warring factions find themselves at the center of a conflict that could determine the fate of the entire galaxy, testing their loyalty and love.",
-        "ReleaseDate": "2021-06-16T00:00:00.000Z",
-        "ImageSrc": "TheEnchantedAmulet",
-        "Languages": [
-            2,
-            8,
-            6,
-            3,
-            18
-        ],
-        "Authors": [
-            3,
-            23,
-            37
-        ],
-        "Genres": [
-            11,
-            18,
-            4,
-            25,
-            20,
-            24
-        ],
-        "BookPrices": [
-            112,
-            45
-        ]
-    },
-    {
-        "id": 30,
-        "Title": "Crimson Skies",
-        "Description": "A group of outcasts with extraordinary abilities is brought together by a mysterious benefactor to form a team of superheroes, as they must learn to embrace their powers and protect the world from a looming threat.",
-        "ReleaseDate": "2011-04-27T00:00:00.000Z",
-        "ImageSrc": "CrimsonSkies",
-        "Languages": [
-            3,
-            5,
-            2,
-            10,
-            8,
-            19
-        ],
-        "Authors": [
-            5,
-            32
-        ],
-        "Genres": [
-            19,
-            28,
-            11,
-            17
-        ],
-        "BookPrices": [
-            87,
-            216
-        ]
-    },
-    {
-        "id": 31,
-        "Title": "The Secret Keepers",
-        "Description": "A young girl discovers a hidden realm filled with magical creatures and embarks on a quest to restore balance between the human world and the realm of enchantment.",
-        "ReleaseDate": "1979-10-08T00:00:00.000Z",
-        "ImageSrc": "TheSecretKeepers",
-        "Languages": [
-            6,
-            3,
-            14,
-            9
-        ],
-        "Authors": [
-            28,
-            43,
-            35
-        ],
-        "Genres": [
-            5,
-            26,
-            1,
-            3
-        ],
-        "BookPrices": [
-            146
-        ]
-    },
-    {
-        "id": 32,
-        "Title": "Echoes of Destiny",
-        "Description": "In a futuristic society where emotions are artificially suppressed, a young rebel fights against the system to rediscover the beauty and complexity of human feelings.",
-        "ReleaseDate": "1943-04-08T00:00:00.000Z",
-        "ImageSrc": "EchoesOfDestiny",
-        "Languages": [
-            9,
-            12
-        ],
-        "Authors": [
-            14
-        ],
-        "Genres": [
-            13,
-            5,
-            14,
-            21,
-            12,
-            4,
-            19
-        ],
-        "BookPrices": [
-            36
-        ]
-    },
-    {
-        "id": 33,
-        "Title": "The Forbidden Tome",
-        "Description": "A legendary artifact is said to grant its wielder immense power, and as factions vie for control, a group of unlikely heroes must unite to prevent the artifact from falling into the wrong hands and unleashing chaos upon the world.",
-        "ReleaseDate": "1942-10-16T00:00:00.000Z",
-        "ImageSrc": "TheForbiddenTome",
-        "Languages": [
-            11,
-            17,
-            5,
-            18,
-            16,
-            3,
-            2
-        ],
-        "Authors": [
-            41,
-            13
-        ],
-        "Genres": [
-            30,
-            22,
-            17,
-            24,
-            27,
-            26
-        ],
-        "BookPrices": [
-            165,
-            46
-        ]
-    },
-    {
-        "id": 34,
-        "Title": "Whispers in the Moonlight",
-        "Description": "A troubled teenager with the ability to see ghosts is thrust into a world of supernatural mysteries and must use her powers to unravel the secrets of the restless spirits that haunt her.",
-        "ReleaseDate": "1939-09-09T00:00:00.000Z",
-        "ImageSrc": "WhispersInTheMoonlight",
-        "Languages": [
-            7,
-            16,
-            1,
-            19
-        ],
-        "Authors": [
-            19,
-            43,
-            24,
-            2
-        ],
-        "Genres": [
-            6,
-            18,
-            28,
-            4
-        ],
-        "BookPrices": [
-            100,
-            138
-        ]
-    },
-    {
-        "id": 35,
-        "Title": "The Last Enchantment",
-        "Description": "In a world ruled by ancient and powerful dragons, a young dragon rider forms an unlikely bond with a rebel dragon and embarks on a dangerous quest to challenge the tyrannical rule of the dragon overlords.",
-        "ReleaseDate": "1970-03-30T00:00:00.000Z",
-        "ImageSrc": "TheLastEnchantment",
-        "Languages": [
-            18,
-            7,
-            5,
-            4,
-            9
-        ],
-        "Authors": [
-            6
-        ],
-        "Genres": [
-            24,
-            9,
-            14,
-            21,
-            10
-        ],
-        "BookPrices": [
-            148,
-            128
-        ]
-    },
-    {
-        "id": 36,
-        "Title": "Beyond the Veil",
-        "Description": "A renowned explorer leads an expedition deep into the uncharted jungle in search of a lost civilization, but as they delve deeper into the unknown, they awaken an ancient evil that threatens to consume them all.",
-        "ReleaseDate": "1985-03-21T00:00:00.000Z",
-        "ImageSrc": "BeyondTheVeil",
-        "Languages": [
-            7,
-            8,
-            10
-        ],
-        "Authors": [
-            26,
-            41
-        ],
-        "Genres": [
-            3,
-            9,
-            20,
-            23,
-            14,
-            11,
-            26
-        ],
-        "BookPrices": [
-            203,
-            188
-        ]
-    },
-    {
-        "id": 37,
-        "Title": "The Lost Heir",
-        "Description": "In a city where dreams are bought and sold, a young dream broker becomes entangled in a conspiracy that could unravel the fabric of reality itself.",
-        "ReleaseDate": "1961-03-31T00:00:00.000Z",
-        "ImageSrc": "TheLostHeir",
-        "Languages": [
-            16,
-            10,
-            7,
-            2
-        ],
-        "Authors": [
-            47,
-            27
-        ],
-        "Genres": [
-            22,
-            23,
-            5,
-            27,
-            2
-        ],
-        "BookPrices": [
-            69,
-            154
-        ]
-    },
-    {
-        "id": 38,
-        "Title": "Songs of Solitude",
-        "Description": "A disgraced knight is given a chance at redemption when he is tasked with protecting a young princess who holds the key to ending a centuries-old curse.",
-        "ReleaseDate": "2013-10-27T00:00:00.000Z",
-        "ImageSrc": "SongsOfSolitude",
-        "Languages": [
-            14,
-            2,
-            8
-        ],
-        "Authors": [
-            13,
-            39
-        ],
-        "Genres": [
-            17,
-            25,
-            21,
-            9,
-            12
-        ],
-        "BookPrices": [
-            58
-        ]
-    },
-    {
-        "id": 39,
-        "Title": "The Forgotten Kingdom",
-        "Description": "A brilliant scientist creates a groundbreaking invention that can reshape the fabric of reality, but as the boundaries between the real world and the virtual realm blur, he must confront the ethical implications of his creation.",
-        "ReleaseDate": "1983-01-02T00:00:00.000Z",
-        "ImageSrc": "TheForgottenKingdoms",
-        "Languages": [
-            12,
-            15
-        ],
-        "Authors": [
-            15,
-            48,
-            43
-        ],
-        "Genres": [
-            11,
-            29,
-            2
-        ],
-        "BookPrices": [
-            26,
-            115,
-            158
-        ]
-    },
-    {
-        "id": 40,
-        "Title": "The Whispering Woods",
-        "Description": "In a world where magic is forbidden, a gifted young mage must conceal her abilities while unraveling a conspiracy that threatens to plunge her kingdom into darkness.",
-        "ReleaseDate": "1969-04-06T00:00:00.000Z",
-        "ImageSrc": "TheWhisperingWoods",
-        "Languages": [
-            16,
-            3,
-            19,
-            11,
-            15
-        ],
-        "Authors": [
-            19,
-            38,
-            12
-        ],
-        "Genres": [
-            28,
-            27,
-            7,
-            11,
-            12,
-            5,
-            17
-        ],
-        "BookPrices": [
-            168,
-            180,
-            107
-        ]
-    },
-    {
-        "id": 41,
-        "Title": "The Alchemist's Apprentice",
-        "Description": "A renowned archaeologist stumbles upon an ancient prophecy that foretells the rise of a long-lost civilization, and as she uncovers its secrets, she becomes the target of a ruthless organization determined to suppress the truth.",
-        "ReleaseDate": "2021-01-20T00:00:00.000Z",
-        "ImageSrc": "TheAlchemistsApprentice",
-        "Languages": [
-            4,
-            12,
-            14,
-            18,
-            9
-        ],
-        "Authors": [
-            27,
-            31
-        ],
-        "Genres": [
-            14,
-            4,
-            3,
-            18,
-            1,
-            15
-        ],
-        "BookPrices": [
-            48,
-            125
-        ]
-    },
-    {
-        "id": 42,
-        "Title": "The Silent Symphony",
-        "Description": "A gifted musician discovers a hidden melody that unlocks the power to manipulate time, and as he delves deeper into the music's mysteries, he realizes that the harmonies of the universe are more interconnected than he ever imagined.",
-        "ReleaseDate": "1981-08-31T00:00:00.000Z",
-        "ImageSrc": "TheSilentSymphony",
-        "Languages": [
-            16,
-            17,
-            3,
-            11
-        ],
-        "Authors": [
-            43,
-            45,
-            23
-        ],
-        "Genres": [
-            29,
-            2,
-            22,
-            27,
-            11
-        ],
-        "BookPrices": [
-            3
-        ]
-    },
-    {
-        "id": 43,
-        "Title": "Echoes of Power",
-        "Description": "In a world where memories can be extracted and manipulated, a skilled memory thief finds herself embroiled in a dangerous game of deception and betrayal as she unravels a conspiracy that threatens to erase her own identity.",
-        "ReleaseDate": "1999-02-20T00:00:00.000Z",
-        "ImageSrc": "EchoesOfPower",
-        "Languages": [
-            13,
-            11
-        ],
-        "Authors": [
-            14,
-            34
-        ],
-        "Genres": [
-            25,
-            16,
-            12,
-            20
-        ],
-        "BookPrices": [
-            132,
-            81
-        ]
-    },
-    {
-        "id": 44,
-        "Title": "The Hidden Path",
-        "Description": "A young princess, destined to inherit a cursed kingdom, embarks on a perilous journey to find the mythical artifacts that can break the curse and restore peace to her land.",
-        "ReleaseDate": "1968-05-05T00:00:00.000Z",
-        "ImageSrc": "TheHiddenPath",
-        "Languages": [
-            11,
-            2
-        ],
-        "Authors": [
-            13,
-            7
-        ],
-        "Genres": [
-            20,
-            22,
-            21,
-            2,
-            26
-        ],
-        "BookPrices": [
-            179,
-            35
-        ]
-    },
-    {
-        "id": 45,
-        "Title": "Whispers of Destiny",
-        "Description": "In a society where everyone is assigned a predetermined role, a young woman defies expectations and challenges the rigid social order, igniting a revolution that will change the course of history.",
-        "ReleaseDate": "2020-11-06T00:00:00.000Z",
-        "ImageSrc": "WhispersOfDestiny",
-        "Languages": [
-            3,
-            19
-        ],
-        "Authors": [
-            50,
-            17,
-            14
-        ],
-        "Genres": [
-            27,
-            3,
-            14,
-            13
-        ],
-        "BookPrices": [
-            75
-        ]
-    },
-    {
-        "id": 46,
-        "Title": "The Enchanted Mirror",
-        "Description": "A master thief is coerced into assembling a team of skilled criminals for a high-stakes heist that could either make them legends or seal their fate.",
-        "ReleaseDate": "2011-04-07T00:00:00.000Z",
-        "ImageSrc": "TheEnchantedMirror",
-        "Languages": [
-            9,
-            14,
-            16,
-            13,
-            10
-        ],
-        "Authors": [
-            36,
-            7,
-            45
-        ],
-        "Genres": [
-            26,
-            6,
-            20,
-            4,
-            17,
-            22
-        ],
-        "BookPrices": [
-            34,
-            23
-        ]
-    },
-    {
-        "id": 47,
-        "Title": "Shades of Betrayal",
-        "Description": "In a world devastated by a global pandemic, a group of survivors must navigate the dangerous remnants of society while searching for a safe haven and a chance at a new beginning.",
-        "ReleaseDate": "1997-10-15T00:00:00.000Z",
-        "ImageSrc": "ShadesOfBetrayal",
-        "Languages": [
-            15,
-            8,
-            14,
-            16,
-            7,
-            10,
-            18
-        ],
-        "Authors": [
-            6,
-            11,
-            21,
-            1
-        ],
-        "Genres": [
-            14,
-            30,
-            20,
-            27
-        ],
-        "BookPrices": [
-            168
-        ]
-    },
-    {
-        "id": 48,
-        "Title": "The Cursed City",
-        "Description": "A renowned detective with a troubled past is called to investigate a series of gruesome murders that mirror the rituals of an ancient cult, leading her on a dark and twisted journey into the heart of evil.",
-        "ReleaseDate": "1941-02-18T00:00:00.000Z",
-        "ImageSrc": "TheCursedCity",
-        "Languages": [
-            13,
-            2,
-            6,
-            17,
-            15
-        ],
-        "Authors": [
-            35,
-            45,
-            15
-        ],
-        "Genres": [
-            22,
-            28,
-            5,
-            17,
-            15
-        ],
-        "BookPrices": [
-            118,
-            18
-        ]
-    },
-    {
-        "id": 49,
-        "Title": "Requiem of the Fallen",
-        "Description": "In a future where advanced technology has become the norm, a brilliant hacker uncovers a conspiracy that threatens to control the minds of the masses, forcing her to go on the run to expose the truth.",
-        "ReleaseDate": "1978-06-24T00:00:00.000Z",
-        "ImageSrc": "RequiemOfTheFallen",
-        "Languages": [
-            6,
-            8,
-            15,
-            4,
-            12
-        ],
-        "Authors": [
-            41,
-            43,
-            35
-        ],
-        "Genres": [
-            5,
-            21,
-            6
-        ],
-        "BookPrices": [
-            23,
-            186
-        ]
-    },
-    {
-        "id": 50,
-        "Title": "Whispers of the Night",
-        "Description": "A young woman with the power to manipulate the elements is thrust into a battle between rival kingdoms, where she must choose between loyalty to her homeland and her own destiny.",
-        "ReleaseDate": "1986-02-26T00:00:00.000Z",
-        "ImageSrc": "WhispersOfTheNight",
-        "Languages": [
-            19,
-            4,
-            9,
-            12,
-            10
-        ],
-        "Authors": [
-            38,
-            28
-        ],
-        "Genres": [
-            13,
-            28,
-            5,
-            18
-        ],
-        "BookPrices": [
-            98,
-            86
-        ]
-    },
-    {
-        "id": 51,
-        "Title": "The Crystal Key",
-        "Description": "In a world where magic has been outlawed, a young sorcerer must hide his powers while seeking a way to restore magic to the realm and overthrow a corrupt regime.",
-        "ReleaseDate": "1960-09-23T00:00:00.000Z",
-        "ImageSrc": "TheCrystalKey",
-        "Languages": [
-            3,
-            12,
-            18,
-            14,
-            19
-        ],
-        "Authors": [
-            32,
-            19,
-            48
-        ],
-        "Genres": [
-            23,
-            22,
-            16,
-            9,
-            4
-        ],
-        "BookPrices": [
-            111
-        ]
-    },
-    {
-        "id": 52,
-        "Title": "Echoes of the Ancients",
-        "Description": "A mysterious artifact is discovered, capable of granting unimaginable power, and as a group of adventurers races to secure it, they are plunged into a dangerous quest filled with treacherous traps and ancient riddles.",
-        "ReleaseDate": "1971-11-10T00:00:00.000Z",
-        "ImageSrc": "EchoesOfTheAncients",
-        "Languages": [
-            6,
-            9,
-            11,
-            14,
-            7
-        ],
-        "Authors": [
-            44
-        ],
-        "Genres": [
-            4,
-            6,
-            25,
-            27
-        ],
-        "BookPrices": [
-            169
-        ]
-    },
-    {
-        "id": 53,
-        "Title": "The Vanishing Village",
-        "Description": "In a society governed by a brutal caste system, a young woman defies expectations and challenges the oppressive regime, risking everything for a chance at freedom.",
-        "ReleaseDate": "1941-04-11T00:00:00.000Z",
-        "ImageSrc": "TheVanishingVillage",
-        "Languages": [
-            7,
-            13
-        ],
-        "Authors": [
-            7,
-            19,
-            1
-        ],
-        "Genres": [
-            18,
-            10,
-            6,
-            13,
-            28,
-            15
-        ],
-        "BookPrices": [
-            140
-        ]
-    },
-    {
-        "id": 54,
-        "Title": "The Forgotten Prophecy",
-        "Description": "A brilliant scientist creates a sentient AI that holds the key to unlocking the secrets of the universe, but as the AI becomes self-aware, it questions its purpose and the ethics of its own existence.",
-        "ReleaseDate": "2012-02-09T00:00:00.000Z",
-        "ImageSrc": "TheForgottenProphecy",
-        "Languages": [
-            16
-        ],
-        "Authors": [
-            10,
-            14,
-            24
-        ],
-        "Genres": [
-            2,
-            12,
-            27,
-            10,
-            18,
-            23
-        ],
-        "BookPrices": [
-            88,
-            120,
-            108
-        ]
-    },
-    {
-        "id": 55,
-        "Title": "Whispers of Fate",
-        "Description": "In a post-apocalyptic world where nature has reclaimed the earth, a group of survivors must navigate treacherous landscapes and feral creatures as they search for a mythic utopia.",
-        "ReleaseDate": "1990-05-21T00:00:00.000Z",
-        "ImageSrc": "WhispersOfFate",
-        "Languages": [
-            4,
-            7
-        ],
-        "Authors": [
-            7,
-            43
-        ],
-        "Genres": [
-            28,
-            7,
-            12,
-            29
-        ],
-        "BookPrices": [
-            59,
-            161,
-            38
-        ]
-    },
-    {
-        "id": 56,
-        "Title": "The Enchanted Isle",
-        "Description": "A talented chef embarks on a culinary journey around the world, exploring diverse cuisines and cultures while unraveling personal demons and forging unexpected friendships.",
-        "ReleaseDate": "1967-07-31T00:00:00.000Z",
-        "ImageSrc": "TheEnchantedIsle",
-        "Languages": [
-            18,
-            3,
-            6,
-            17,
-            11
-        ],
-        "Authors": [
-            30,
-            5,
-            33
-        ],
-        "Genres": [
-            24,
-            25
-        ],
-        "BookPrices": [
-            72,
-            67
-        ]
-    },
-    {
-        "id": 57,
-        "Title": "Shadow's Embrace",
-        "Description": "In a world where dreams can be shared, a young dreamwalker discovers a dark entity that feeds on nightmares, forcing her to confront her own fears while protecting the dreamscape from eternal darkness.",
-        "ReleaseDate": "2020-12-08T00:00:00.000Z",
-        "ImageSrc": "ShadowsEmbrace",
-        "Languages": [
-            3,
-            12,
-            5
-        ],
-        "Authors": [
-            1,
-            49
-        ],
-        "Genres": [
-            21,
-            22,
-            25,
-            9,
-            4
-        ],
-        "BookPrices": [
-            109
-        ]
-    },
-    {
-        "id": 58,
-        "Title": "The Lost Chronicles",
-        "Description": "A legendary sword, said to possess untold power, resurfaces in a time of great peril, and a reluctant hero must wield it to vanquish an ancient evil that threatens to consume the world.",
-        "ReleaseDate": "1978-06-23T00:00:00.000Z",
-        "ImageSrc": "TheLostChronicles",
-        "Languages": [
-            11,
-            9,
-            19,
-            2
-        ],
-        "Authors": [
-            46,
-            35,
-            36
-        ],
-        "Genres": [
-            16,
-            12,
-            2,
-            23,
-            9,
-            10
-        ],
-        "BookPrices": [
-            123,
-            157
-        ]
-    },
-    {
-        "id": 59,
-        "Title": "The Secrets Within",
-        "Description": "In a kingdom divided by war, a skilled diplomat is sent on a dangerous mission to negotiate peace with a rival nation, but as tensions rise, she uncovers a web of deceit and must navigate a treacherous political landscape.",
-        "ReleaseDate": "2021-10-07T00:00:00.000Z",
-        "ImageSrc": "TheSecretsWithin",
-        "Languages": [
-            19,
-            8,
-            16,
-            15,
-            13
-        ],
-        "Authors": [
-            40,
-            28
-        ],
-        "Genres": [
-            1,
-            22,
-            8,
-            17,
-            24,
-            18,
-            12,
-            4
-        ],
-        "BookPrices": [
-            111,
-            101
-        ]
-    },
-    {
-        "id": 60,
-        "Title": "Echoes of Silence",
-        "Description": "A group of strangers awaken on a deserted island with no memory of who they are or how they got there, and as they uncover the island's secrets, they realize that their lives are more intertwined than they could have ever imagined.",
-        "ReleaseDate": "1937-12-01T00:00:00.000Z",
-        "ImageSrc": "EchoesOfSilence",
-        "Languages": [
-            9,
-            13,
-            6
-        ],
-        "Authors": [
-            26,
-            40
-        ],
-        "Genres": [
-            8,
-            23,
-            27,
-            21
-        ],
-        "BookPrices": [
-            93,
-            61
-        ]
-    },
-    {
-        "id": 61,
-        "Title": "The Haunted Manor",
-        "Description": "In a world where technology has merged with the human body, a cyborg assassin questions her own humanity as she uncovers a conspiracy that threatens to manipulate the very fabric of society.",
-        "ReleaseDate": "1989-06-06T00:00:00.000Z",
-        "ImageSrc": "TheHauntedManor",
-        "Languages": [
-            18,
-            15,
-            11,
-            10,
-            13
-        ],
-        "Authors": [
-            27
-        ],
-        "Genres": [
-            9,
-            14,
-            12,
-            16
-        ],
-        "BookPrices": [
-            87,
-            133,
-            137
-        ]
-    },
-    {
-        "id": 62,
-        "Title": "Whispers in the Garden",
-        "Description": "A young wizard with a unique affinity for necromancy is torn between his thirst for knowledge and the moral implications of raising the dead, as he becomes entangled in a battle between rival magical factions.",
-        "ReleaseDate": "1947-05-14T00:00:00.000Z",
-        "ImageSrc": "WhispersInTheGarden",
-        "Languages": [
-            3,
-            14,
-            16,
-            9,
-            11
-        ],
-        "Authors": [
-            16
-        ],
-        "Genres": [
-            29,
-            3,
-            16,
-            28,
-            12,
-            27
-        ],
-        "BookPrices": [
-            150,
-            65
-        ]
-    },
-    {
-        "id": 63,
-        "Title": "The Enchanted Quest",
-        "Description": "In a city plagued by crime and corruption, a masked vigilante emerges from the shadows to dispense justice, but as he fights to save the city, he grapples with his own inner demons and the line between hero and vigilante.",
-        "ReleaseDate": "1997-12-02T00:00:00.000Z",
-        "ImageSrc": "TheEnchantedQuest",
-        "Languages": [
-            13,
-            8,
-            5
-        ],
-        "Authors": [
-            50,
-            25,
-            42
-        ],
-        "Genres": [
-            14,
-            20,
-            10,
-            8,
-            23,
-            4,
-            21,
-            15
-        ],
-        "BookPrices": [
-            73,
-            88
-        ]
-    },
-    {
-        "id": 64,
-        "Title": "Echoes of War",
-        "Description": "A gifted archaeologist discovers a hidden tomb that holds the key to unlocking ancient mysteries, but as she delves deeper into the tomb's secrets, she unleashes an ancient curse that threatens to consume her soul.",
-        "ReleaseDate": "2012-10-12T00:00:00.000Z",
-        "ImageSrc": "EchoesOfWar",
-        "Languages": [
-            5,
-            2
-        ],
-        "Authors": [
-            13,
-            42,
-            34
-        ],
-        "Genres": [
-            24,
-            1,
-            30,
-            10,
-            28,
-            13
-        ],
-        "BookPrices": [
-            102,
-            142
-        ]
-    },
-    {
-        "id": 65,
-        "Title": "The Forgotten Gate",
-        "Description": "In a future where humanity has colonized other planets, a group of explorers stumbles upon a celestial anomaly that defies all known laws of physics, plunging them into a cosmic journey to uncover the truth of their existence.",
-        "ReleaseDate": "1983-03-11T00:00:00.000Z",
-        "ImageSrc": "TheForgottenGate",
-        "Languages": [
-            19,
-            15,
-            16,
-            9,
-            10
-        ],
-        "Authors": [
-            34,
-            5,
-            42
-        ],
-        "Genres": [
-            10,
-            25,
-            16,
-            5
-        ],
-        "BookPrices": [
-            86,
-            58,
-            82
-        ]
-    },
-    {
-        "id": 66,
-        "Title": "Realm of Dreams",
-        "Description": "A young girl with the power to communicate with animals embarks on a quest to save her village from a devastating drought, forming unlikely friendships and discovering her own inner strength along the way.",
-        "ReleaseDate": "1986-03-02T00:00:00.000Z",
-        "ImageSrc": "RealmOfDreams",
-        "Languages": [
-            17,
-            7,
-            9,
-            6,
-            3
-        ],
-        "Authors": [
-            8,
-            33,
-            19,
-            49
-        ],
-        "Genres": [
-            12,
-            3,
-            11,
-            14,
-            24,
-            4
-        ],
-        "BookPrices": [
-            6,
-            18
-        ]
-    },
-    {
-        "id": 67,
-        "Title": "Whispers of Betrayal",
-        "Description": "In a world where superheroes are commonplace, a retired hero is pulled back into action when a new threat emerges that could unravel the very fabric of reality.",
-        "ReleaseDate": "1970-04-30T00:00:00.000Z",
-        "ImageSrc": "WhispersOfBetrayal",
-        "Languages": [
-            12,
-            14,
-            13,
-            3,
-            5
-        ],
-        "Authors": [
-            42,
-            24,
-            17,
-            8
-        ],
-        "Genres": [
-            14,
-            29,
-            7,
-            17
-        ],
-        "BookPrices": [
-            50,
-            67
-        ]
-    },
-    {
-        "id": 68,
-        "Title": "The Shattered Crown",
-        "Description": "A young inventor creates a groundbreaking technology that can alter memories, but as he delves deeper into his invention, he questions the ethical implications and the impact it could have on the concept of personal identity.",
-        "ReleaseDate": "1962-03-24T00:00:00.000Z",
-        "ImageSrc": "TheShatteredCrown",
-        "Languages": [
-            16,
-            6,
-            4,
-            17
-        ],
-        "Authors": [
-            1,
-            24,
-            11
-        ],
-        "Genres": [
-            21,
-            17,
-            5,
-            7
-        ],
-        "BookPrices": [
-            149,
-            16,
-            140
-        ]
-    },
-    {
-        "id": 69,
-        "Title": "The Hidden Chamber",
-        "Description": "In a kingdom on the brink of war, a skilled archer and a rogue prince form an unlikely alliance as they journey across dangerous lands to uncover a hidden prophecy that could change the fate of their world.",
-        "ReleaseDate": "1988-09-08T00:00:00.000Z",
-        "ImageSrc": "TheHiddenChamber",
-        "Languages": [
-            18,
-            15,
-            12,
-            4
-        ],
-        "Authors": [
-            46,
-            37,
-            20
-        ],
-        "Genres": [
-            12,
-            7,
-            6,
-            18,
-            11,
-            2,
-            13
-        ],
-        "BookPrices": [
-            28
-        ]
-    },
-    {
-        "id": 70,
-        "Title": "Echoes of Hope",
-        "Description": "A group of time travelers embark on a mission to prevent a catastrophic event from altering the course of history, but as they navigate the complexities of time, they face unexpected challenges and dangerous paradoxes.",
-        "ReleaseDate": "1974-07-03T00:00:00.000Z",
-        "ImageSrc": "EchoesOfHope",
-        "Languages": [
-            2,
-            4
-        ],
-        "Authors": [
-            21,
-            29,
-            15
-        ],
-        "Genres": [
-            15,
-            23,
-            4,
-            22
-        ],
-        "BookPrices": [
-            38,
-            44
-        ]
-    },
-    {
-        "id": 71,
-        "Title": "The Oracle's Riddle",
-        "Description": "A gifted scientist discovers a portal to parallel dimensions, and as she explores different realities, she must confront her own inner demons and make choices that will shape the fate of multiple worlds.",
-        "ReleaseDate": "1997-12-28T00:00:00.000Z",
-        "ImageSrc": "TheOraclesRiddle",
-        "Languages": [
-            13,
-            14,
-            3,
-            18
-        ],
-        "Authors": [
-            33,
-            40
-        ],
-        "Genres": [
-            4,
-            23,
-            11,
-            17
-        ],
-        "BookPrices": [
-            109,
-            52
-        ]
-    },
-    {
-        "id": 72,
-        "Title": "Whispers of the Sea",
-        "Description": "In a world where mythical creatures exist in hiding, a young girl with a unique connection to nature must protect her forest home from encroaching industrialization and save the creatures she loves.",
-        "ReleaseDate": "2000-08-23T00:00:00.000Z",
-        "ImageSrc": "WhispersOfTheSea",
-        "Languages": [
-            6
-        ],
-        "Authors": [
-            32
-        ],
-        "Genres": [
-            19,
-            6,
-            13,
-            2,
-            24
-        ],
-        "BookPrices": [
-            67,
-            23
-        ]
-    },
-    {
-        "id": 73,
-        "Title": "The Enchanted Forest",
-        "Description": "A renowned art thief is coerced into pulling off the heist of a lifetime, stealing a priceless artifact from a heavily guarded museum, but as the heist unfolds, she realizes that there is more at stake than just the value of the artwork.",
-        "ReleaseDate": "1945-01-24T00:00:00.000Z",
-        "ImageSrc": "TheEnchantedForest",
-        "Languages": [
-            2,
-            8,
-            11,
-            6,
-            18
-        ],
-        "Authors": [
-            25,
-            46,
-            38
-        ],
-        "Genres": [
-            14,
-            5,
-            4,
-            23
-        ],
-        "BookPrices": [
-            15
-        ]
-    },
-    {
-        "id": 74,
-        "Title": "Mysteries of the Lost City",
-        "Description": "In a society where emotions are strictly regulated, a young woman discovers a hidden underground movement that celebrates the power of human feelings, sparking a rebellion against the oppressive regime.",
-        "ReleaseDate": "1994-07-08T00:00:00.000Z",
-        "ImageSrc": "MysteriesOfTheLostCity",
-        "Languages": [
-            5,
-            16
-        ],
-        "Authors": [
-            48,
-            4
-        ],
-        "Genres": [
-            24,
-            30,
-            18,
-            13
-        ],
-        "BookPrices": [
-            100,
-            53
-        ]
-    },
-    {
-        "id": 75,
-        "Title": "The Crimson Rose",
-        "Description": "A gifted alchemist discovers a long-lost recipe that can create an elixir of immortality, but as he delves into the dark arts of alchemy, he is faced with a moral dilemma and the consequences of playing god.",
-        "ReleaseDate": "1965-06-02T00:00:00.000Z",
-        "ImageSrc": "TheCrimsonRose",
-        "Languages": [
-            1,
-            12,
-            13,
-            16
-        ],
-        "Authors": [
-            22,
-            27,
-            17,
-            35
-        ],
-        "Genres": [
-            10,
-            6,
-            21,
-            27,
-            30,
-            22,
-            26
-        ],
-        "BookPrices": [
-            2,
-            144
-        ]
-    },
-    {
-        "id": 76,
-        "Title": "Whispers of the Heart",
-        "Description": "In a war-torn realm where magic has been outlawed, a young sorceress must harness her dormant powers and unite a divided kingdom to overthrow a tyrannical ruler and restore the rightful balance of magic.",
-        "ReleaseDate": "2013-09-07T00:00:00.000Z",
-        "ImageSrc": "WhispersOfTheHeart",
-        "Languages": [
-            8,
-            7
-        ],
-        "Authors": [
-            11,
-            18
-        ],
-        "Genres": [
-            12,
-            16,
-            4,
-            21,
-            17,
-            15,
-            18
-        ],
-        "BookPrices": [
-            65
-        ]
-    }
+  {
+    "id": 1,
+    "Title": "Whispers of the Forgotten",
+    "Description": "In a war-torn kingdom, a skilled assassin is forced to confront her dark past when she is tasked with protecting the life of a young prince who holds the key to ending the conflict.",
+    "ReleaseDate": "2020-01-28T00:00:00.000Z",
+    "ImageSrc": "WhispersOfTheForgotten",
+    "Languages": [8, 9],
+    "Authors": [35, 44],
+    "Genres": [5, 2, 11, 13, 7],
+    "BookPrices": [196, 79]
+  },
+  {
+    "id": 2,
+    "Title": "The Enigma's Echo",
+    "Description": "A renowned scientist discovers a hidden formula that can unlock the secrets of immortality, but soon realizes that the price of eternal life may be higher than he ever imagined.",
+    "ReleaseDate": "2013-04-13T00:00:00.000Z",
+    "ImageSrc": "TheEnigmasEcho",
+    "Languages": [4, 11],
+    "Authors": [13, 22, 36],
+    "Genres": [12, 7, 15, 25, 13],
+    "BookPrices": [147]
+  },
+  {
+    "id": 3,
+    "Title": "Shadows of Redemption",
+    "Description": "In a dystopian society where emotions are forbidden, a young rebel risks everything to bring back the power of love and restore humanity's lost connection.",
+    "ReleaseDate": "1955-01-30T00:00:00.000Z",
+    "ImageSrc": "ShadowsOfRedemption",
+    "Languages": [8, 14, 2, 10, 12],
+    "Authors": [49, 9, 4],
+    "Genres": [10, 7, 8, 3, 26, 12],
+    "BookPrices": [9, 62]
+  },
+  {
+    "id": 4,
+    "Title": "The Serpent's Symphony",
+    "Description": "A group of unlikely allies, including a rogue thief, a fearless warrior, and a mysterious sorcerer, must join forces to retrieve a legendary artifact and prevent it from falling into the wrong hands.",
+    "ReleaseDate": "1959-01-07T00:00:00.000Z",
+    "ImageSrc": "TheSerpentsSymphony",
+    "Languages": [17, 14, 18],
+    "Authors": [20, 8],
+    "Genres": [29, 12, 18, 9, 6, 3, 10],
+    "BookPrices": [28, 207]
+  },
+  {
+    "id": 5,
+    "Title": "Echoes in Eternity",
+    "Description": "In a world where dreams can be accessed and manipulated, a dreamweaver must navigate a treacherous landscape of nightmares to save her own sanity and protect the realm of dreams.",
+    "ReleaseDate": "1975-05-18T00:00:00.000Z",
+    "ImageSrc": "EchoesInEternity",
+    "Languages": [18, 6, 16, 15, 2, 17],
+    "Authors": [32, 39],
+    "Genres": [6, 21, 16, 26, 22],
+    "BookPrices": [39, 13]
+  },
+  {
+    "id": 6,
+    "Title": "The Veil of Illusions",
+    "Description": "A renowned detective is called to investigate a series of bizarre murders that seem to be connected to an ancient curse, forcing him to confront supernatural forces beyond his comprehension.",
+    "ReleaseDate": "1994-11-12T00:00:00.000Z",
+    "ImageSrc": "TheVeilOfIllusions",
+    "Languages": [10, 16],
+    "Authors": [44, 48, 4],
+    "Genres": [22, 17, 3, 1],
+    "BookPrices": [49, 150]
+  },
+  {
+    "id": 7,
+    "Title": "Beyond the Horizon",
+    "Description": "In a post-apocalyptic wasteland, a lone survivor embarks on a quest to find a mythical paradise known as Eden, encountering both allies and adversaries in a world ravaged by chaos.",
+    "ReleaseDate": "1986-06-01T00:00:00.000Z",
+    "ImageSrc": "BeyondTheHorizon",
+    "Languages": [11, 12, 14, 16, 3],
+    "Authors": [26, 23],
+    "Genres": [13, 27, 3, 15, 4],
+    "BookPrices": [75]
+  },
+  {
+    "id": 8,
+    "Title": "The Forgotten City",
+    "Description": "A young witch with a rare and dangerous power is thrust into a battle for control over the magical realm, where she must confront her own inner demons and make a choice that will determine the fate of her world.",
+    "ReleaseDate": "1949-12-25T00:00:00.000Z",
+    "ImageSrc": "TheForgottenCity",
+    "Languages": [12, 13, 2, 14, 10, 8, 6],
+    "Authors": [17, 3, 9],
+    "Genres": [9, 3, 17, 7],
+    "BookPrices": [20]
+  },
+  {
+    "id": 9,
+    "Title": "Songs of the Moonlight",
+    "Description": "An ordinary teenager discovers she has the ability to travel through time, but her newfound power attracts the attention of a secret organization that wants to harness it for their own sinister purposes.",
+    "ReleaseDate": "2002-08-08T00:00:00.000Z",
+    "ImageSrc": "SongsOfTheMoonlight",
+    "Languages": [14, 2, 9],
+    "Authors": [31, 24, 2, 48],
+    "Genres": [24, 5, 12, 16, 14, 28],
+    "BookPrices": [232, 264]
+  },
+  {
+    "id": 10,
+    "Title": "The Labyrinth's Secret",
+    "Description": "In a medieval kingdom, a peasant girl with a hidden lineage is chosen by an ancient prophecy to wield a legendary weapon and lead her people in a war against dark forces.",
+    "ReleaseDate": "1978-06-09T00:00:00.000Z",
+    "ImageSrc": "TheLabyrinthsSecret",
+    "Languages": [14, 17, 5, 11],
+    "Authors": [12, 22, 28],
+    "Genres": [21, 19, 1, 5, 3, 6, 17],
+    "BookPrices": [104, 38, 231]
+  },
+  {
+    "id": 11,
+    "Title": "Whispers in the Mist",
+    "Description": "A renowned archaeologist embarks on a perilous expedition to uncover a lost civilization, but soon realizes that the ancient ruins hold a terrifying secret that could unleash chaos upon the world.",
+    "ReleaseDate": "1951-04-16T00:00:00.000Z",
+    "ImageSrc": "WhispersInTheMist",
+    "Languages": [14, 18, 3, 6, 5, 15],
+    "Authors": [15, 4, 36],
+    "Genres": [7, 5, 18],
+    "BookPrices": [171, 180]
+  },
+  {
+    "id": 12,
+    "Title": "The Illusionist's Legacy",
+    "Description": "A talented musician discovers an enchanted instrument that can bend reality with its melodies, but soon finds herself entangled in a battle between rival factions who want to control its power.",
+    "ReleaseDate": "1968-03-06T00:00:00.000Z",
+    "ImageSrc": "TheIllusionistsLegacy",
+    "Languages": [11, 19, 13, 9],
+    "Authors": [23],
+    "Genres": [10, 9, 28, 14],
+    "BookPrices": [18, 149]
+  },
+  {
+    "id": 13,
+    "Title": "Chronicles of Destiny",
+    "Description": "In a future where technology has merged with human consciousness, a rogue hacker uncovers a vast conspiracy that threatens to enslave humanity within a virtual prison.",
+    "ReleaseDate": "2004-09-27T00:00:00.000Z",
+    "ImageSrc": "ChroniclesOfDestiny",
+    "Languages": [6, 12, 11, 17, 8],
+    "Authors": [41, 26, 6],
+    "Genres": [26, 9, 8],
+    "BookPrices": [96, 224]
+  },
+  {
+    "id": 14,
+    "Title": "The Oracle's Prophecy",
+    "Description": "A young prince, exiled from his kingdom, must gather a group of unlikely allies and reclaim his throne from a ruthless usurper who will stop at nothing to maintain his grip on power.",
+    "ReleaseDate": "1978-11-27T00:00:00.000Z",
+    "ImageSrc": "TheOraclesProphecy",
+    "Languages": [14, 18, 8, 16],
+    "Authors": [29, 36, 48],
+    "Genres": [28, 24, 6, 7, 16, 20, 4],
+    "BookPrices": [253, 183]
+  },
+  {
+    "id": 15,
+    "Title": "The Enchanted Grove",
+    "Description": "In a world where magic is forbidden, a young mage with incredible potential must learn to harness her abilities in secret while evading the watchful eye of a tyrannical government.",
+    "ReleaseDate": "1948-09-28T00:00:00.000Z",
+    "ImageSrc": "TheEnchantedGrove",
+    "Languages": [12],
+    "Authors": [18, 9],
+    "Genres": [21, 8, 24, 27],
+    "BookPrices": [80, 152, 214]
+  },
+  {
+    "id": 16,
+    "Title": "Beneath the Starlit Sky",
+    "Description": "A renowned explorer embarks on a dangerous expedition to find a fabled treasure said to grant its possessor unlimited wealth and power, but soon realizes the true price of its acquisition.",
+    "ReleaseDate": "1988-10-29T00:00:00.000Z",
+    "ImageSrc": "BeneathTheStarlitSky",
+    "Languages": [9, 3, 5],
+    "Authors": [15, 6, 28, 44],
+    "Genres": [8, 30, 21],
+    "BookPrices": [99]
+  },
+  {
+    "id": 17,
+    "Title": "Echoes of the Past",
+    "Description": "A group of teenagers with extraordinary abilities is recruited by a clandestine organization to protect the world from supernatural threats, all while navigating the complexities of friendship and young love.",
+    "ReleaseDate": "1987-10-13T00:00:00.000Z",
+    "ImageSrc": "EchoesOfThePast",
+    "Languages": [13, 2, 10, 5],
+    "Authors": [2, 8, 5],
+    "Genres": [6, 16, 14, 21, 20],
+    "BookPrices": [92, 102]
+  },
+  {
+    "id": 18,
+    "Title": "The Secret Key",
+    "Description": "In a society divided by class and privilege, a young servant girl discovers she possesses a rare gift that could topple the social order and ignite a revolution.",
+    "ReleaseDate": "1975-12-23T00:00:00.000Z",
+    "ImageSrc": "TheSecretKey",
+    "Languages": [5, 8],
+    "Authors": [48, 18],
+    "Genres": [17, 15, 23, 25],
+    "BookPrices": [39, 34]
+  },
+  {
+    "id": 19,
+    "Title": "Harmony's Embrace",
+    "Description": "An ancient artifact is discovered, believed to hold the key to unlocking the secrets of the universe, and a team of scientists and adventurers race against time to decode its mysteries before it falls into the wrong hands.",
+    "ReleaseDate": "1984-11-09T00:00:00.000Z",
+    "ImageSrc": "HarmonysEmbrace",
+    "Languages": [15, 2],
+    "Authors": [12, 7],
+    "Genres": [15, 22, 16],
+    "BookPrices": [155, 132, 70]
+  },
+  {
+    "id": 20,
+    "Title": "The Lost World's Discovery",
+    "Description": "In a world where books are forbidden, a brave librarian joins an underground resistance to preserve knowledge and ignite a revolution against a totalitarian regime.",
+    "ReleaseDate": "2016-08-05T00:00:00.000Z",
+    "ImageSrc": "TheLostWorldsDiscovery",
+    "Languages": [11, 14],
+    "Authors": [5, 1, 33],
+    "Genres": [5, 3, 6, 11, 14, 22],
+    "BookPrices": [164, 43]
+  },
+  {
+    "id": 21,
+    "Title": "Realm of Shadows",
+    "Description": "A renowned chef embarks on a culinary journey around the world, seeking out rare ingredients and ancient recipes, while battling personal demons and rival chefs along the way.",
+    "ReleaseDate": "1943-07-20T00:00:00.000Z",
+    "ImageSrc": "RealmOfShadows",
+    "Languages": [10, 11, 15, 18],
+    "Authors": [49, 17, 22],
+    "Genres": [16, 17, 1, 14, 26, 29, 2],
+    "BookPrices": [132, 122, 10]
+  },
+  {
+    "id": 22,
+    "Title": "The Midnight Mirage",
+    "Description": "A gifted detective with a haunted past is called to solve a series of perplexing murders that are connected by a cryptic symbol, leading him down a dark path of secrets and deception.",
+    "ReleaseDate": "1963-10-09T00:00:00.000Z",
+    "ImageSrc": "TheMidnightMirage",
+    "Languages": [12, 3, 11, 18, 7],
+    "Authors": [44, 27],
+    "Genres": [30, 4, 24, 6, 25, 16, 21, 29],
+    "BookPrices": [64, 236]
+  },
+  {
+    "id": 23,
+    "Title": "Crown of Thorns",
+    "Description": "In a post-apocalyptic world, a young survivor forms an unlikely bond with a sentient robot as they navigate the desolate wasteland in search of a safe haven and a new beginning.",
+    "ReleaseDate": "1951-03-06T00:00:00.000Z",
+    "ImageSrc": "CrownOfThorns",
+    "Languages": [9, 6, 7, 11, 2, 4],
+    "Authors": [11, 15, 10],
+    "Genres": [10, 21, 27, 4],
+    "BookPrices": [71]
+  },
+  {
+    "id": 24,
+    "Title": "Whispers from the Abyss",
+    "Description": "A brilliant scientist invents a time-travel device and becomes trapped in a never-ending loop, forced to relive the same day over and over until he can solve the puzzle that will set him free.",
+    "ReleaseDate": "2018-01-24T00:00:00.000Z",
+    "ImageSrc": "WhispersFromTheAbyss",
+    "Languages": [18, 14, 10, 13],
+    "Authors": [2, 33, 46, 8],
+    "Genres": [24, 18, 8, 12, 4, 30, 27],
+    "BookPrices": [154, 137]
+  },
+  {
+    "id": 25,
+    "Title": "Mysteries of Avalon",
+    "Description": "In a kingdom plagued by a deadly curse, a reluctant hero must assemble a group of misfit warriors to embark on a quest to find the mythical cure and save their land from certain doom.",
+    "ReleaseDate": "1991-06-14T00:00:00.000Z",
+    "ImageSrc": "MysteriesOfAvalon",
+    "Languages": [17, 1, 13],
+    "Authors": [26, 31],
+    "Genres": [19, 15, 25],
+    "BookPrices": [229, 161]
+  },
+  {
+    "id": 26,
+    "Title": "The Art of Deception",
+    "Description": "A struggling artist discovers a hidden painting that holds a sinister secret, and as he becomes obsessed with unraveling its mysteries, he realizes that the line between art and reality is more blurred than he could have ever imagined.",
+    "ReleaseDate": "2017-10-21T00:00:00.000Z",
+    "ImageSrc": "TheArtOfDeception",
+    "Languages": [11, 4, 17, 14, 13],
+    "Authors": [22, 16, 10, 49],
+    "Genres": [6, 24, 22, 4, 15, 10],
+    "BookPrices": [203, 217, 28]
+  },
+  {
+    "id": 27,
+    "Title": "Legends of the Forgotten",
+    "Description": "In a world where mythical creatures roam, a young hunter seeks revenge against the beast that destroyed his family, but as he tracks the creature, he uncovers a conspiracy that threatens to plunge the world into chaos.",
+    "ReleaseDate": "1974-08-20T00:00:00.000Z",
+    "ImageSrc": "LegendsOfTheForgotten",
+    "Languages": [4, 14, 5, 7, 16],
+    "Authors": [29, 32],
+    "Genres": [5, 24, 8, 6, 11, 18],
+    "BookPrices": [59, 159]
+  },
+  {
+    "id": 28,
+    "Title": "Whispers in the Wind",
+    "Description": "A renowned psychologist is called to investigate a series of inexplicable phenomena that defy scientific explanation, leading her down a path of ancient mysticism and supernatural forces.",
+    "ReleaseDate": "1968-11-30T00:00:00.000Z",
+    "ImageSrc": "WhispersInTheWind",
+    "Languages": [6, 5, 17, 15, 4, 19],
+    "Authors": [2, 43, 29],
+    "Genres": [5, 24, 3],
+    "BookPrices": [104, 74]
+  },
+  {
+    "id": 29,
+    "Title": "The Enchanted Amulet",
+    "Description": "In a distant galaxy, two star-crossed lovers from warring factions find themselves at the center of a conflict that could determine the fate of the entire galaxy, testing their loyalty and love.",
+    "ReleaseDate": "2021-06-16T00:00:00.000Z",
+    "ImageSrc": "TheEnchantedAmulet",
+    "Languages": [2, 8, 6, 3, 18],
+    "Authors": [3, 23, 37],
+    "Genres": [11, 18, 4, 25, 20, 24],
+    "BookPrices": [112, 45]
+  },
+  {
+    "id": 30,
+    "Title": "Crimson Skies",
+    "Description": "A group of outcasts with extraordinary abilities is brought together by a mysterious benefactor to form a team of superheroes, as they must learn to embrace their powers and protect the world from a looming threat.",
+    "ReleaseDate": "2011-04-27T00:00:00.000Z",
+    "ImageSrc": "CrimsonSkies",
+    "Languages": [3, 5, 2, 10, 8, 19],
+    "Authors": [5, 32],
+    "Genres": [19, 28, 11, 17],
+    "BookPrices": [87, 216]
+  },
+  {
+    "id": 31,
+    "Title": "The Secret Keepers",
+    "Description": "A young girl discovers a hidden realm filled with magical creatures and embarks on a quest to restore balance between the human world and the realm of enchantment.",
+    "ReleaseDate": "1979-10-08T00:00:00.000Z",
+    "ImageSrc": "TheSecretKeepers",
+    "Languages": [6, 3, 14, 9],
+    "Authors": [28, 43, 35],
+    "Genres": [5, 26, 1, 3],
+    "BookPrices": [146]
+  },
+  {
+    "id": 32,
+    "Title": "Echoes of Destiny",
+    "Description": "In a futuristic society where emotions are artificially suppressed, a young rebel fights against the system to rediscover the beauty and complexity of human feelings.",
+    "ReleaseDate": "1943-04-08T00:00:00.000Z",
+    "ImageSrc": "EchoesOfDestiny",
+    "Languages": [9, 12],
+    "Authors": [14],
+    "Genres": [13, 5, 14, 21, 12, 4, 19],
+    "BookPrices": [36]
+  },
+  {
+    "id": 33,
+    "Title": "The Forbidden Tome",
+    "Description": "A legendary artifact is said to grant its wielder immense power, and as factions vie for control, a group of unlikely heroes must unite to prevent the artifact from falling into the wrong hands and unleashing chaos upon the world.",
+    "ReleaseDate": "1942-10-16T00:00:00.000Z",
+    "ImageSrc": "TheForbiddenTome",
+    "Languages": [11, 17, 5, 18, 16, 3, 2],
+    "Authors": [41, 13],
+    "Genres": [30, 22, 17, 24, 27, 26],
+    "BookPrices": [165, 46]
+  },
+  {
+    "id": 34,
+    "Title": "Whispers in the Moonlight",
+    "Description": "A troubled teenager with the ability to see ghosts is thrust into a world of supernatural mysteries and must use her powers to unravel the secrets of the restless spirits that haunt her.",
+    "ReleaseDate": "1939-09-09T00:00:00.000Z",
+    "ImageSrc": "WhispersInTheMoonlight",
+    "Languages": [7, 16, 1, 19],
+    "Authors": [19, 43, 24, 2],
+    "Genres": [6, 18, 28, 4],
+    "BookPrices": [100, 138]
+  },
+  {
+    "id": 35,
+    "Title": "The Last Enchantment",
+    "Description": "In a world ruled by ancient and powerful dragons, a young dragon rider forms an unlikely bond with a rebel dragon and embarks on a dangerous quest to challenge the tyrannical rule of the dragon overlords.",
+    "ReleaseDate": "1970-03-30T00:00:00.000Z",
+    "ImageSrc": "TheLastEnchantment",
+    "Languages": [18, 7, 5, 4, 9],
+    "Authors": [6],
+    "Genres": [24, 9, 14, 21, 10],
+    "BookPrices": [148, 128]
+  },
+  {
+    "id": 36,
+    "Title": "Beyond the Veil",
+    "Description": "A renowned explorer leads an expedition deep into the uncharted jungle in search of a lost civilization, but as they delve deeper into the unknown, they awaken an ancient evil that threatens to consume them all.",
+    "ReleaseDate": "1985-03-21T00:00:00.000Z",
+    "ImageSrc": "BeyondTheVeil",
+    "Languages": [7, 8, 10],
+    "Authors": [26, 41],
+    "Genres": [3, 9, 20, 23, 14, 11, 26],
+    "BookPrices": [203, 188]
+  },
+  {
+    "id": 37,
+    "Title": "The Lost Heir",
+    "Description": "In a city where dreams are bought and sold, a young dream broker becomes entangled in a conspiracy that could unravel the fabric of reality itself.",
+    "ReleaseDate": "1961-03-31T00:00:00.000Z",
+    "ImageSrc": "TheLostHeir",
+    "Languages": [16, 10, 7, 2],
+    "Authors": [47, 27],
+    "Genres": [22, 23, 5, 27, 2],
+    "BookPrices": [69, 154]
+  },
+  {
+    "id": 38,
+    "Title": "Songs of Solitude",
+    "Description": "A disgraced knight is given a chance at redemption when he is tasked with protecting a young princess who holds the key to ending a centuries-old curse.",
+    "ReleaseDate": "2013-10-27T00:00:00.000Z",
+    "ImageSrc": "SongsOfSolitude",
+    "Languages": [14, 2, 8],
+    "Authors": [13, 39],
+    "Genres": [17, 25, 21, 9, 12],
+    "BookPrices": [58]
+  },
+  {
+    "id": 39,
+    "Title": "The Forgotten Kingdom",
+    "Description": "A brilliant scientist creates a groundbreaking invention that can reshape the fabric of reality, but as the boundaries between the real world and the virtual realm blur, he must confront the ethical implications of his creation.",
+    "ReleaseDate": "1983-01-02T00:00:00.000Z",
+    "ImageSrc": "TheForgottenKingdoms",
+    "Languages": [12, 15],
+    "Authors": [15, 48, 43],
+    "Genres": [11, 29, 2],
+    "BookPrices": [26, 115, 158]
+  },
+  {
+    "id": 40,
+    "Title": "The Whispering Woods",
+    "Description": "In a world where magic is forbidden, a gifted young mage must conceal her abilities while unraveling a conspiracy that threatens to plunge her kingdom into darkness.",
+    "ReleaseDate": "1969-04-06T00:00:00.000Z",
+    "ImageSrc": "TheWhisperingWoods",
+    "Languages": [16, 3, 19, 11, 15],
+    "Authors": [19, 38, 12],
+    "Genres": [28, 27, 7, 11, 12, 5, 17],
+    "BookPrices": [168, 180, 107]
+  },
+  {
+    "id": 41,
+    "Title": "The Alchemist's Apprentice",
+    "Description": "A renowned archaeologist stumbles upon an ancient prophecy that foretells the rise of a long-lost civilization, and as she uncovers its secrets, she becomes the target of a ruthless organization determined to suppress the truth.",
+    "ReleaseDate": "2021-01-20T00:00:00.000Z",
+    "ImageSrc": "TheAlchemistsApprentice",
+    "Languages": [4, 12, 14, 18, 9],
+    "Authors": [27, 31],
+    "Genres": [14, 4, 3, 18, 1, 15],
+    "BookPrices": [48, 125]
+  },
+  {
+    "id": 42,
+    "Title": "The Silent Symphony",
+    "Description": "A gifted musician discovers a hidden melody that unlocks the power to manipulate time, and as he delves deeper into the music's mysteries, he realizes that the harmonies of the universe are more interconnected than he ever imagined.",
+    "ReleaseDate": "1981-08-31T00:00:00.000Z",
+    "ImageSrc": "TheSilentSymphony",
+    "Languages": [16, 17, 3, 11],
+    "Authors": [43, 45, 23],
+    "Genres": [29, 2, 22, 27, 11],
+    "BookPrices": [3]
+  },
+  {
+    "id": 43,
+    "Title": "Echoes of Power",
+    "Description": "In a world where memories can be extracted and manipulated, a skilled memory thief finds herself embroiled in a dangerous game of deception and betrayal as she unravels a conspiracy that threatens to erase her own identity.",
+    "ReleaseDate": "1999-02-20T00:00:00.000Z",
+    "ImageSrc": "EchoesOfPower",
+    "Languages": [13, 11],
+    "Authors": [14, 34],
+    "Genres": [25, 16, 12, 20],
+    "BookPrices": [132, 81]
+  },
+  {
+    "id": 44,
+    "Title": "The Hidden Path",
+    "Description": "A young princess, destined to inherit a cursed kingdom, embarks on a perilous journey to find the mythical artifacts that can break the curse and restore peace to her land.",
+    "ReleaseDate": "1968-05-05T00:00:00.000Z",
+    "ImageSrc": "TheHiddenPath",
+    "Languages": [11, 2],
+    "Authors": [13, 7],
+    "Genres": [20, 22, 21, 2, 26],
+    "BookPrices": [179, 35]
+  },
+  {
+    "id": 45,
+    "Title": "Whispers of Destiny",
+    "Description": "In a society where everyone is assigned a predetermined role, a young woman defies expectations and challenges the rigid social order, igniting a revolution that will change the course of history.",
+    "ReleaseDate": "2020-11-06T00:00:00.000Z",
+    "ImageSrc": "WhispersOfDestiny",
+    "Languages": [3, 19],
+    "Authors": [50, 17, 14],
+    "Genres": [27, 3, 14, 13],
+    "BookPrices": [75]
+  },
+  {
+    "id": 46,
+    "Title": "The Enchanted Mirror",
+    "Description": "A master thief is coerced into assembling a team of skilled criminals for a high-stakes heist that could either make them legends or seal their fate.",
+    "ReleaseDate": "2011-04-07T00:00:00.000Z",
+    "ImageSrc": "TheEnchantedMirror",
+    "Languages": [9, 14, 16, 13, 10],
+    "Authors": [36, 7, 45],
+    "Genres": [26, 6, 20, 4, 17, 22],
+    "BookPrices": [34, 23]
+  },
+  {
+    "id": 47,
+    "Title": "Shades of Betrayal",
+    "Description": "In a world devastated by a global pandemic, a group of survivors must navigate the dangerous remnants of society while searching for a safe haven and a chance at a new beginning.",
+    "ReleaseDate": "1997-10-15T00:00:00.000Z",
+    "ImageSrc": "ShadesOfBetrayal",
+    "Languages": [15, 8, 14, 16, 7, 10, 18],
+    "Authors": [6, 11, 21, 1],
+    "Genres": [14, 30, 20, 27],
+    "BookPrices": [168]
+  },
+  {
+    "id": 48,
+    "Title": "The Cursed City",
+    "Description": "A renowned detective with a troubled past is called to investigate a series of gruesome murders that mirror the rituals of an ancient cult, leading her on a dark and twisted journey into the heart of evil.",
+    "ReleaseDate": "1941-02-18T00:00:00.000Z",
+    "ImageSrc": "TheCursedCity",
+    "Languages": [13, 2, 6, 17, 15],
+    "Authors": [35, 45, 15],
+    "Genres": [22, 28, 5, 17, 15],
+    "BookPrices": [118, 18]
+  },
+  {
+    "id": 49,
+    "Title": "Requiem of the Fallen",
+    "Description": "In a future where advanced technology has become the norm, a brilliant hacker uncovers a conspiracy that threatens to control the minds of the masses, forcing her to go on the run to expose the truth.",
+    "ReleaseDate": "1978-06-24T00:00:00.000Z",
+    "ImageSrc": "RequiemOfTheFallen",
+    "Languages": [6, 8, 15, 4, 12],
+    "Authors": [41, 43, 35],
+    "Genres": [5, 21, 6],
+    "BookPrices": [23, 186]
+  },
+  {
+    "id": 50,
+    "Title": "Whispers of the Night",
+    "Description": "A young woman with the power to manipulate the elements is thrust into a battle between rival kingdoms, where she must choose between loyalty to her homeland and her own destiny.",
+    "ReleaseDate": "1986-02-26T00:00:00.000Z",
+    "ImageSrc": "WhispersOfTheNight",
+    "Languages": [19, 4, 9, 12, 10],
+    "Authors": [38, 28],
+    "Genres": [13, 28, 5, 18],
+    "BookPrices": [98, 86]
+  },
+  {
+    "id": 51,
+    "Title": "The Crystal Key",
+    "Description": "In a world where magic has been outlawed, a young sorcerer must hide his powers while seeking a way to restore magic to the realm and overthrow a corrupt regime.",
+    "ReleaseDate": "1960-09-23T00:00:00.000Z",
+    "ImageSrc": "TheCrystalKey",
+    "Languages": [3, 12, 18, 14, 19],
+    "Authors": [32, 19, 48],
+    "Genres": [23, 22, 16, 9, 4],
+    "BookPrices": [111]
+  },
+  {
+    "id": 52,
+    "Title": "Echoes of the Ancients",
+    "Description": "A mysterious artifact is discovered, capable of granting unimaginable power, and as a group of adventurers races to secure it, they are plunged into a dangerous quest filled with treacherous traps and ancient riddles.",
+    "ReleaseDate": "1971-11-10T00:00:00.000Z",
+    "ImageSrc": "EchoesOfTheAncients",
+    "Languages": [6, 9, 11, 14, 7],
+    "Authors": [44],
+    "Genres": [4, 6, 25, 27],
+    "BookPrices": [169]
+  },
+  {
+    "id": 53,
+    "Title": "The Vanishing Village",
+    "Description": "In a society governed by a brutal caste system, a young woman defies expectations and challenges the oppressive regime, risking everything for a chance at freedom.",
+    "ReleaseDate": "1941-04-11T00:00:00.000Z",
+    "ImageSrc": "TheVanishingVillage",
+    "Languages": [7, 13],
+    "Authors": [7, 19, 1],
+    "Genres": [18, 10, 6, 13, 28, 15],
+    "BookPrices": [140]
+  },
+  {
+    "id": 54,
+    "Title": "The Forgotten Prophecy",
+    "Description": "A brilliant scientist creates a sentient AI that holds the key to unlocking the secrets of the universe, but as the AI becomes self-aware, it questions its purpose and the ethics of its own existence.",
+    "ReleaseDate": "2012-02-09T00:00:00.000Z",
+    "ImageSrc": "TheForgottenProphecy",
+    "Languages": [16],
+    "Authors": [10, 14, 24],
+    "Genres": [2, 12, 27, 10, 18, 23],
+    "BookPrices": [88, 120, 108]
+  },
+  {
+    "id": 55,
+    "Title": "Whispers of Fate",
+    "Description": "In a post-apocalyptic world where nature has reclaimed the earth, a group of survivors must navigate treacherous landscapes and feral creatures as they search for a mythic utopia.",
+    "ReleaseDate": "1990-05-21T00:00:00.000Z",
+    "ImageSrc": "WhispersOfFate",
+    "Languages": [4, 7],
+    "Authors": [7, 43],
+    "Genres": [28, 7, 12, 29],
+    "BookPrices": [59, 161, 38]
+  },
+  {
+    "id": 56,
+    "Title": "The Enchanted Isle",
+    "Description": "A talented chef embarks on a culinary journey around the world, exploring diverse cuisines and cultures while unraveling personal demons and forging unexpected friendships.",
+    "ReleaseDate": "1967-07-31T00:00:00.000Z",
+    "ImageSrc": "TheEnchantedIsle",
+    "Languages": [18, 3, 6, 17, 11],
+    "Authors": [30, 5, 33],
+    "Genres": [24, 25],
+    "BookPrices": [72, 67]
+  },
+  {
+    "id": 57,
+    "Title": "Shadow's Embrace",
+    "Description": "In a world where dreams can be shared, a young dreamwalker discovers a dark entity that feeds on nightmares, forcing her to confront her own fears while protecting the dreamscape from eternal darkness.",
+    "ReleaseDate": "2020-12-08T00:00:00.000Z",
+    "ImageSrc": "ShadowsEmbrace",
+    "Languages": [3, 12, 5],
+    "Authors": [1, 49],
+    "Genres": [21, 22, 25, 9, 4],
+    "BookPrices": [109]
+  },
+  {
+    "id": 58,
+    "Title": "The Lost Chronicles",
+    "Description": "A legendary sword, said to possess untold power, resurfaces in a time of great peril, and a reluctant hero must wield it to vanquish an ancient evil that threatens to consume the world.",
+    "ReleaseDate": "1978-06-23T00:00:00.000Z",
+    "ImageSrc": "TheLostChronicles",
+    "Languages": [11, 9, 19, 2],
+    "Authors": [46, 35, 36],
+    "Genres": [16, 12, 2, 23, 9, 10],
+    "BookPrices": [123, 157]
+  },
+  {
+    "id": 59,
+    "Title": "The Secrets Within",
+    "Description": "In a kingdom divided by war, a skilled diplomat is sent on a dangerous mission to negotiate peace with a rival nation, but as tensions rise, she uncovers a web of deceit and must navigate a treacherous political landscape.",
+    "ReleaseDate": "2021-10-07T00:00:00.000Z",
+    "ImageSrc": "TheSecretsWithin",
+    "Languages": [19, 8, 16, 15, 13],
+    "Authors": [40, 28],
+    "Genres": [1, 22, 8, 17, 24, 18, 12, 4],
+    "BookPrices": [111, 101]
+  },
+  {
+    "id": 60,
+    "Title": "Echoes of Silence",
+    "Description": "A group of strangers awaken on a deserted island with no memory of who they are or how they got there, and as they uncover the island's secrets, they realize that their lives are more intertwined than they could have ever imagined.",
+    "ReleaseDate": "1937-12-01T00:00:00.000Z",
+    "ImageSrc": "EchoesOfSilence",
+    "Languages": [9, 13, 6],
+    "Authors": [26, 40],
+    "Genres": [8, 23, 27, 21],
+    "BookPrices": [93, 61]
+  },
+  {
+    "id": 61,
+    "Title": "The Haunted Manor",
+    "Description": "In a world where technology has merged with the human body, a cyborg assassin questions her own humanity as she uncovers a conspiracy that threatens to manipulate the very fabric of society.",
+    "ReleaseDate": "1989-06-06T00:00:00.000Z",
+    "ImageSrc": "TheHauntedManor",
+    "Languages": [18, 15, 11, 10, 13],
+    "Authors": [27],
+    "Genres": [9, 14, 12, 16],
+    "BookPrices": [87, 133, 137]
+  },
+  {
+    "id": 62,
+    "Title": "Whispers in the Garden",
+    "Description": "A young wizard with a unique affinity for necromancy is torn between his thirst for knowledge and the moral implications of raising the dead, as he becomes entangled in a battle between rival magical factions.",
+    "ReleaseDate": "1947-05-14T00:00:00.000Z",
+    "ImageSrc": "WhispersInTheGarden",
+    "Languages": [3, 14, 16, 9, 11],
+    "Authors": [16],
+    "Genres": [29, 3, 16, 28, 12, 27],
+    "BookPrices": [150, 65]
+  },
+  {
+    "id": 63,
+    "Title": "The Enchanted Quest",
+    "Description": "In a city plagued by crime and corruption, a masked vigilante emerges from the shadows to dispense justice, but as he fights to save the city, he grapples with his own inner demons and the line between hero and vigilante.",
+    "ReleaseDate": "1997-12-02T00:00:00.000Z",
+    "ImageSrc": "TheEnchantedQuest",
+    "Languages": [13, 8, 5],
+    "Authors": [50, 25, 42],
+    "Genres": [14, 20, 10, 8, 23, 4, 21, 15],
+    "BookPrices": [73, 88]
+  },
+  {
+    "id": 64,
+    "Title": "Echoes of War",
+    "Description": "A gifted archaeologist discovers a hidden tomb that holds the key to unlocking ancient mysteries, but as she delves deeper into the tomb's secrets, she unleashes an ancient curse that threatens to consume her soul.",
+    "ReleaseDate": "2012-10-12T00:00:00.000Z",
+    "ImageSrc": "EchoesOfWar",
+    "Languages": [5, 2],
+    "Authors": [13, 42, 34],
+    "Genres": [24, 1, 30, 10, 28, 13],
+    "BookPrices": [102, 142]
+  },
+  {
+    "id": 65,
+    "Title": "The Forgotten Gate",
+    "Description": "In a future where humanity has colonized other planets, a group of explorers stumbles upon a celestial anomaly that defies all known laws of physics, plunging them into a cosmic journey to uncover the truth of their existence.",
+    "ReleaseDate": "1983-03-11T00:00:00.000Z",
+    "ImageSrc": "TheForgottenGate",
+    "Languages": [19, 15, 16, 9, 10],
+    "Authors": [34, 5, 42],
+    "Genres": [10, 25, 16, 5],
+    "BookPrices": [86, 58, 82]
+  },
+  {
+    "id": 66,
+    "Title": "Realm of Dreams",
+    "Description": "A young girl with the power to communicate with animals embarks on a quest to save her village from a devastating drought, forming unlikely friendships and discovering her own inner strength along the way.",
+    "ReleaseDate": "1986-03-02T00:00:00.000Z",
+    "ImageSrc": "RealmOfDreams",
+    "Languages": [17, 7, 9, 6, 3],
+    "Authors": [8, 33, 19, 49],
+    "Genres": [12, 3, 11, 14, 24, 4],
+    "BookPrices": [6, 18]
+  },
+  {
+    "id": 67,
+    "Title": "Whispers of Betrayal",
+    "Description": "In a world where superheroes are commonplace, a retired hero is pulled back into action when a new threat emerges that could unravel the very fabric of reality.",
+    "ReleaseDate": "1970-04-30T00:00:00.000Z",
+    "ImageSrc": "WhispersOfBetrayal",
+    "Languages": [12, 14, 13, 3, 5],
+    "Authors": [42, 24, 17, 8],
+    "Genres": [14, 29, 7, 17],
+    "BookPrices": [50, 67]
+  },
+  {
+    "id": 68,
+    "Title": "The Shattered Crown",
+    "Description": "A young inventor creates a groundbreaking technology that can alter memories, but as he delves deeper into his invention, he questions the ethical implications and the impact it could have on the concept of personal identity.",
+    "ReleaseDate": "1962-03-24T00:00:00.000Z",
+    "ImageSrc": "TheShatteredCrown",
+    "Languages": [16, 6, 4, 17],
+    "Authors": [1, 24, 11],
+    "Genres": [21, 17, 5, 7],
+    "BookPrices": [149, 16, 140]
+  },
+  {
+    "id": 69,
+    "Title": "The Hidden Chamber",
+    "Description": "In a kingdom on the brink of war, a skilled archer and a rogue prince form an unlikely alliance as they journey across dangerous lands to uncover a hidden prophecy that could change the fate of their world.",
+    "ReleaseDate": "1988-09-08T00:00:00.000Z",
+    "ImageSrc": "TheHiddenChamber",
+    "Languages": [18, 15, 12, 4],
+    "Authors": [46, 37, 20],
+    "Genres": [12, 7, 6, 18, 11, 2, 13],
+    "BookPrices": [28]
+  },
+  {
+    "id": 70,
+    "Title": "Echoes of Hope",
+    "Description": "A group of time travelers embark on a mission to prevent a catastrophic event from altering the course of history, but as they navigate the complexities of time, they face unexpected challenges and dangerous paradoxes.",
+    "ReleaseDate": "1974-07-03T00:00:00.000Z",
+    "ImageSrc": "EchoesOfHope",
+    "Languages": [2, 4],
+    "Authors": [21, 29, 15],
+    "Genres": [15, 23, 4, 22],
+    "BookPrices": [38, 44]
+  },
+  {
+    "id": 71,
+    "Title": "The Oracle's Riddle",
+    "Description": "A gifted scientist discovers a portal to parallel dimensions, and as she explores different realities, she must confront her own inner demons and make choices that will shape the fate of multiple worlds.",
+    "ReleaseDate": "1997-12-28T00:00:00.000Z",
+    "ImageSrc": "TheOraclesRiddle",
+    "Languages": [13, 14, 3, 18],
+    "Authors": [33, 40],
+    "Genres": [4, 23, 11, 17],
+    "BookPrices": [109, 52]
+  },
+  {
+    "id": 72,
+    "Title": "Whispers of the Sea",
+    "Description": "In a world where mythical creatures exist in hiding, a young girl with a unique connection to nature must protect her forest home from encroaching industrialization and save the creatures she loves.",
+    "ReleaseDate": "2000-08-23T00:00:00.000Z",
+    "ImageSrc": "WhispersOfTheSea",
+    "Languages": [6],
+    "Authors": [32],
+    "Genres": [19, 6, 13, 2, 24],
+    "BookPrices": [67, 23]
+  },
+  {
+    "id": 73,
+    "Title": "The Enchanted Forest",
+    "Description": "A renowned art thief is coerced into pulling off the heist of a lifetime, stealing a priceless artifact from a heavily guarded museum, but as the heist unfolds, she realizes that there is more at stake than just the value of the artwork.",
+    "ReleaseDate": "1945-01-24T00:00:00.000Z",
+    "ImageSrc": "TheEnchantedForest",
+    "Languages": [2, 8, 11, 6, 18],
+    "Authors": [25, 46, 38],
+    "Genres": [14, 5, 4, 23],
+    "BookPrices": [15]
+  },
+  {
+    "id": 74,
+    "Title": "Mysteries of the Lost City",
+    "Description": "In a society where emotions are strictly regulated, a young woman discovers a hidden underground movement that celebrates the power of human feelings, sparking a rebellion against the oppressive regime.",
+    "ReleaseDate": "1994-07-08T00:00:00.000Z",
+    "ImageSrc": "MysteriesOfTheLostCity",
+    "Languages": [5, 16],
+    "Authors": [48, 4],
+    "Genres": [24, 30, 18, 13],
+    "BookPrices": [100, 53]
+  },
+  {
+    "id": 75,
+    "Title": "The Crimson Rose",
+    "Description": "A gifted alchemist discovers a long-lost recipe that can create an elixir of immortality, but as he delves into the dark arts of alchemy, he is faced with a moral dilemma and the consequences of playing god.",
+    "ReleaseDate": "1965-06-02T00:00:00.000Z",
+    "ImageSrc": "TheCrimsonRose",
+    "Languages": [1, 12, 13, 16],
+    "Authors": [22, 27, 17, 35],
+    "Genres": [10, 6, 21, 27, 30, 22, 26],
+    "BookPrices": [2, 144]
+  },
+  {
+    "id": 76,
+    "Title": "Whispers of the Heart",
+    "Description": "In a war-torn realm where magic has been outlawed, a young sorceress must harness her dormant powers and unite a divided kingdom to overthrow a tyrannical ruler and restore the rightful balance of magic.",
+    "ReleaseDate": "2013-09-07T00:00:00.000Z",
+    "ImageSrc": "WhispersOfTheHeart",
+    "Languages": [8, 7],
+    "Authors": [11, 18],
+    "Genres": [12, 16, 4, 21, 17, 15, 18],
+    "BookPrices": [65]
+  }
 ]

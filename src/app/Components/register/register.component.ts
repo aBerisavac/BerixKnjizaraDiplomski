@@ -20,6 +20,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
       this._userService.errors$.subscribe(x=>{
+        this.errors = [];
         for(let error of x){
           this.errors.push(error.ErrorMessage as string);
         }

@@ -26,9 +26,9 @@ export class UsersService {
   constructor(private _http: HttpClient, private _router: Router) { }
 
   public register(firstName: string, lastName: string, email: string, password: string, address: string){
-    let userToInsert = new UserInsertDTO(firstName, lastName, email, password, address);
+    let userToInsert = new UserInsertDTO(firstName, lastName, email, address, password);
     return this._http
-      .post<any>('http://localhost:5111/api/user', userToInsert)
+      .post<any>('http://localhost:5000/api/user', userToInsert)
       .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
         // this.errorMessage = error.message;
         let errors =  error.error.errors; 
@@ -75,7 +75,7 @@ export class UsersService {
   
   private setUserData(){
     const headers = { 'Authorization': `Bearer ${this.getUserToken()}` };
-    this._http.get<any>('http://localhost:5111/api/user', {headers})
+    this._http.get<any>('http://localhost:5000/api/user', {headers})
     .subscribe(data => {
         this.loggedInUserData.next(this.capitalizePropertyNames(data[0]) as UserDTO);
         this.loggedInUser = this.capitalizePropertyNames(data[0]) as UserDTO;
