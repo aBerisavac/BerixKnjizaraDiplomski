@@ -20,7 +20,7 @@ export class CartPopupComponent implements OnInit {
       {
         this.items = x;
         this.totalQuantity = x.length;
-        this.totalPrice = x.reduce((sum, current) => sum + (current.BookPrices[0].Price * current.Quantity), 0);
+        this.totalPrice = x.reduce((sum, current) => sum + (current.Prices[0].price * current.Quantity), 0);
       }
     })
   }

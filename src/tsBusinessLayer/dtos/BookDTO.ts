@@ -13,7 +13,7 @@ export class BookDTO implements IBook{
     public Authors:Array<AuthorDTO>;
     public Genres:Array<GenreDTO>;
     public Languages:Array<LanguageDTO>;
-    public BookPrices:Array<BookPriceDTO>;
+    public Prices:Array<BookPriceDTO>;
 
     constructor(id:number, title: String, description: String, imageSrc: String, releaseDate: Date, authors:Array<AuthorDTO>, genres:Array<GenreDTO>, languages:Array<LanguageDTO>, bookPrices:Array<BookPriceDTO>){
         this.id = id;
@@ -24,6 +24,6 @@ export class BookDTO implements IBook{
         this.Authors = authors;
         this.Genres = genres;
         this.Languages = languages;
-        this.BookPrices = bookPrices;
+        this.Prices = bookPrices;
     }
 }

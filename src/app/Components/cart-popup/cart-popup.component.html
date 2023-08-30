@@ -12,7 +12,7 @@
         <li class="clearfix" *ngFor="let item of items">
           <img [src]="'/assets/images/books/' + item.ImageSrc" alt="item1" />
           <span class="item-name">{{item.Title}}</span>
-          <span class="item-price">${{item.BookPrices[0].Price}}</span>
+          <span class="item-price">${{item.Prices[0].price}}</span>
           <span class="item-quantity">Quantity: {{item.Quantity}}</span>
           <button type="button" class="btn btn-danger ml-4" (click)="remove(item)">Remove</button>
         </li>

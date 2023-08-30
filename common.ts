@@ -46,4 +46,20 @@ const VALIDATORS = {
   }
 };
 
-export { getRandomDate, getRandomNumber, capitalizeFirstLetter, VALIDATORS };
+ function capitalizePropertyNamesWithoutIdCapitalization(obj: any) {
+  const newObj: { [key: string]: any } = {};
+
+  for (let key in obj) {
+    if (key != 'id') {
+      const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
+      newObj[capitalizedKey] = obj[key];
+    } else {
+      const capitalizedKey = 'id';
+      newObj[capitalizedKey] = obj[key];
+    }
+  }
+
+  return newObj;
+}
+
+export { getRandomDate, getRandomNumber, capitalizeFirstLetter, capitalizePropertyNamesWithoutIdCapitalization, VALIDATORS };

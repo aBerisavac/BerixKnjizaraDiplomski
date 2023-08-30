@@ -22,7 +22,7 @@ export class AdminBooksComponent {
     this.books = this._booksService.getBooks() as Array<BookDTO>;
     for (let book of this.books) {
 
-      let price = book.BookPrices[0].Price;
+      let price = book.Prices[0].price;
 
       let genres="";
       book.Genres.forEach(x=>genres+= `${x.Name}, `)

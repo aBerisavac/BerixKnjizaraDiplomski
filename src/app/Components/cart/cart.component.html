@@ -30,8 +30,8 @@
             <img [src]="'/assets/images/books/' + item.ImageSrc + '.jpg'" />
           </td>
           <td>{{ item.Title }}</td>
-          <td>{{ item.BookPrices[0].Price }}$</td>
-          <td>{{ item.BookPrices[0].Price * item.Quantity }}$</td>
+          <td>{{ item.Prices[0].price }}$</td>
+          <td>{{ item.Prices[0].price * item.Quantity }}$</td>
           <td>#{{ item.Quantity }}</td>
           <td>
             <mat-icon (click)="removeFromCart(item)"

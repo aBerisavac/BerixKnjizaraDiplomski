@@ -1,0 +1,68 @@
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Application.deps.json
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Application.pdb
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Domain.dll
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Domain.pdb
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\refint\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.pdb
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\ref\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\EFDataAccess.dll
+C:\Users\aleks_eg16h3h\Desktop\ASP\Berix-Knjizara, ASP .NET\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\EFDataAccess.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Application.deps.json
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Application.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Domain.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\EFDataAccess.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Domain.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\EFDataAccess.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\refint\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\berix-library\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\ref\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Application.deps.json
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Application.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Domain.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\EFDataAccess.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\Domain.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\bin\Debug\net6.0\EFDataAccess.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\refint\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\Application.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\ASP.NET-projekat\BerixLibrary\Application\obj\Debug\net6.0\ref\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\bin\Debug\net6.0\Application.deps.json
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\bin\Debug\net6.0\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\bin\Debug\net6.0\Application.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\bin\Debug\net6.0\Domain.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\bin\Debug\net6.0\EFDataAccess.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\bin\Debug\net6.0\Domain.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\bin\Debug\net6.0\EFDataAccess.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\obj\Debug\net6.0\Application.AssemblyInfoInputs.cache
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\obj\Debug\net6.0\Application.AssemblyInfo.cs
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\obj\Debug\net6.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\obj\Debug\net6.0\Application.csproj.CopyComplete
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\obj\Debug\net6.0\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\obj\Debug\net6.0\refint\Application.dll
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\obj\Debug\net6.0\Application.pdb
+C:\Users\aleks_eg16h3h\Desktop\Angular\BerixKnjizaraDiplomski\Berix-Library-API\Application\obj\Debug\net6.0\ref\Application.dll

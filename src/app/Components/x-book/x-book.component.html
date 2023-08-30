@@ -7,7 +7,7 @@
   <div>
     <p class="info-holder">Price:</p>
     <div class="price">
-      <p>{{ book.BookPrices[0].Price }}$</p>
+      <p>{{ book.Prices[0].price }}$</p>
       <div>
         <mat-icon *ngIf="currentBookExistsInCart" (click)="removeFromCart(book)"
           >remove_circle_outline</mat-icon

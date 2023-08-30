@@ -19,7 +19,7 @@ export class AdminOrdersComponent{
     this.orders = this.ordersModel.getAll() as Array<OrderDTO>;
     for(let order of this.orders){
       let price = 0;
-      order.OrderInvoices.forEach(x=>price+= x.NumberOfBooks*x.Book.BookPrices[0].Price)
+      order.OrderInvoices.forEach(x=>price+= x.NumberOfBooks*x.Book.Prices[0].price)
       let orderAdmin = {
         "id": order.id,
         "Customer name": order.Customer.FirstName+" "+order.Customer.LastName,

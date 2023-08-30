@@ -12,5 +12,5 @@ export interface IBook {
     "Authors": Array<IAuthor>,
     "Genres": Array<IGenre>,
     "Languages": Array<ILanguage>,
-    "BookPrices": Array<IBookPrice>
+    "Prices": Array<IBookPrice>
 }

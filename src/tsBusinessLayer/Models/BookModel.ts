@@ -79,7 +79,7 @@ export class BookModel implements IEntityGetAll, IEntityGet {
         ReleaseDate: new Date(`${book.ReleaseDate}`),
         Authors: authorModel.getAuthorsByBook(book),
         Genres: genreModel.getGenresByBook(book),
-        BookPrices: bookPriceModel.getBookPricesByBook(book),
+        Prices: bookPriceModel.getBookPricesByBook(book),
         Languages: languageModel.getLanguagesByBook(book),
       });
     }

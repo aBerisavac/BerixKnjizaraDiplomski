@@ -30,7 +30,7 @@ export class BookPriceModel implements IEntityGetAll, IEntityGet {
   }
   
   public insertBookPrice(price: number){
-    this.bookPrices.push(new BookPriceDTO(this.getMaxId()+1, price, new Date()))
+    this.bookPrices.push(new BookPriceDTO(this.getMaxId()+1, price))
 
     localStorage.setItem(
       'BookPrices',
@@ -50,10 +50,7 @@ export class BookPriceModel implements IEntityGetAll, IEntityGet {
     for (let bookPriceId of bookPriceIdsArray) {
       bookPrices.push(this.get(bookPriceId));
     }
-
-    return bookPrices.sort((x, y) => {
-      return x.CreatedAt > y.CreatedAt ? -1 : 1;
-    });
+    return bookPrices;
   }
 
   
@@ -65,8 +62,7 @@ export class BookPriceModel implements IEntityGetAll, IEntityGet {
     for (let bookPrice of bookPrices) {
       bookPricesDTO.push({
         id: bookPrice.id,
-        Price: bookPrice.Price,
-        CreatedAt: new Date(`${bookPrice.CreatedAt}`),
+        price: bookPrice.Price,
       });
     }
 

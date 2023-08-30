@@ -2,12 +2,10 @@ import {IBookPrice} from "../interfaces/IBookPrice"
 
 export class BookPriceDTO implements IBookPrice{
     public id:number;
-    public Price:number;
-    public CreatedAt:Date;
+    public price:number;
 
-    constructor(id:number, price: number, createdAt: Date){
+    constructor(id:number, price: number){
         this.id = id;
-        this.Price = price;
-        this.CreatedAt = createdAt;
+        this.price = price;
     }
 }

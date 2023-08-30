@@ -13,9 +13,12 @@ export class BooksComponent implements OnInit{
 
   constructor(booksService: BooksService ){
     this.booksService=booksService;
+    this.booksService.getBooks();
   }
   ngOnInit(): void {
-    this.books = this.booksService.getBooks();
+    this.booksService.books$.subscribe(x=>{
+      this.books = x;
+    })
   }
 
 }

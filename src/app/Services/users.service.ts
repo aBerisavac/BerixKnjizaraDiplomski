@@ -6,6 +6,7 @@ import { UserModel } from 'src/tsBusinessLayer/Models/UserModel';
 import { UserDTO } from 'src/tsBusinessLayer/dtos/UserDTO';
 import { UserInsertDTO } from 'src/tsBusinessLayer/dtos/UserInsertDTO';
 import {TErrorMessagesFromBack} from 'src/app/types/TErrorMessagesFromBack'
+import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
 
 @Injectable({
   providedIn: 'root'
@@ -54,31 +55,13 @@ export class UsersService {
       this.loggedInUserData.next(undefined)
     }
   }
-
-  
-
-  private capitalizePropertyNames(obj: any) {
-    const newObj: { [key: string]: any } = {};
-
-    for (let key in obj) {
-      if (key != 'id') {
-        const capitalizedKey = key.charAt(0).toUpperCase() + key.slice(1);
-        newObj[capitalizedKey] = obj[key];
-      } else {
-        const capitalizedKey = 'id';
-        newObj[capitalizedKey] = obj[key];
-      }
-    }
-
-    return newObj;
-  }
   
   private setUserData(){
     const headers = { 'Authorization': `Bearer ${this.getUserToken()}` };
     this._http.get<any>('http://localhost:5000/api/user', {headers})
     .subscribe(data => {
-        this.loggedInUserData.next(this.capitalizePropertyNames(data[0]) as UserDTO);
-        this.loggedInUser = this.capitalizePropertyNames(data[0]) as UserDTO;
+        this.loggedInUserData.next(capitalizePropertyNamesWithoutIdCapitalization(data[0]) as UserDTO);
+        this.loggedInUser = capitalizePropertyNamesWithoutIdCapitalization(data[0]) as UserDTO;
     });
   }
 

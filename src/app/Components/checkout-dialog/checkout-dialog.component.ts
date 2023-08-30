@@ -117,7 +117,7 @@ export class CheckoutDialogComponent implements OnInit {
       if(x)
       {
         this.itemsInCart = x;
-        this.totalCost = x.reduce((sum, current) => sum + (current.BookPrices[0].Price * current.Quantity), 0);
+        this.totalCost = x.reduce((sum, current) => sum + (current.Prices[0].price * current.Quantity), 0);
       }
     })
   }

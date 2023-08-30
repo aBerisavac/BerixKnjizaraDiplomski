@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
+import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
 import { OrderModel } from 'src/tsBusinessLayer/Models/OrderModel';
 import { ShippingMethodModel } from 'src/tsBusinessLayer/Models/ShippingMethodModel';
 import { OrderDTO } from 'src/tsBusinessLayer/dtos/OrderDTO';
@@ -11,10 +13,30 @@ import { ShippingMethodDTO } from 'src/tsBusinessLayer/dtos/ShippingMethodDTO';
 export class ShippingMethodsService {
   constructor(private _http: HttpClient) {}
 
+  
+  private shippingMethods = new BehaviorSubject<Array<ShippingMethodDTO>>([]);
+  public shippingMethods$ = this.shippingMethods.asObservable();
+
   private ordersModel: OrderModel = new OrderModel(this._http);
   private shippingMethodModel = new ShippingMethodModel();
 
   getShippingMethods(): ShippingMethodDTO[] {
+    this._http
+    .get<any>('http://localhost:5000/api/shippingMethod')
+    .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
+      console.log(error)
+
+      return of();
+  }))
+    .subscribe({
+      next: (data) => {
+        let shippingMethodsFromBack: ShippingMethodDTO[] = [];
+        for(let shippingMethod of data){
+          shippingMethodsFromBack.push(capitalizePropertyNamesWithoutIdCapitalization(shippingMethod) as ShippingMethodDTO);
+        }
+        this.shippingMethods.next(shippingMethodsFromBack);
+      }
+    });
     return this.shippingMethodModel.getAll();
   }
 

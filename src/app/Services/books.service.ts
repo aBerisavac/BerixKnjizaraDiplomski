@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
+import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
 import { AuthorModel } from 'src/tsBusinessLayer/Models/AuthorModel';
 import { BookModel } from 'src/tsBusinessLayer/Models/BookModel';
 import { BookPriceModel } from 'src/tsBusinessLayer/Models/BookPriceModel';
@@ -20,6 +22,9 @@ export class BooksService {
 
   constructor(private _http: HttpClient) { }
 
+  private books = new BehaviorSubject<Array<BookDTO>>([]);
+  public books$ = this.books.asObservable();
+
   private ordersModel = new OrderModel(this._http);
   private bookModel = new BookModel();
   private authorModel = new AuthorModel();
@@ -28,6 +33,41 @@ export class BooksService {
   private bookPriceModel = new BookPriceModel();
 
   getBooks() : BookDTO[]{
+    this._http
+    .get<any>('http://localhost:5000/api/book')
+    .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
+      console.log(error)
+
+      return of();
+  }))
+    .subscribe({
+      next: (data) => {
+        let booksFromBack: Array<BookDTO> = [];
+        for(let book of data){
+          let authorsFromBook: Array<AuthorDTO> = [];
+          for(let author of book.authors){
+            authorsFromBook.push(capitalizePropertyNamesWithoutIdCapitalization(author) as AuthorDTO);
+          }
+          book.authors = authorsFromBook;
+          
+          let genresFromBook: Array<GenreDTO> = [];
+          for(let genre of book.genres){
+            genresFromBook.push(capitalizePropertyNamesWithoutIdCapitalization(genre) as GenreDTO);
+          }
+          book.genres =genresFromBook;
+          
+          let languagesFromBook: Array<LanguageDTO> = [];
+          for(let language of book.languages){
+            languagesFromBook.push(capitalizePropertyNamesWithoutIdCapitalization(language) as LanguageDTO);
+          }
+          book.languages =languagesFromBook;
+
+          booksFromBack.push(capitalizePropertyNamesWithoutIdCapitalization(book) as BookDTO);
+        }
+
+        this.books.next(booksFromBack)
+      }
+    });
     return this.bookModel.getAll();
   }
 
