@@ -1,4 +1,4 @@
-﻿using FluentValidation;
+using FluentValidation;
 using Newtonsoft.Json;
 using Application.Exceptions;
 
@@ -39,6 +39,13 @@ namespace Api.Core
                             response = new
                             {
                                 message = "Resource not found."
+                            };
+                            break;
+                        case ReferentialIntegrityViolationException _:
+                            statusCode = StatusCodes.Status422UnprocessableEntity;
+                            response = new
+                            {
+                                message = ex.Message
                             };
                             break;
                         case ValidationException validationException:

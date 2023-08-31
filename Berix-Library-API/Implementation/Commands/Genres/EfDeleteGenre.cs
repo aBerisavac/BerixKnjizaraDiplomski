@@ -1,4 +1,4 @@
-﻿using Application.Commands.Genres;
+using Application.Commands.Genres;
 using Application.Exceptions;
 using Domain;
 using EFDataAccess;
@@ -10,28 +10,33 @@ using System.Threading.Tasks;
 
 namespace Implementation.Commands.Genres
 {
-    public class EfDeleteGenre : IDeleteGenreCommand
+  public class EfDeleteGenre : IDeleteGenreCommand
+  {
+    private readonly DBKnjizaraContext _dbContext;
+    public int Id => 14;
+
+    public string Name => "Delete Genre";
+
+    public EfDeleteGenre(DBKnjizaraContext dbContext)
     {
-        private readonly DBKnjizaraContext _dbContext;
-        public int Id => 14;
-
-        public string Name => "Delete Genre";
-
-        public EfDeleteGenre(DBKnjizaraContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
-
-        public void Execute(int id)
-        {
-            var genre = _dbContext.Genres.Find(id);
-            if (genre == null)
-            {
-                throw new EntityNotFoundException(id, typeof(Genre));
-            }
-
-            genre.IsDeleted = true;
-            _dbContext.SaveChanges();
-        }
+      _dbContext = dbContext;
     }
+
+    public void Execute(int id)
+    {
+      var genre = _dbContext.Genres.Find(id);
+      if (genre == null)
+      {
+        throw new EntityNotFoundException(id, typeof(Genre));
+      }
+
+      if (_dbContext.BookGenres.Any(x=>x.BookId==id))
+      {
+        throw new ReferentialIntegrityViolationException(typeof(Genre), typeof(Book));
+      }
+
+      genre.IsDeleted = true;
+      _dbContext.SaveChanges();
+    }
+  }
 }

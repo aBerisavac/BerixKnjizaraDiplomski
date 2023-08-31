@@ -28,6 +28,11 @@ namespace Implementation.Commands.Languages
         throw new EntityNotFoundException(id, typeof(Language));
       }
 
+      if (_dbContext.BookLanguages.Any(x => x.LanguageId == id))
+      {
+        throw new ReferentialIntegrityViolationException(typeof(Language), typeof(Book));
+      }
+
       language.IsDeleted = true;
       _dbContext.SaveChanges();
     }

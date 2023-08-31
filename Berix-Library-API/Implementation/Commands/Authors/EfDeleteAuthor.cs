@@ -1,4 +1,4 @@
-﻿using Application.Commands.Authors;
+using Application.Commands.Authors;
 using Application.DTOs.Authors;
 using Application.Exceptions;
 using Domain;
@@ -27,6 +27,11 @@ namespace Implementation.Commands.Authors
             if (author == null)
             {
                 throw new EntityNotFoundException(id, typeof(Author));
+            }
+
+            if (_dbContext.BookAuthors.Any(x => x.AuthorId == id))
+            {
+              throw new ReferentialIntegrityViolationException(typeof(Author), typeof(Book));
             }
 
             author.IsDeleted = true;
