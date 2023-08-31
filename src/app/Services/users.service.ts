@@ -24,7 +24,11 @@ export class UsersService {
   private notificationMessage = new BehaviorSubject<String>("")
   public currentNotifyMessage$ = this.notificationMessage.asObservable();
 
-  constructor(private _http: HttpClient, private _router: Router) { }
+  constructor(private _http: HttpClient, private _router: Router) { 
+    if(localStorage.getItem("userToken")!=undefined){
+      this.setUserToken(localStorage.getItem("userToken")!)
+    }
+  }
 
   public register(firstName: string, lastName: string, email: string, password: string, address: string){
     let userToInsert = new UserInsertDTO(firstName, lastName, email, address, password);
@@ -48,6 +52,7 @@ export class UsersService {
 
   setUserToken(newToken: string){
     this.userToken=newToken;
+    localStorage.setItem("userToken", newToken)
 
     if(newToken.trim()!=""){
       this.setUserData();

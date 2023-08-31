@@ -20,7 +20,6 @@ export class XAuthorDetailsComponent {
   constructor(private authorsService: AuthorsService, private route: ActivatedRoute, private booksService: BooksService){
     this.id = this.route.snapshot.paramMap.get('id')!;
     this.author=this.authorsService.getAuthor(parseInt(this.id));
-    console.log(this.author);
     this.formattedDate = formatDate(this.author.BirthDate, "MMM d, y", "en")
     this.booksByAuthor = this.booksService.getBooksWrittenByAuthor(this.author.id)
   }

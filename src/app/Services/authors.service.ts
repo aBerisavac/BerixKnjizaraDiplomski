@@ -18,6 +18,9 @@ export class AuthorsService {
   private authors = new BehaviorSubject<Array<AuthorDTO>>([]);
   public authors$ = this.authors.asObservable();
 
+  private errors = new BehaviorSubject<Array<string>>([]);
+  private errors$ = this.errors.asObservable();
+
   private bookModel = new BookModel();
   private authorModel = new AuthorModel();
 
@@ -69,20 +72,21 @@ export class AuthorsService {
     }
   }
 
-  deleteAuthor(id: number): String[] {
-    let errors = [];
-    let books = this.bookModel.getAll() as Array<BookDTO>;
-    for (let book of books) {
-      if (book.Authors.filter((x) => x.id == id).length > 0) {
-        errors.push('Referential integrity violation.');
-        break;
+  deleteAuthor(id: number){
+    const headers = { 'Authorization': `Bearer ${this._userService.getUserToken()}`};
+    this._http
+    .delete<any>(`http://localhost:5000/api/author/${id}`, {headers})
+    .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
+      console.log(error)
+      this.errors.next([])
+
+      return of();
+  }))
+    .subscribe({
+      next: (data) => {
+        this.getAuthors();
       }
-    }
+    });
 
-    if (errors.length == 0) {
-      this.authorModel.deleteItem(id);
-    }
-
-    return errors;
   }
 }

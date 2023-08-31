@@ -1,5 +1,5 @@
 import { formatDate } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IAuthorAdmin } from 'src/app/Interfaces/IAuthorAdmin';
 import { AuthorsService } from 'src/app/Services/authors.service';
 import { ErrorModalService } from 'src/app/Services/error-modal.service';
@@ -10,16 +10,19 @@ import { AuthorDTO } from 'src/tsBusinessLayer/dtos/AuthorDTO';
   templateUrl: './admin-authors.component.html',
   styleUrls: ['./admin-authors.component.scss'],
 })
-export class AdminAuthorsComponent {
+export class AdminAuthorsComponent implements OnInit {
   private authors: Array<AuthorDTO> = [];
   public jsonObjectArrayToDisplay: Array<IAuthorAdmin> = [];
 
-  constructor(private _errorModalService: ErrorModalService, private _authorsService: AuthorsService) {
-    this.convertAuthorsDTOToIAuthorAdmins();
+  constructor(private _errorModalService: ErrorModalService, private _authorsService: AuthorsService) { }
+  ngOnInit(): void {
+    this._authorsService.authors$.subscribe(x=>{
+      this.authors=x;
+      this.convertAuthorsDTOToIAuthorAdmins();
+
+    })
   }
   convertAuthorsDTOToIAuthorAdmins(){
-    this.authors = this._authorsService.getAuthors() as Array<AuthorDTO>;
-
     this.jsonObjectArrayToDisplay = [];
     for (let author of this.authors) {
       this.jsonObjectArrayToDisplay.push({
@@ -35,12 +38,7 @@ export class AdminAuthorsComponent {
   }
 
   deleteItem(item: IAuthorAdmin) {
-    let errors = this._authorsService.deleteAuthor(item.id);
+    this._authorsService.deleteAuthor(item.id);
 
-    if(errors.length>0){
-      this._errorModalService.setErrors(errors);
-    } else{
-      this.convertAuthorsDTOToIAuthorAdmins();
-    }
   }
 }
