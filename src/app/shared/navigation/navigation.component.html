@@ -15,13 +15,13 @@
     <a [routerLink]="['/assets/docs/docs.pdf']" target="_blank">
       <p>Docs</p>
     </a>
-    <a *ngIf="isAdminLoggedIn" routerLink="/admin/orders">
+    <a *ngIf="isAdminLoggedIn" routerLink="/admin">
       <p>Admin</p>
     </a>
-    <a *ngIf="isLoggedIn" routerLink="/logout">
+    <a *ngIf="isLoggedIn" routerLink="/user/logout">
         <p>Logout</p>
     </a>
-    <a *ngIf="!isLoggedIn" routerLink="/login">
+    <a *ngIf="!isLoggedIn" routerLink="/user/login">
         <p>Login</p>
     </a>
   </div>
