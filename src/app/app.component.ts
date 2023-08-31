@@ -21,7 +21,9 @@ export class AppComponent {
     private _genresService: GenresService,
     private _shippingMethodsService: ShippingMethodsService,
     private _booksService: BooksService,
-    ){}
+    ){
+      _authorsService.getAuthors();
+    }
 
   public onActivate(event: Event) {
     let scrollToTop = window.setInterval(() => {

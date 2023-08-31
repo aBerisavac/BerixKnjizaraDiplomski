@@ -72,7 +72,19 @@ export class BooksService {
   }
 
   getBook(id: number) : BookDTO{
-    return this.bookModel.get(id);
+    return this.books.getValue().filter(x=>x.id==id)[0];
+  }
+
+  getBooksWrittenByAuthor(id: number): BookDTO[]{
+    let booksWrittenByAuthor: BookDTO[] = []
+
+    this.books.getValue().forEach(x=>{
+      if(x.Authors.filter(y=>y.id==id).length>0){
+        booksWrittenByAuthor.push(x);
+      }
+    })
+
+    return booksWrittenByAuthor;
   }
 
   insertBook(title: String, description: String, imageSrc: String, releaseDate: Date, authorIds:Array<string>, genreIds:Array<string>, languageIds:Array<string>, bookPrice:number): boolean{

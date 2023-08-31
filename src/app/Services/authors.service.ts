@@ -7,12 +7,13 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
 import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
 import { UsersService } from './users.service';
+import { BooksService } from './books.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthorsService {
-  constructor(private _http: HttpClient, private _userService: UsersService) {}
+  constructor(private _http: HttpClient, private _userService: UsersService, private _booksService: BooksService) {}
 
   private authors = new BehaviorSubject<Array<AuthorDTO>>([]);
   public authors$ = this.authors.asObservable();
@@ -42,26 +43,7 @@ export class AuthorsService {
   }
 
   getAuthor(id: number): AuthorDTO {
-    // return this.authors.filter(x=>x.id==id)[0];
-    return this.authorModel.get(id);
-  }
-
-
-
-  getBooksWrittenByAuthor(author: AuthorDTO): Array<BookDTO> {
-    let books: Array<BookDTO> = this.bookModel.getAll();
-    let booksWithRequestedAutor: Array<BookDTO> = [];
-
-    for (let book of books) {
-      for (let bookAuthor of book.Authors) {
-        if (bookAuthor.id == author.id) {
-          booksWithRequestedAutor.push(book);
-          break;
-        }
-      }
-    }
-
-    return booksWithRequestedAutor;
+    return this.authors.getValue().filter(x=>x.id==id)[0];
   }
 
   insertAuthor(firstName: String, lastName: String, birthDate: Date, ){
