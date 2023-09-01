@@ -68,7 +68,7 @@ export class AdminAuthorInsertComponent {
           new Date(Date.parse(authorBirthDate as string))
         )
       ) {
-        this.router.navigateByUrl('/admin/authors');
+        this.router.navigateByUrl('/admin/panel/authors');
       } else {
         this._modalErrorService.setErrors([
           'There was an error storing data. Try again later.',
