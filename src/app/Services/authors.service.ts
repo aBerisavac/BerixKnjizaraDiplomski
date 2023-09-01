@@ -8,12 +8,16 @@ import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
 import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
 import { UsersService } from './users.service';
 import { BooksService } from './books.service';
+import { ErrorModalService } from './error-modal.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthorsService {
-  constructor(private _http: HttpClient, private _userService: UsersService, private _booksService: BooksService) {}
+  constructor(
+    private _http: HttpClient, private _userService: UsersService, 
+    private _errorModalService: ErrorModalService
+    ) {}
 
   private authors = new BehaviorSubject<Array<AuthorDTO>>([]);
   public authors$ = this.authors.asObservable();
@@ -77,8 +81,7 @@ export class AuthorsService {
     this._http
     .delete<any>(`http://localhost:5000/api/author/${id}`, {headers})
     .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
-      console.log(error)
-      this.errors.next([])
+      this._errorModalService.setErrors([error.error.message])
 
       return of();
   }))

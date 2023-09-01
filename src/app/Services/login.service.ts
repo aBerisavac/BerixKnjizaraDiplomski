@@ -23,7 +23,11 @@ export class LoginService {
     private http: HttpClient,
     private _router: Router,
     private _userService: UsersService
-  ) {}
+  ) {
+    if(localStorage.getItem("userToken")!=undefined){
+      this.isLoggedIn.next(true);
+    }
+  }
 
   public tryLogin(email: String, password: String) {
     this.http
@@ -56,6 +60,7 @@ export class LoginService {
   }
 
   public logout() {
+    localStorage.clear();
     this._userService.setUserToken('');
     this.isLoggedIn.next(false);
     this.notificationMessage.next("You have successfully logged out");

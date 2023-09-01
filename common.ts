@@ -1,3 +1,6 @@
+import { OnInit } from "@angular/core";
+import { UsersService } from "src/app/Services/users.service";
+
 function getRandomDate(startDate: Date, endDate: Date) {
   /*
         const startDate = new Date('1940-01-01');
@@ -10,6 +13,8 @@ function getRandomDate(startDate: Date, endDate: Date) {
   return randomDate.toISOString().slice(0, 10);
 }
 
+
+
 function getRandomNumber(min: number, max: number, decimals: number) {
   const scaledRandom = (Math.random() * (max - min) + min).toFixed(decimals);
   return parseFloat(scaledRandom);
@@ -17,6 +22,9 @@ function getRandomNumber(min: number, max: number, decimals: number) {
 
 function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+const CONSTANTS = {
 }
 
 const VALIDATORS = {

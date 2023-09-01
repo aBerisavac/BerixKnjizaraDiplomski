@@ -12,5 +12,6 @@ export class ErrorModalService {
 
   public setErrors(errors: Array<String>){
     this.errorModal.next(errors);
+    console.log(errors)
   }
 }
