@@ -23,6 +23,7 @@ export class AppComponent {
     private _booksService: BooksService,
     ){
       _authorsService.getAuthors();
+      _genresService.getGenres();
     }
 
   public onActivate(event: Event) {

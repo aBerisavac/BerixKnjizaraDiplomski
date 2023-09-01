@@ -6,13 +6,18 @@ import { GenreDTO } from 'src/tsBusinessLayer/dtos/GenreDTO';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
 import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
+import { ErrorModalService } from './error-modal.service';
+import { UsersService } from './users.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GenresService {
 
-  constructor(private _http: HttpClient) { }
+  constructor(
+    private _errorModalService: ErrorModalService, 
+    private _userService: UsersService, 
+    private _http: HttpClient,) { }
 
   private genres = new BehaviorSubject<Array<GenreDTO>>([]);
   public genres$ = this.genres.asObservable();
@@ -45,29 +50,36 @@ export class GenresService {
     return this.genreModel.get(id);
   }
 
-  insertGenre(name: String): boolean{
-    try{
-      this.genreModel.insertGenre(name)
-      return true;
-    } catch(ex){
-      return false;
-    }
+  insertGenre(name: String){
+    const headers = { 'Authorization': `Bearer ${this._userService.getUserToken()}` };
+    this._http
+    .post<any>('http://localhost:5000/api/genre', {Name: name}, {headers})
+    .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
+      console.log(error)
+      this._errorModalService.setErrors([error.error.message])
+
+      return of();
+  }))
+    .subscribe({
+      next: (data) => {
+        this.getGenres();
+      }
+    });
   }
 
-  deleteGenre(id: number): String[] {
-    let errors = [];
-    let books = this.bookModel.getAll() as Array<BookDTO>;
-    for (let book of books) {
-      if (book.Genres.filter((x) => x.id == id).length > 0) {
-        errors.push('Referential integrity violation.');
-        break;
+  deleteGenre(id: number) {
+    const headers = { 'Authorization': `Bearer ${this._userService.getUserToken()}`};
+    this._http
+    .delete<any>(`http://localhost:5000/api/genre/${id}`, {headers})
+    .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
+      this._errorModalService.setErrors([error.error.message])
+
+      return of();
+  }))
+    .subscribe({
+      next: (data) => {
+        this.getGenres();
       }
-    }
-
-    if (errors.length == 0) {
-      this.genreModel.deleteItem(id);
-    }
-
-    return errors;
+    });
   }
 }

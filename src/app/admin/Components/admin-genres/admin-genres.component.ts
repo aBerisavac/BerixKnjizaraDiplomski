@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ErrorModalService } from 'src/app/Services/error-modal.service';
+import { Component, OnInit } from '@angular/core';
 import { GenresService } from 'src/app/Services/genres.service';
 import { GenreDTO } from 'src/tsBusinessLayer/dtos/GenreDTO';
 
@@ -8,11 +7,15 @@ import { GenreDTO } from 'src/tsBusinessLayer/dtos/GenreDTO';
   templateUrl: './admin-genres.component.html',
   styleUrls: ['./admin-genres.component.scss']
 })
-export class AdminGenresComponent{
+export class AdminGenresComponent implements OnInit{
   public jsonObjectArrayToDisplay: Array<GenreDTO> = [];
 
-  constructor(private _errorModalService: ErrorModalService, private _genreService: GenresService){
-    this.jsonObjectArrayToDisplay = this._genreService.getGenres() as Array<GenreDTO>;
+  constructor(
+    private _genreService: GenresService, 
+    ){
+  }
+  ngOnInit(): void {
+    this._genreService.genres$.subscribe(x=>this.jsonObjectArrayToDisplay = x);
   }
 
   editItem(item: GenreDTO){
@@ -20,12 +23,7 @@ export class AdminGenresComponent{
   }
 
   deleteItem(item: GenreDTO){
-    let errors = this._genreService.deleteGenre(item.id);
+    this._genreService.deleteGenre(item.id)
 
-    if(errors.length>0){
-      this._errorModalService.setErrors(errors);
-    } else{
-      this.jsonObjectArrayToDisplay = this._genreService.getGenres() as Array<GenreDTO>;
-    }
   }
 }

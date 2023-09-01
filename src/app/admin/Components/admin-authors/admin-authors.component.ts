@@ -19,7 +19,6 @@ export class AdminAuthorsComponent implements OnInit {
     this._authorsService.authors$.subscribe(x=>{
       this.authors=x;
       this.convertAuthorsDTOToIAuthorAdmins();
-
     })
   }
   convertAuthorsDTOToIAuthorAdmins(){

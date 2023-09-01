@@ -33,13 +33,10 @@ export class AdminGenreInsertComponent {
     if (errors.length > 0) {
       this._modalErrorService.setErrors(errors);
     } else {
-      if (this._genreService.insertGenre(capitalizeFirstLetter(genreName as string))) {
-        this.router.navigateByUrl('/admin/genres');
-      } else {
-        this._modalErrorService.setErrors([
-          'There was an error storing data. Try again later.',
-        ]);
-      }
+      this._genreService.insertGenre(
+        capitalizeFirstLetter(genreName as string)
+      );
+      this.router.navigateByUrl('/admin/panel/genres');
     }
   }
 }

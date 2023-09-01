@@ -30,7 +30,7 @@ namespace Implementation.Commands.Genres
         throw new EntityNotFoundException(id, typeof(Genre));
       }
 
-      if (_dbContext.BookGenres.Any(x=>x.BookId==id))
+      if (_dbContext.BookGenres.Any(x=>x.GenreId==id))
       {
         throw new ReferentialIntegrityViolationException(typeof(Genre), typeof(Book));
       }
