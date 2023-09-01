@@ -51,18 +51,11 @@ export class AdminShippingMethodInsertComponent {
     if (errors.length > 0) {
       this._modalErrorService.setErrors(errors);
     } else {
-      if (
         this._shippingMethodService.insertShippingMethod(
           capitalizeFirstLetter(shippingMethodName as string),
           parseFloat(shippingMethodCost as string)
         )
-      ) {
-        this.router.navigateByUrl('/admin/shipping_methods');
-      } else {
-        this._modalErrorService.setErrors([
-          'There was an error storing data. Try again later.',
-        ]);
-      }
+        this.router.navigateByUrl('/admin/panel/shipping_methods');
     }
   }
 }

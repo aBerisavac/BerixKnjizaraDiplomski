@@ -4,14 +4,19 @@ import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
 import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
 import { OrderModel } from 'src/tsBusinessLayer/Models/OrderModel';
 import { ShippingMethodModel } from 'src/tsBusinessLayer/Models/ShippingMethodModel';
-import { OrderDTO } from 'src/tsBusinessLayer/dtos/OrderDTO';
 import { ShippingMethodDTO } from 'src/tsBusinessLayer/dtos/ShippingMethodDTO';
+import { UsersService } from './users.service';
+import { ErrorModalService } from './error-modal.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ShippingMethodsService {
-  constructor(private _http: HttpClient) {}
+  constructor(
+    private _http: HttpClient,
+    private _userService: UsersService,
+    private _errorModalService: ErrorModalService
+    ) {}
 
   
   private shippingMethods = new BehaviorSubject<Array<ShippingMethodDTO>>([]);
@@ -44,29 +49,44 @@ export class ShippingMethodsService {
     return this.shippingMethodModel.get(id);
   }
 
-  insertShippingMethod(name: String, cost: Number): boolean{
-    try{
-      this.shippingMethodModel.insertShippingMethod(name, cost)
-      return true;
-    } catch(ex){
-      return false;
-    }
+  insertShippingMethod(name: String, cost: Number){
+    const headers = {
+      Authorization: `Bearer ${this._userService.getUserToken()}`,
+    };
+    this._http
+      .post<any>(
+        'http://localhost:5000/api/shippingMethod',
+        { Name: name, Cost: cost },
+        { headers }
+      )
+      .pipe(
+        catchError((error: any, caught: Observable<any>): Observable<any> => {
+          console.log(error);
+          this._errorModalService.setErrors([error.error.message]);
+
+          return of();
+        })
+      )
+      .subscribe({
+        next: (data) => {
+          this.getShippingMethods();
+        },
+      });
   }
 
-  deleteShippingMethod(id: number): String[] {
-    let errors = [];
-    let orders = this.ordersModel.getAll() as Array<OrderDTO>;
-    for (let order of orders) {
-      if (order.ShippingMethod.id == id) {
-        errors.push('Referential integrity violation.');
-        break;
+  deleteShippingMethod(id: number) {
+    const headers = { 'Authorization': `Bearer ${this._userService.getUserToken()}`};
+    this._http
+    .delete<any>(`http://localhost:5000/api/shippingMethod/${id}`, {headers})
+    .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
+      this._errorModalService.setErrors([error.error.message])
+
+      return of();
+  }))
+    .subscribe({
+      next: (data) => {
+        this.getShippingMethods();
       }
-    }
-
-    if (errors.length == 0) {
-      this.shippingMethodModel.deleteItem(id);
-    }
-
-    return errors;
+    });
   }
 }

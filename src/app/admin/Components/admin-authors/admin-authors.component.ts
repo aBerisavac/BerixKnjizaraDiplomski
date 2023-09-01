@@ -21,6 +21,7 @@ export class AdminAuthorsComponent implements OnInit {
       this.convertAuthorsDTOToIAuthorAdmins();
     })
   }
+
   convertAuthorsDTOToIAuthorAdmins(){
     this.jsonObjectArrayToDisplay = [];
     for (let author of this.authors) {
@@ -32,12 +33,12 @@ export class AdminAuthorsComponent implements OnInit {
       } as IAuthorAdmin);
     }
   }
+
   editItem(item: IAuthorAdmin) {
     console.log(item);
   }
 
   deleteItem(item: IAuthorAdmin) {
     this._authorsService.deleteAuthor(item.id);
-
   }
 }

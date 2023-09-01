@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IShippingMethodAdmin } from 'src/app/Interfaces/IShippingMethodAdmin';
 import { ErrorModalService } from 'src/app/Services/error-modal.service';
 import { ShippingMethodsService } from 'src/app/Services/shipping-methods.service';
 import { ShippingMethodDTO } from 'src/tsBusinessLayer/dtos/ShippingMethodDTO';
@@ -15,7 +16,18 @@ export class AdminShippingMethodsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.jsonObjectArrayToDisplay = this._shippingMethodsService.getShippingMethods() as Array<ShippingMethodDTO>;
+    this._shippingMethodsService.shippingMethods$.subscribe(x=>this.convertShippingMethodDTOToIShippingMethods(x))
+  }
+
+  convertShippingMethodDTOToIShippingMethods(shippingMethods: Array<ShippingMethodDTO>){
+    this.jsonObjectArrayToDisplay = [];
+    for (let shippingMethod of shippingMethods) {
+      this.jsonObjectArrayToDisplay.push({
+        id: shippingMethod.id,
+        Name: shippingMethod.Name,
+        Cost: shippingMethod.Cost
+      } as IShippingMethodAdmin);
+    }
   }
 
   editItem(item: ShippingMethodDTO){
@@ -23,11 +35,6 @@ export class AdminShippingMethodsComponent implements OnInit {
   }
 
   deleteItem(item: ShippingMethodDTO){
-    let errors = this._shippingMethodsService.deleteShippingMethod(item.id);
-    if(errors.length>0){
-      this._errorModalService.setErrors(errors);
-    } else{
-      this.jsonObjectArrayToDisplay = this._shippingMethodsService.getShippingMethods() as Array<ShippingMethodDTO>;
-    }
+    this._shippingMethodsService.deleteShippingMethod(item.id);
   }
 }

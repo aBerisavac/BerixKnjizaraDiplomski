@@ -117,7 +117,6 @@ export class AdminBookInsertComponent {
     if (errors.length > 0) {
       this._modalErrorService.setErrors(errors);
     } else {
-      if (
         this._bookService.insertBook(
           capitalizeFirstLetter(bookTitle as string),
           bookDescription,
@@ -128,13 +127,7 @@ export class AdminBookInsertComponent {
           bookLanguages as string[],
           parseFloat(bookPrice as string)
         )
-      ) {
-        this.router.navigateByUrl('/admin/authors');
-      } else {
-        this._modalErrorService.setErrors([
-          'There was an error storing data. Try again later.',
-        ]);
-      }
+        this.router.navigateByUrl('/admin/panel/books');
     }
   }
 }

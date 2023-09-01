@@ -24,6 +24,8 @@ export class AppComponent {
     ){
       _authorsService.getAuthors();
       _genresService.getGenres();
+      _shippingMethodsService.getShippingMethods();
+      _booksService.getBooks();
     }
 
   public onActivate(event: Event) {
