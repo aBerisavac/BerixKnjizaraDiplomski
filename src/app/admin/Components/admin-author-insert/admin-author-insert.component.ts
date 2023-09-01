@@ -48,11 +48,12 @@ export class AdminAuthorInsertComponent {
       try {
         if (Number.isNaN(Date.parse(authorBirthDate as string))) {
           errors.push('Birth Date is not of correct format.');
-        } else{
-          if(new Date(Date.parse(authorBirthDate as string))>new Date()){
-            errors.push("Birth Date can't be in the future");
-          }
-        }
+        } 
+        // else{
+        //   if(new Date(Date.parse(authorBirthDate as string))>new Date()){
+        //     errors.push("Birth Date can't be in the future");
+        //   }
+        // }
       } catch (ex) {
         errors.push('Birth Date is not of correct format.');
       }
@@ -61,19 +62,12 @@ export class AdminAuthorInsertComponent {
     if (errors.length > 0) {
       this._modalErrorService.setErrors(errors);
     } else {
-      if (
         this._authorService.insertAuthor(
           capitalizeFirstLetter(authorFirstName as string),
           capitalizeFirstLetter(authorLastName as string),
           new Date(Date.parse(authorBirthDate as string))
         )
-      ) {
         this.router.navigateByUrl('/admin/panel/authors');
-      } else {
-        this._modalErrorService.setErrors([
-          'There was an error storing data. Try again later.',
-        ]);
-      }
     }
   }
 }

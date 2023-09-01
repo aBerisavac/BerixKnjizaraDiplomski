@@ -32,7 +32,7 @@ export class AuthorsService {
     this._http
     .get<any>('http://localhost:5000/api/author')
     .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
-      console.log(error)
+      this._errorModalService.setErrors([error.error.message])
 
       return of();
   }))
@@ -59,21 +59,15 @@ export class AuthorsService {
     .post<any>('http://localhost:5000/api/author', {FirstName: firstName, LastName: lastName, BirthDate: birthDate}, {headers})
     .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
       console.log(error)
+      this._errorModalService.setErrors([error.error.message])
 
       return of();
   }))
     .subscribe({
       next: (data) => {
-        console.log(data);
+        this.getAuthors();
       }
     });
-
-    try{
-      this.authorModel.insertAuthor(firstName, lastName, birthDate)
-      return true;
-    } catch(ex){
-      return false;
-    }
   }
 
   deleteAuthor(id: number){
