@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
 import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
-import { OrderModel } from 'src/tsBusinessLayer/Models/OrderModel';
 import { ShippingMethodModel } from 'src/tsBusinessLayer/Models/ShippingMethodModel';
 import { ShippingMethodDTO } from 'src/tsBusinessLayer/dtos/ShippingMethodDTO';
 import { UsersService } from './users.service';
@@ -22,7 +21,6 @@ export class ShippingMethodsService {
   private shippingMethods = new BehaviorSubject<Array<ShippingMethodDTO>>([]);
   public shippingMethods$ = this.shippingMethods.asObservable();
 
-  private ordersModel: OrderModel = new OrderModel(this._http);
   private shippingMethodModel = new ShippingMethodModel();
 
   getShippingMethods(): ShippingMethodDTO[] {

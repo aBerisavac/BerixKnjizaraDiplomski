@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/Services/users.service';
 import { AuthorsService } from './Services/authors.service';
 import { GenresService } from './Services/genres.service';
 import { LanguagesService } from './Services/languages.service';
 import { BooksService } from './Services/books.service';
 import { ShippingMethodsService } from './Services/shipping-methods.service';
+import { OrdersService } from './Services/orders.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'Berix Library';
 
   constructor(
@@ -21,12 +22,17 @@ export class AppComponent {
     private _genresService: GenresService,
     private _shippingMethodsService: ShippingMethodsService,
     private _booksService: BooksService,
+    private _ordersService: OrdersService,
     ){
       _authorsService.getAuthors();
       _genresService.getGenres();
       _shippingMethodsService.getShippingMethods();
       _booksService.getBooks();
+      _languageService.getLanguages();
     }
+  ngOnInit(): void {
+    this._booksService.books$.subscribe(x=>this._ordersService.getOrders())
+  }
 
   public onActivate(event: Event) {
     let scrollToTop = window.setInterval(() => {

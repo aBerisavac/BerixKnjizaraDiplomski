@@ -1,67 +1,88 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from 'src/app/Services/cart.service';
 import { IBookCart } from 'src/app/Interfaces/IBookCart';
-import { IAddOrder } from 'src/tsBusinessLayer/interfaces/IAddOrder';
-import { OrderModel } from 'src/tsBusinessLayer/Models/OrderModel';
 import { ShippingMethodDTO } from 'src/tsBusinessLayer/dtos/ShippingMethodDTO';
 import { HttpClient } from '@angular/common/http';
+import { OrdersService } from 'src/app/Services/orders.service';
+import { OrderDTO } from 'src/tsBusinessLayer/dtos/OrderDTO';
+import { UsersService } from 'src/app/Services/users.service';
+import { OrderInvoiceDTO } from 'src/tsBusinessLayer/dtos/OrderInvoiceDTO';
+import { BookDTO } from 'src/tsBusinessLayer/dtos/BookDTO';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+  styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
   public showCheckoutFormBool = false;
 
-  public items: Array<IBookCart> =[]
-  public totalPrice:number = 0;
-  public totalQuantity:number = 0;
-  private orderModel = new OrderModel(this._http);
+  public items: Array<IBookCart> = [];
+  public totalPrice: number = 0;
+  public totalQuantity: number = 0;
 
-  constructor(private _cartService:CartService, private _http:HttpClient) { }
+  constructor(
+    private _cartService: CartService,
+    private _ordersService: OrdersService,
+    private _userService: UsersService,
+    private _http: HttpClient
+  ) {}
 
   ngOnInit() {
-    this._cartService.currentDataCart$.subscribe(x=>{
-      if(x)
-      {
+    this._cartService.currentDataCart$.subscribe((x) => {
+      if (x) {
         this.items = x;
-        this.totalQuantity = x.reduce((sum, current) => sum + current.Quantity, 0);;
-        this.totalPrice = Math.round(x.reduce((sum, current) => sum + (current.Prices[0].price * current.Quantity), 0));
+        this.totalQuantity = x.reduce(
+          (sum, current) => sum + current.Quantity,
+          0
+        );
+        this.totalPrice = Math.round(
+          x.reduce(
+            (sum, current) => sum + current.Prices[0].price * current.Quantity,
+            0
+          )
+        );
       }
-    })
+    });
   }
 
-  public successfullCheckout(data: FormData){
-    let dataOrder: IAddOrder = {
-      "FirstName": data.get("FirstName") as String,
-      "LastName": data.get("LastName") as String,
-      "Email": data.get("Email") as String,
-      "Address": data.get("Address") as String,
-      "Password": data.get("Password") as String,
-      "items": JSON.parse(data.get("items") as string) as Array<IBookCart>,
-      "ShippingMethod": JSON.parse(data.get("ShippingMethod") as string) as ShippingMethodDTO,
+  public successfullCheckout(data: FormData) {
+    let orderInvoices: OrderInvoiceDTO[] = [];
+    let items = JSON.parse(data.get("items") as string) as Array<IBookCart>;
+    for (let item of items){
+      orderInvoices.push({
+        "Book": new BookDTO(item.id, item.Title, item.Description, item.ImageSrc, item.ReleaseDate, item.Authors, item.Genres, item.Languages, item.Prices),
+        "id": 0,
+        "NumberOfItems": item.Quantity
+      })
     }
-    this.orderModel.addOrder(dataOrder);
+
+    let dataOrder: OrderDTO = {
+      id: 0,
+      ShippingMethod: JSON.parse(
+        data.get('ShippingMethod') as string
+      ) as ShippingMethodDTO,
+      Customer: this._userService.getUserData()!,
+      OrderInvoices: orderInvoices
+    };
+
+    this._ordersService.insertOrder(dataOrder)
 
     this.showCheckoutFormBool = false;
-    window.location.href="/successfull_checkout"
+    window.location.href = '/successfull_checkout';
   }
 
-  public removeFromCart(book: IBookCart)
-  {
+  public removeFromCart(book: IBookCart) {
     let bookCart: IBookCart = book as IBookCart;
     this._cartService.lowerElementQuantityFromCart(bookCart);
   }
 
-  public addToCart(book: IBookCart)
-  {
+  public addToCart(book: IBookCart) {
     let bookCart: IBookCart = book as IBookCart;
     this._cartService.changeCart(bookCart);
   }
-  
-  public showCheckoutForm(){
-    this.showCheckoutFormBool=true;
-  }
 
+  public showCheckoutForm() {
+    this.showCheckoutFormBool = true;
+  }
 }

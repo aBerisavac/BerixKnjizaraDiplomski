@@ -2,18 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
 import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
-import { AuthorModel } from 'src/tsBusinessLayer/Models/AuthorModel';
-import { BookModel } from 'src/tsBusinessLayer/Models/BookModel';
-import { BookPriceModel } from 'src/tsBusinessLayer/Models/BookPriceModel';
-import { GenreModel } from 'src/tsBusinessLayer/Models/GenreModel';
-import { LanguageModel } from 'src/tsBusinessLayer/Models/LanguageModel';
-import { OrderModel } from 'src/tsBusinessLayer/Models/OrderModel';
 import { AuthorDTO } from 'src/tsBusinessLayer/dtos/AuthorDTO';
 import { BookDTO } from 'src/tsBusinessLayer/dtos/BookDTO';
-import { BookPriceDTO } from 'src/tsBusinessLayer/dtos/BookPriceDTO';
 import { GenreDTO } from 'src/tsBusinessLayer/dtos/GenreDTO';
 import { LanguageDTO } from 'src/tsBusinessLayer/dtos/LanguageDTO';
-import { OrderDTO } from 'src/tsBusinessLayer/dtos/OrderDTO';
 import { UsersService } from './users.service';
 import { ErrorModalService } from './error-modal.service';
 
@@ -30,14 +22,8 @@ export class BooksService {
   private books = new BehaviorSubject<Array<BookDTO>>([]);
   public books$ = this.books.asObservable();
 
-  private ordersModel = new OrderModel(this._http);
-  private bookModel = new BookModel();
-  private authorModel = new AuthorModel();
-  private genreModel = new GenreModel();
-  private languageModel = new LanguageModel();
-  private bookPriceModel = new BookPriceModel();
 
-  getBooks(): BookDTO[] {
+  getBooks(){
     this._http
       .get<any>('http://localhost:5000/api/book')
       .pipe(
@@ -89,7 +75,6 @@ export class BooksService {
           this.books.next(booksFromBack);
         },
       });
-    return this.bookModel.getAll();
   }
 
   getBook(id: number): BookDTO {

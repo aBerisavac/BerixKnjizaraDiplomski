@@ -1,5 +1,6 @@
 import { IBook } from "src/tsBusinessLayer/interfaces/IBook"
 
 export interface IBookCart extends IBook{
-    "Quantity": number
+    "Quantity": number,
+    "Price": number
 }

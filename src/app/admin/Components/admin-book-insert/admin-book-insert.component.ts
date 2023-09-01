@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { VALIDATORS, capitalizeFirstLetter } from 'common';
 import { AuthorsService } from 'src/app/Services/authors.service';
@@ -6,16 +6,19 @@ import { BooksService } from 'src/app/Services/books.service';
 import { ErrorModalService } from 'src/app/Services/error-modal.service';
 import { GenresService } from 'src/app/Services/genres.service';
 import { LanguagesService } from 'src/app/Services/languages.service';
+import { AuthorDTO } from 'src/tsBusinessLayer/dtos/AuthorDTO';
+import { GenreDTO } from 'src/tsBusinessLayer/dtos/GenreDTO';
+import { LanguageDTO } from 'src/tsBusinessLayer/dtos/LanguageDTO';
 
 @Component({
   selector: 'app-admin-book-insert',
   templateUrl: './admin-book-insert.component.html',
   styleUrls: ['./admin-book-insert.component.scss']
 })
-export class AdminBookInsertComponent {
-  public authors;
-  public genres;
-  public languages;
+export class AdminBookInsertComponent implements OnInit {
+  public authors: AuthorDTO[] = [];
+  public genres: GenreDTO[] = [];
+  public languages: LanguageDTO[] = [];
 
   constructor(
     private _modalErrorService: ErrorModalService,
@@ -25,9 +28,11 @@ export class AdminBookInsertComponent {
     private _languageService: LanguagesService,
     private router: Router
   ) {
-    this.authors = _authorService.getAuthors();
-    this.genres = _genreService.getGenres();
-    this.languages = _languageService.getLanguages();
+  }
+  ngOnInit(): void {
+    this._authorService.authors$.subscribe(x=>this.authors=x);
+    this._genreService.genres$.subscribe(x=>this.genres=x);
+    this._languageService.languages$.subscribe(x=>this.languages=x);
   }
 
   public formSubmitted(e: SubmitEvent) {

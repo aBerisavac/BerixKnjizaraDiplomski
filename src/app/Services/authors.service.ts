@@ -26,10 +26,7 @@ export class AuthorsService {
   private errors = new BehaviorSubject<Array<string>>([]);
   private errors$ = this.errors.asObservable();
 
-  private bookModel = new BookModel();
-  private authorModel = new AuthorModel();
-
-  getAuthors(): AuthorDTO[] {
+  getAuthors(){
     this._http
       .get<any>('http://localhost:5000/api/author')
       .pipe(
@@ -52,8 +49,6 @@ export class AuthorsService {
           this.authors.next(authorsFromBack);
         },
       });
-
-    return this.authorModel.getAll();
   }
 
   getAuthor(id: number): AuthorDTO {

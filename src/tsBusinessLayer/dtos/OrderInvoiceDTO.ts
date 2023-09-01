@@ -4,11 +4,11 @@ import { BookDTO } from "./BookDTO";
 export class OrderInvoiceDTO implements IOrderInvoice{
     public id:number;
     public Book:BookDTO;
-    public NumberOfBooks:number;
+    public NumberOfItems:number;
 
-    constructor(id:number, book: BookDTO, numberOfBooks: number){
+    constructor(id:number, book: BookDTO, NumberOfItems: number){
         this.id = id;
         this.Book = book;
-        this.NumberOfBooks = numberOfBooks;
+        this.NumberOfItems = NumberOfItems;
     }
 }
