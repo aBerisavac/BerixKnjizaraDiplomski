@@ -15,7 +15,6 @@ namespace Application.DTOs.Books
         public IEnumerable<int> GenreIds { get; set; }
         public IEnumerable<int> AuthorIds { get; set; }
         public IEnumerable<int> LanguageIds { get; set; }
-
         virtual public int Price { get; set; }
     }
 }

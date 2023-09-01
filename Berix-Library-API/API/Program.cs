@@ -85,7 +85,7 @@ builder.Services.AddTransient<IApplicationActor>(x =>
             RoleId = 3,
             Email = "Unauthorised actor",
             UserId = 3,
-            AllowedUseCases = new List<int> { 19, 30, 31, 34, 35, 36, 37, 38, 39, 49, 50 }
+            AllowedUseCases = new List<int> { 19, 30, 31, 34, 35, 36, 37, 38, 39, 42, 49, 50 }
         };
 
         return unauthorisedUser;
