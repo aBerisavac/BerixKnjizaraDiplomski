@@ -1,0 +1,9 @@
+<div id="shipping-method-update-form-holder">
+    <form id="shipping-method-update-form" (submit)="formSubmitted($event)" >
+        <label for="name">Shipping Method Name:</label>
+        <input id="name" [value]="shippingMethodToEdit.Name" name="name" type="text"/>
+        <label for="name">Shipping Method Cost:</label> {{shippingMethodToEdit.Cost}}
+        <input id="cost" [value]="shippingMethodToEdit.Cost" name="cost" placeholder="Type a number for cost in $" type="text"/>
+        <input type="submit" value="Update" >
+    </form>
+</div>

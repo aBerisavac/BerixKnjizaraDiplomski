@@ -31,7 +31,11 @@ export class AppComponent implements OnInit{
     this._shippingMethodsService.getShippingMethods();
     this._booksService.getBooks();
     this._languageService.getLanguages();
-    this._booksService.books$.subscribe(x=>this._ordersService.getOrders())
+    this._booksService.books$.subscribe((x)=>{
+      if(x.length>0) {
+        this._ordersService.getOrders(); 
+      } 
+  })
   }
 
   public onActivate(event: Event) {

@@ -12,6 +12,7 @@ import { AdminShippingMethodInsertComponent } from './Components/admin-shipping-
 import { AdminPanelComponent } from './Components/admin-panel/admin-panel.component';
 import { AdminAuthorUpdateComponent } from './Components/admin-author-update/admin-author-update.component';
 import { AdminGenreUpdateComponent } from './Components/admin-genre-update/admin-genre-update.component';
+import { AdminShippingMethodUpdateComponent } from './Components/admin-shipping-method-update/admin-shipping-method-update.component';
 
 const routes: Routes = [
   {
@@ -36,10 +37,6 @@ const routes: Routes = [
         component: AdminAuthorUpdateComponent
       },
       {
-        path:"genres/edit/:id",
-        component: AdminGenreUpdateComponent
-      },
-      {
         path:"books",
         component: AdminBooksComponent
       },
@@ -52,6 +49,10 @@ const routes: Routes = [
         component: AdminGenresComponent
       },
       {
+        path:"genres/edit/:id",
+        component: AdminGenreUpdateComponent
+      },
+      {
         path:"genres/insert",
         component: AdminGenreInsertComponent
       },
@@ -62,6 +63,10 @@ const routes: Routes = [
       {
         path:"shipping_methods",
         component: AdminShippingMethodsComponent
+      },
+      {
+        path:"shipping_methods/edit/:id",
+        component: AdminShippingMethodUpdateComponent
       },
       {
         path:"shipping_methods/insert",

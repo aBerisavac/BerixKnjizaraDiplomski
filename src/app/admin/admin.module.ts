@@ -18,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AdminAuthorUpdateComponent } from './Components/admin-author-update/admin-author-update.component';
 import { FormsModule } from '@angular/forms';
 import { AdminGenreUpdateComponent } from './Components/admin-genre-update/admin-genre-update.component';
+import { AdminShippingMethodUpdateComponent } from './Components/admin-shipping-method-update/admin-shipping-method-update.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { AdminGenreUpdateComponent } from './Components/admin-genre-update/admin
     AdminShippingMethodsComponent,
     AdminShippingMethodInsertComponent,
     AdminAuthorUpdateComponent,
-    AdminGenreUpdateComponent
+    AdminGenreUpdateComponent,
+    AdminShippingMethodUpdateComponent
   ],
   imports: [
     CommonModule,

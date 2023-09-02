@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IShippingMethodAdmin } from 'src/app/Interfaces/IShippingMethodAdmin';
 import { ErrorModalService } from 'src/app/Services/error-modal.service';
 import { ShippingMethodsService } from 'src/app/Services/shipping-methods.service';
@@ -12,7 +13,11 @@ import { ShippingMethodDTO } from 'src/tsBusinessLayer/dtos/ShippingMethodDTO';
 export class AdminShippingMethodsComponent implements OnInit {
   public jsonObjectArrayToDisplay: Array<ShippingMethodDTO> = [];
 
-  constructor(private _errorModalService: ErrorModalService, private _shippingMethodsService: ShippingMethodsService){
+  constructor(
+    private _errorModalService: ErrorModalService, 
+    private _shippingMethodsService: ShippingMethodsService,
+    private _router: Router
+    ){
   }
 
   ngOnInit(): void {
@@ -31,7 +36,7 @@ export class AdminShippingMethodsComponent implements OnInit {
   }
 
   editItem(item: ShippingMethodDTO){
-    console.log(item)
+    this._router.navigateByUrl(`${this._router.url}/edit/${item.id}`)
   }
 
   deleteItem(item: ShippingMethodDTO){

@@ -27,7 +27,7 @@ export class CheckoutDialogComponent implements OnInit {
     private _cartService: CartService,
     private _shippingMethodsService: ShippingMethodsService
   ) {
-    this.shippingMethods = this._shippingMethodsService.getShippingMethods();
+    this._shippingMethodsService.shippingMethods$.subscribe(x=>this.shippingMethods=x)
     this.selectedShippingMethod = this.shippingMethods[0];
   }
 
