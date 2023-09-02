@@ -1,21 +1,37 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { VALIDATORS, capitalizeFirstLetter } from 'common';
+import { Component, OnInit } from '@angular/core';
 import { AuthorsService } from 'src/app/Services/authors.service';
+import { HttpClient } from '@angular/common/http';
+import { UsersService } from 'src/app/Services/users.service';
+import { AuthorDTO } from 'src/tsBusinessLayer/dtos/AuthorDTO';
+import { ActivatedRoute, Router } from '@angular/router';
+import { VALIDATORS, capitalizeFirstLetter } from 'common';
 import { ErrorModalService } from 'src/app/Services/error-modal.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-admin-author-insert',
-  templateUrl: './admin-author-insert.component.html',
-  styleUrls: ['./admin-author-insert.component.scss'],
+  selector: 'app-admin-author-update',
+  templateUrl: './admin-author-update.component.html',
+  styleUrls: ['./admin-author-update.component.scss'],
+  providers: [DatePipe]
 })
-export class AdminAuthorInsertComponent {
-  constructor(
-    private _modalErrorService: ErrorModalService,
-    private _authorService: AuthorsService,
-    private router: Router
-  ) {}
+export class AdminAuthorUpdateComponent{
 
+  public authorToEdit: AuthorDTO;
+  public convertedBirthDate: string;
+  
+  constructor(
+    private _authorsService: AuthorsService,
+    private _modalErrorService: ErrorModalService,
+    private _route: ActivatedRoute,
+    private _router: Router,
+    private _datePipe: DatePipe,
+  ){
+    let id=parseInt(this._route.snapshot.paramMap.get('id')!);
+    this.authorToEdit = _authorsService.getAuthor(id)
+    this.convertedBirthDate = this._datePipe.transform(new Date(Date.parse((this.authorToEdit.BirthDate as any) as string)), 'yyyy-MM-dd')!;
+  }
+
+   
   public formSubmitted(e: SubmitEvent) {
     e.preventDefault();
     const data = new FormData(e.target as HTMLFormElement);
@@ -62,12 +78,14 @@ export class AdminAuthorInsertComponent {
     if (errors.length > 0) {
       this._modalErrorService.setErrors(errors);
     } else {
-        this._authorService.insertAuthor(
-          capitalizeFirstLetter(authorFirstName as string),
-          capitalizeFirstLetter(authorLastName as string),
-          new Date(Date.parse(authorBirthDate as string))
+        this._authorsService.updateAuthor(
+          new AuthorDTO(
+            this.authorToEdit.id,
+            capitalizeFirstLetter(authorFirstName as string),
+            capitalizeFirstLetter(authorLastName as string),
+            new Date(Date.parse(authorBirthDate as string)))
         )
-        this.router.navigateByUrl('/admin/panel/authors');
+        this._router.navigateByUrl('/admin/panel/authors');
     }
   }
 }

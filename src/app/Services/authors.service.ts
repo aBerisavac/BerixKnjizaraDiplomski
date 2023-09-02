@@ -80,6 +80,31 @@ export class AuthorsService {
       });
   }
 
+  updateAuthor(author: AuthorDTO){
+    const headers = {
+      Authorization: `Bearer ${this._userService.getUserToken()}`,
+    };
+    this._http
+      .put<any>(
+        `http://localhost:5000/api/author/${author.id}`,
+        { FirstName: author.FirstName, LastName: author.LastName, BirthDate: author.BirthDate },
+        { headers }
+      )
+      .pipe(
+        catchError((error: any, caught: Observable<any>): Observable<any> => {
+          console.log(error);
+          this._errorModalService.setErrors([error.error.message]);
+
+          return of();
+        })
+      )
+      .subscribe({
+        next: (data) => {
+          this.getAuthors();
+        },
+      });
+  }
+
   deleteAuthor(id: number) {
     const headers = {
       Authorization: `Bearer ${this._userService.getUserToken()}`,

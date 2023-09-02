@@ -1,0 +1,11 @@
+<div id="author-update-form-holder">
+    <form id="author-update-form" (submit)="formSubmitted($event)" >
+        <label for="first-name">First Name:</label>
+        <input id="first-name" [value]="authorToEdit.FirstName" name="first-name" type="text"/>
+        <label for="last-name">Last Name:</label>
+        <input id="last-name" [value]="authorToEdit.LastName"  name="last-name" type="text"/>
+        <label for="birth-date">Author Birth Date:</label>
+        <input id="birth-date" [(ngModel)]="convertedBirthDate" name="birth-date" type="date"/>
+        <input type="submit" value="Update" >
+    </form>
+</div>

@@ -15,6 +15,8 @@ import { AdminShippingMethodsComponent } from './Components/admin-shipping-metho
 import { AdminShippingMethodInsertComponent } from './Components/admin-shipping-method-insert/admin-shipping-method-insert.component';
 import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from '../shared/shared.module';
+import { AdminAuthorUpdateComponent } from './Components/admin-author-update/admin-author-update.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,13 +31,15 @@ import { SharedModule } from '../shared/shared.module';
     AdminGenresComponent,
     AdminGenreInsertComponent,
     AdminShippingMethodsComponent,
-    AdminShippingMethodInsertComponent
+    AdminShippingMethodInsertComponent,
+    AdminAuthorUpdateComponent
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     MatIconModule,
     SharedModule,
+    FormsModule,
   ]
 })
 export class AdminModule { }

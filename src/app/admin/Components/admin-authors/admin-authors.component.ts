@@ -1,8 +1,8 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IAuthorAdmin } from 'src/app/Interfaces/IAuthorAdmin';
 import { AuthorsService } from 'src/app/Services/authors.service';
-import { ErrorModalService } from 'src/app/Services/error-modal.service';
 import { AuthorDTO } from 'src/tsBusinessLayer/dtos/AuthorDTO';
 
 @Component({
@@ -14,7 +14,11 @@ export class AdminAuthorsComponent implements OnInit {
   private authors: Array<AuthorDTO> = [];
   public jsonObjectArrayToDisplay: Array<IAuthorAdmin> = [];
 
-  constructor(private _errorModalService: ErrorModalService, private _authorsService: AuthorsService) { }
+  constructor(
+    private _authorsService: AuthorsService,
+    private _router: Router
+    ) { }
+
   ngOnInit(): void {
     this._authorsService.authors$.subscribe(x=>{
       this.authors=x;
@@ -35,7 +39,7 @@ export class AdminAuthorsComponent implements OnInit {
   }
 
   editItem(item: IAuthorAdmin) {
-    console.log(item);
+    this._router.navigateByUrl(`${this._router.url}/edit/${item.id}`)
   }
 
   deleteItem(item: IAuthorAdmin) {

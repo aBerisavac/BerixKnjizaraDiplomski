@@ -10,6 +10,7 @@ import { AdminOrdersComponent } from './Components/admin-orders/admin-orders.com
 import { AdminShippingMethodsComponent } from './Components/admin-shipping-methods/admin-shipping-methods.component';
 import { AdminShippingMethodInsertComponent } from './Components/admin-shipping-method-insert/admin-shipping-method-insert.component';
 import { AdminPanelComponent } from './Components/admin-panel/admin-panel.component';
+import { AdminAuthorUpdateComponent } from './Components/admin-author-update/admin-author-update.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
       {
         path:"authors/insert",
         component: AdminAuthorInsertComponent
+      },
+      {
+        path:"authors/edit/:id",
+        component: AdminAuthorUpdateComponent
       },
       {
         path:"books",
