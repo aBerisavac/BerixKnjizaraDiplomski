@@ -13,6 +13,7 @@ import { AdminPanelComponent } from './Components/admin-panel/admin-panel.compon
 import { AdminAuthorUpdateComponent } from './Components/admin-author-update/admin-author-update.component';
 import { AdminGenreUpdateComponent } from './Components/admin-genre-update/admin-genre-update.component';
 import { AdminShippingMethodUpdateComponent } from './Components/admin-shipping-method-update/admin-shipping-method-update.component';
+import { AdminBookUpdateComponent } from './Components/admin-book-update/admin-book-update.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,10 @@ const routes: Routes = [
       {
         path:"books/insert",
         component: AdminBookInsertComponent
+      },
+      {
+        path:"books/edit/:id",
+        component: AdminBookUpdateComponent
       },
       {
         path:"genres",

@@ -1,0 +1,42 @@
+<div id="book-update-form-holder">
+    <form id="book-update-form" (submit)="formSubmitted($event)" >
+
+        <label for="title">Book Title:</label>
+        <input id="title" [value]="bookToEdit.Title" name="title" type="text"/>
+
+        <label for="description">Book Description:</label>
+        <input id="description" [value]="bookToEdit.Description" name="description" type="text"/>
+
+        <label for="price">Book Price:</label>
+        <input id="price" [value]="bookToEdit.Prices[0].price+'$'" name="price" type="text"/>
+
+        <label for="image-src">Book ImageSrc:</label>
+        <input id="image-src" [value]="bookToEdit.ImageSrc" name="image-src" type="text"/>
+
+        <label for="release-date">Book Release Date:</label>
+        <input id="release-date" [value]="convertedReleaseDate" name="release-date" type="date"/>
+
+        <label for="authors">Select book authors:</label>
+        <select id="authors" name="authors" multiple="multiple">
+            <option [value]="author.id" *ngFor="let author of authors" [selected]="selectedAuthors.includes(author.id)">
+              {{author.FirstName}} {{author.LastName}}
+            </option>
+          </select>
+
+        <label for="genres">Select book genres:</label>
+        <select id="genres" name="genres" multiple="multiple">
+            <option *ngFor="let genre of genres" [value]="genre.id" [selected]="selectedGenres.includes(genre.id)">
+              {{ genre.Name }}
+            </option>
+          </select>
+
+        <label for="languages">Select book languages:</label>
+        <select id="languages" name="languages" multiple="multiple">
+            <option *ngFor="let language of languages" [value]="language.id" [selected]="selectedLanguages.includes(language.id)">
+              {{ language.Name }}
+            </option>
+          </select>
+        
+        <input type="submit" value="Update" >
+    </form>
+</div>

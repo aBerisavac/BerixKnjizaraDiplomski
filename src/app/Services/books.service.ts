@@ -127,6 +127,38 @@ export class BooksService {
       });
   }
 
+  editBook(book: BookDTO){
+    let languageIds: Number[] = [];
+    book.Languages.forEach(x=>languageIds.push(x.id));
+    let genreIds: Number[] = [];
+    book.Genres.forEach(x=>genreIds.push(x.id));
+    let authorIds: Number[] = [];
+    book.Languages.forEach(x=>authorIds.push(x.id));
+
+    const headers = {
+      Authorization: `Bearer ${this._userService.getUserToken()}`,
+    };
+    this._http
+      .put<any>(
+        `http://localhost:5000/api/book/${book.id}`,
+        { Title: book.Title, Description: book.Description, ImageSrc: book.ImageSrc, ReleaseDate: book.ReleaseDate, GenreIds: genreIds, AuthorIds: authorIds, LanguageIds: languageIds, Price: book.Prices[0].price },
+        { headers }
+      )
+      .pipe(
+        catchError((error: any, caught: Observable<any>): Observable<any> => {
+          console.log(error);
+          this._errorModalService.setErrors([error.error.message]);
+
+          return of();
+        })
+      )
+      .subscribe({
+        next: (data) => {
+          this.getBooks();
+        },
+      });
+  }
+
   deleteBook(id: number) {
     const headers = {
       Authorization: `Bearer ${this._userService.getUserToken()}`,

@@ -39,6 +39,7 @@ namespace Implementation.Commands.Books
             var books = _dbContext.Books
                 .Include(book => book.Authors).ThenInclude(author => author.Author)
                 .Include(book => book.Genres).ThenInclude(genre => genre.Genre)
+                .Include(book => book.Languages).ThenInclude(language => language.Language)
                 .Include(book => book.Prices);
             var book = books.Select(x => x).Where(x => x.Id == request.Id).FirstOrDefault();
 
@@ -164,7 +165,7 @@ namespace Implementation.Commands.Books
         {
             for(int i = 0; i < newLanguageIds.Count(); i++)
             {
-                var currentBookLanguages = _mapper.Map<BookDTO>(currentBook).Authors;
+                var currentBookLanguages = _mapper.Map<BookDTO>(currentBook).Languages;
 
                 if(currentBookLanguages.Any(x=> !newLanguageIds.Contains(x.Id))){
                     return true;

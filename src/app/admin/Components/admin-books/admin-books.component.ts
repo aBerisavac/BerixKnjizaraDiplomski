@@ -1,8 +1,8 @@
 import { formatDate } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IBookAdmin } from 'src/app/Interfaces/IBookAdmin';
 import { BooksService } from 'src/app/Services/books.service';
-import { ErrorModalService } from 'src/app/Services/error-modal.service';
 import { BookDTO } from 'src/tsBusinessLayer/dtos/BookDTO';
 
 @Component({
@@ -15,7 +15,7 @@ export class AdminBooksComponent implements OnInit {
 
   constructor(
     private _booksService: BooksService,
-    private _errorModalService: ErrorModalService
+    private _router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -57,7 +57,7 @@ export class AdminBooksComponent implements OnInit {
   }
 
   editItem(item: IBookAdmin) {
-    console.log(item);
+    this._router.navigateByUrl(`${this._router.url}/edit/${item.id}`)
   }
 
   deleteItem(item: IBookAdmin) {

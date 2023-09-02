@@ -19,6 +19,7 @@ import { AdminAuthorUpdateComponent } from './Components/admin-author-update/adm
 import { FormsModule } from '@angular/forms';
 import { AdminGenreUpdateComponent } from './Components/admin-genre-update/admin-genre-update.component';
 import { AdminShippingMethodUpdateComponent } from './Components/admin-shipping-method-update/admin-shipping-method-update.component';
+import { AdminBookUpdateComponent } from './Components/admin-book-update/admin-book-update.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AdminShippingMethodUpdateComponent } from './Components/admin-shipping-
     AdminShippingMethodInsertComponent,
     AdminAuthorUpdateComponent,
     AdminGenreUpdateComponent,
-    AdminShippingMethodUpdateComponent
+    AdminShippingMethodUpdateComponent,
+    AdminBookUpdateComponent
   ],
   imports: [
     CommonModule,
