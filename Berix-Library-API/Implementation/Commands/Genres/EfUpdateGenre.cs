@@ -1,4 +1,4 @@
-﻿using Application.Commands.Genres;
+using Application.Commands.Genres;
 using Application.DTOs.Genres;
 using Application.Exceptions;
 using AutoMapper;
@@ -40,9 +40,7 @@ namespace Implementation.Commands.Genres
                 throw new EntityNotFoundException(Id, typeof(Genre));
             }
 
-            /*
-        virtual public ICollection<BookGenre>? Books { get; set; } = new List<BookGenre>();
-             */
+
 
             _validator.ValidateAndThrow(request);
 

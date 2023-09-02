@@ -1,0 +1,7 @@
+<div id="genre-update-form-holder">
+    <form id="genre-update-form" (submit)="formSubmitted($event)" >
+        <label for="name">Genre Name:</label>
+        <input id="name" [value]="genreToEdit.Name" name="name" type="text"/>
+        <input type="submit" value="Update" >
+    </form>
+</div>

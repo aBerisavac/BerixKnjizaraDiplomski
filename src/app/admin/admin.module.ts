@@ -17,6 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { SharedModule } from '../shared/shared.module';
 import { AdminAuthorUpdateComponent } from './Components/admin-author-update/admin-author-update.component';
 import { FormsModule } from '@angular/forms';
+import { AdminGenreUpdateComponent } from './Components/admin-genre-update/admin-genre-update.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     AdminGenreInsertComponent,
     AdminShippingMethodsComponent,
     AdminShippingMethodInsertComponent,
-    AdminAuthorUpdateComponent
+    AdminAuthorUpdateComponent,
+    AdminGenreUpdateComponent
   ],
   imports: [
     CommonModule,

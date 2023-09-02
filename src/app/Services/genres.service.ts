@@ -22,10 +22,7 @@ export class GenresService {
   private genres = new BehaviorSubject<Array<GenreDTO>>([]);
   public genres$ = this.genres.asObservable();
 
-  private genreModel = new GenreModel();
-  private bookModel = new BookModel();
-
-  getGenres(): GenreDTO[] {
+  getGenres() {
     this._http
     .get<any>('http://localhost:5000/api/genre')
     .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
@@ -42,12 +39,10 @@ export class GenresService {
         this.genres.next(genresFromBack);
       }
     });
-
-    return this.genreModel.getAll();
   }
 
   getGenre(id: number): GenreDTO {
-    return this.genreModel.get(id);
+    return this.genres.getValue().filter((x) => x.id == id)[0];
   }
 
   insertGenre(name: String){
@@ -67,6 +62,21 @@ export class GenresService {
     });
   }
 
+  editGenre(genre:GenreDTO){
+    const headers = { 'Authorization': `Bearer ${this._userService.getUserToken()}` };
+    this._http
+    .put<any>(`http://localhost:5000/api/genre/${genre.id}`, {Name: genre.Name}, {headers})
+    .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
+      this._errorModalService.setErrors([error.error.message])
+
+      return of();
+  }))
+    .subscribe({
+      next: (data) => {
+        this.getGenres();
+      }
+    });
+  }
   deleteGenre(id: number) {
     const headers = { 'Authorization': `Bearer ${this._userService.getUserToken()}`};
     this._http

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GenresService } from 'src/app/Services/genres.service';
 import { GenreDTO } from 'src/tsBusinessLayer/dtos/GenreDTO';
 
@@ -12,6 +13,7 @@ export class AdminGenresComponent implements OnInit{
 
   constructor(
     private _genreService: GenresService, 
+    private _router: Router, 
     ){
   }
   ngOnInit(): void {
@@ -19,7 +21,7 @@ export class AdminGenresComponent implements OnInit{
   }
 
   editItem(item: GenreDTO){
-    console.log(item)
+    this._router.navigateByUrl(`${this._router.url}/edit/${item.id}`)
   }
 
   deleteItem(item: GenreDTO){
