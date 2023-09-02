@@ -25,7 +25,7 @@ export class CartComponent implements OnInit {
     private _cartService: CartService,
     private _ordersService: OrdersService,
     private _userService: UsersService,
-    private _http: HttpClient
+    private _http: HttpClient,
   ) {}
 
   ngOnInit() {
@@ -83,6 +83,10 @@ export class CartComponent implements OnInit {
   }
 
   public showCheckoutForm() {
-    this.showCheckoutFormBool = true;
+    if(this._userService.getUserData()==undefined){
+      this._cartService.setNotificationMessage("You need to login before you are able to buy.");
+    } else{
+      this.showCheckoutFormBool = true;
+    }
   }
 }

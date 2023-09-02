@@ -77,4 +77,7 @@ export class CartService {
     this.notificationMessage.next(notificationMessage);
   }
 
+  public setNotificationMessage(message: string){
+    this.notificationMessage.next(message);
+  }
 }

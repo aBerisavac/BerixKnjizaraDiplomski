@@ -24,7 +24,7 @@ export class LoginService {
     private _router: Router,
     private _userService: UsersService
   ) {
-    if(localStorage.getItem("userToken")!=undefined){
+    if(localStorage.getItem("userToken")!=undefined && localStorage.getItem("userToken")!=""){
       this.isLoggedIn.next(true);
     }
   }

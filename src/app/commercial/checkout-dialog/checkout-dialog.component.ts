@@ -25,7 +25,7 @@ export class CheckoutDialogComponent implements OnInit {
   constructor(
     private _errorModal: ErrorModalService,
     private _cartService: CartService,
-    private _shippingMethodsService: ShippingMethodsService
+    private _shippingMethodsService: ShippingMethodsService,
   ) {
     this._shippingMethodsService.shippingMethods$.subscribe(x=>this.shippingMethods=x)
     this.selectedShippingMethod = this.shippingMethods[0];
