@@ -24,13 +24,13 @@ export class AppComponent implements OnInit{
     private _booksService: BooksService,
     private _ordersService: OrdersService,
     ){
-      _authorsService.getAuthors();
-      _genresService.getGenres();
-      _shippingMethodsService.getShippingMethods();
-      _booksService.getBooks();
-      _languageService.getLanguages();
     }
   ngOnInit(): void {
+    this._authorsService.getAuthors();
+    this._genresService.getGenres();
+    this._shippingMethodsService.getShippingMethods();
+    this._booksService.getBooks();
+    this._languageService.getLanguages();
     this._booksService.books$.subscribe(x=>this._ordersService.getOrders())
   }
 
