@@ -17,6 +17,12 @@ export class AdminOrdersComponent implements OnInit{
     private _ordersService: OrdersService,
     private _booksService: BooksService,
     ){
+      _booksService.getBooks();
+      _booksService.books$.subscribe(x=>{
+        if(x.length>0){
+          _ordersService.getOrders()
+        }
+      })
   }
   ngOnInit(): void {
     this._ordersService.orders$.subscribe(x=>{
