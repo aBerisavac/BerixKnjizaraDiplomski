@@ -1,0 +1,7 @@
+<div id="language-update-form-holder">
+    <form id="language-update-form" (submit)="formSubmitted($event)" >
+        <label for="name">Language Name:</label>
+        <input id="name" [value]="languageToEdit.Name" name="name" type="text"/>
+        <input type="submit" value="Update" >
+    </form>
+</div>

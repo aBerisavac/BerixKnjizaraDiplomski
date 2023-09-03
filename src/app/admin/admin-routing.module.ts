@@ -16,6 +16,7 @@ import { AdminShippingMethodUpdateComponent } from './Components/admin-shipping-
 import { AdminBookUpdateComponent } from './Components/admin-book-update/admin-book-update.component';
 import { AdminLanguagesComponent } from './Components/admin-languages/admin-languages.component';
 import { AdminLanguageInsertComponent } from './Components/admin-language-insert/admin-language-insert.component';
+import { AdminLanguageUpdateComponent } from './Components/admin-language-update/admin-language-update.component';
 
 const routes: Routes = [
   {
@@ -58,6 +59,10 @@ const routes: Routes = [
       {
         path:"languages/insert",
         component: AdminLanguageInsertComponent
+      },
+      {
+        path:"languages/edit/:id",
+        component: AdminLanguageUpdateComponent
       },
       {
         path:"genres",

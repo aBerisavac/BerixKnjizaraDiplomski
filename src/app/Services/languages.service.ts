@@ -46,7 +46,7 @@ export class LanguagesService {
   }
 
   getLanguage(id: number): LanguageDTO {
-    return this.languageModel.get(id);
+    return this.languages.getValue().filter((x) => x.id == id)[0];
   }
 
   public insertLanguage(language: LanguageDTO){
@@ -67,7 +67,19 @@ export class LanguagesService {
   }
 
   public editLanguage(language: LanguageDTO){
-    console.log("edit")
+    const headers = { 'Authorization': `Bearer ${this._userService.getUserToken()}` };
+    this._http
+    .put<any>(`http://localhost:5000/api/language/${language.id}`, {Name: language.Name}, {headers})
+    .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
+      this._errorModalService.setErrors([error.error.message])
+
+      return of();
+  }))
+    .subscribe({
+      next: (data) => {
+        this.getLanguages();
+      }
+    });
   }
 
   public deleteLanguage(id: number){
@@ -76,7 +88,6 @@ export class LanguagesService {
     .delete<any>(`http://localhost:5000/api/language/${id}`, {headers})
     .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
       this._errorModalService.setErrors([error.error.message])
-      console.log(error)
 
       return of();
   }))
