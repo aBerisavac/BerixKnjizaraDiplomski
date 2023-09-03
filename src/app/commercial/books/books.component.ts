@@ -13,7 +13,6 @@ export class BooksComponent implements OnInit{
 
   constructor(booksService: BooksService ){
     this.booksService=booksService;
-    this.booksService.getBooks();
   }
   ngOnInit(): void {
     this.booksService.books$.subscribe(x=>{

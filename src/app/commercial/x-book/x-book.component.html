@@ -1,6 +1,6 @@
 <div class="book-holder" [attr.data-book-id]="book.id">
   <a [routerLink]="'/book/' + book.id">
-    <img [src]="'assets/images/books/' + book.ImageSrc + '.jpg'"  [alt]="book.ImageSrc" onerror="this.onerror=null; this.src='assets/images/fallbackBookImage.jpg'"/>
+    <img [src]="'data:image/jpeg;base64,'+book.ImageBase64"  [alt]="book.ImageSrc" onerror="this.onerror=null; this.src='assets/images/fallbackBookImage.jpg'"/>
   </a>
   <p>{{ book.Title }}</p>
 

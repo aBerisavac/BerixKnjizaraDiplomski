@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
+import {
+  capitalizePropertyNamesWithoutIdCapitalization,
+  convertBase64ToFile,
+} from 'common';
 import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
 import { AuthorDTO } from 'src/tsBusinessLayer/dtos/AuthorDTO';
 import { BookDTO } from 'src/tsBusinessLayer/dtos/BookDTO';
@@ -22,8 +25,7 @@ export class BooksService {
   private books = new BehaviorSubject<Array<BookDTO>>([]);
   public books$ = this.books.asObservable();
 
-
-  getBooks(){
+  getBooks() {
     this._http
       .get<any>('http://localhost:5000/api/book')
       .pipe(
@@ -35,8 +37,12 @@ export class BooksService {
       )
       .subscribe({
         next: (data) => {
+          const contentType = 'image/jpeg';
+
           let booksFromBack: Array<BookDTO> = [];
           for (let book of data) {
+            book.imageBase64 = book.image;
+
             let authorsFromBook: Array<AuthorDTO> = [];
             for (let author of book.authors) {
               authorsFromBook.push(
@@ -109,7 +115,16 @@ export class BooksService {
     this._http
       .post<any>(
         'http://localhost:5000/api/book',
-        { Title: title, Description: description, ImageSrc: imageSrc, ReleaseDate: releaseDate, GenreIds: genreIds, AuthorIds: authorIds, LanguageIds: languageIds, Price: bookPrice },
+        {
+          Title: title,
+          Description: description,
+          ImageSrc: imageSrc,
+          ReleaseDate: releaseDate,
+          GenreIds: genreIds,
+          AuthorIds: authorIds,
+          LanguageIds: languageIds,
+          Price: bookPrice,
+        },
         { headers }
       )
       .pipe(
@@ -127,13 +142,13 @@ export class BooksService {
       });
   }
 
-  editBook(book: BookDTO){
+  editBook(book: BookDTO) {
     let languageIds: Number[] = [];
-    book.Languages.forEach(x=>languageIds.push(x.id));
+    book.Languages.forEach((x) => languageIds.push(x.id));
     let genreIds: Number[] = [];
-    book.Genres.forEach(x=>genreIds.push(x.id));
+    book.Genres.forEach((x) => genreIds.push(x.id));
     let authorIds: Number[] = [];
-    book.Languages.forEach(x=>authorIds.push(x.id));
+    book.Languages.forEach((x) => authorIds.push(x.id));
 
     const headers = {
       Authorization: `Bearer ${this._userService.getUserToken()}`,
@@ -141,7 +156,16 @@ export class BooksService {
     this._http
       .put<any>(
         `http://localhost:5000/api/book/${book.id}`,
-        { Title: book.Title, Description: book.Description, ImageSrc: book.ImageSrc, ReleaseDate: book.ReleaseDate, GenreIds: genreIds, AuthorIds: authorIds, LanguageIds: languageIds, Price: book.Prices[0].price },
+        {
+          Title: book.Title,
+          Description: book.Description,
+          ImageSrc: book.ImageSrc,
+          ReleaseDate: book.ReleaseDate,
+          GenreIds: genreIds,
+          AuthorIds: authorIds,
+          LanguageIds: languageIds,
+          Price: book.Prices[0].price,
+        },
         { headers }
       )
       .pipe(

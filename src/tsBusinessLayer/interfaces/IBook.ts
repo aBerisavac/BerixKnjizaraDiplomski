@@ -12,5 +12,6 @@ export interface IBook {
     "Authors": Array<IAuthor>,
     "Genres": Array<IGenre>,
     "Languages": Array<ILanguage>,
-    "Prices": Array<IBookPrice>
+    "Prices": Array<IBookPrice>,
+    "ImageBase64"?: String | null,
 }

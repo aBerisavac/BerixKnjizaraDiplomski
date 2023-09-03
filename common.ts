@@ -1,5 +1,5 @@
-import { OnInit } from "@angular/core";
-import { UsersService } from "src/app/Services/users.service";
+import { OnInit } from '@angular/core';
+import { UsersService } from 'src/app/Services/users.service';
 
 function getRandomDate(startDate: Date, endDate: Date) {
   /*
@@ -13,8 +13,6 @@ function getRandomDate(startDate: Date, endDate: Date) {
   return randomDate.toISOString().slice(0, 10);
 }
 
-
-
 function getRandomNumber(min: number, max: number, decimals: number) {
   const scaledRandom = (Math.random() * (max - min) + min).toFixed(decimals);
   return parseFloat(scaledRandom);
@@ -24,37 +22,36 @@ function capitalizeFirstLetter(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const CONSTANTS = {
-}
+const CONSTANTS = {};
 
 const VALIDATORS = {
   email: (email: String): boolean => {
     const emailRegex =
-    /^[a-z0-9!#$%&'*+\/=?^_‘{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_‘{|}~-]+)*@[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)*$/;
-    return emailRegex.test(email as string)
+      /^[a-z0-9!#$%&'*+\/=?^_‘{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_‘{|}~-]+)*@[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)*$/;
+    return emailRegex.test(email as string);
   },
   stringNotNull: (string: String): boolean => {
-    return string.trim().length>0;
+    return string.trim().length > 0;
   },
   variableNotUndefined: (variable: any): boolean => {
-    return variable!=undefined;
+    return variable != undefined;
   },
-  min(number: string | number, minValue: number){
-    number=parseFloat(number as string);
+  min(number: string | number, minValue: number) {
+    number = parseFloat(number as string);
 
-    if(number>minValue){
+    if (number > minValue) {
       return true;
-    } else{
+    } else {
       return false;
     }
   },
-  isNumber(number:string | number){
+  isNumber(number: string | number) {
     number = parseFloat(number as string);
     return !Number.isNaN(number);
-  }
+  },
 };
 
- function capitalizePropertyNamesWithoutIdCapitalization(obj: any) {
+function capitalizePropertyNamesWithoutIdCapitalization(obj: any) {
   const newObj: { [key: string]: any } = {};
 
   for (let key in obj) {
@@ -70,4 +67,28 @@ const VALIDATORS = {
   return newObj;
 }
 
-export { getRandomDate, getRandomNumber, capitalizeFirstLetter, capitalizePropertyNamesWithoutIdCapitalization, VALIDATORS };
+function convertBase64ToFile(
+  base64String: string,
+  contentType: string,
+  fileName: string
+) {
+  const arrayBuffer = new ArrayBuffer(base64String.length);
+  const uint8Array = new Uint8Array(arrayBuffer);
+  for (let i = 0; i < base64String.length; i++) {
+    uint8Array[i] = base64String.charCodeAt(i);
+  }
+
+  const blob = new Blob([arrayBuffer], { type: contentType });
+  const file = new File([blob], fileName, { type: contentType });
+
+  return file;
+}
+
+export {
+  getRandomDate,
+  getRandomNumber,
+  capitalizeFirstLetter,
+  capitalizePropertyNamesWithoutIdCapitalization,
+  convertBase64ToFile,
+  VALIDATORS,
+};

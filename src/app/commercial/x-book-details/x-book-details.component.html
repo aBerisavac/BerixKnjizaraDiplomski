@@ -5,7 +5,9 @@
       <div id="image-holder">
         <img
           height="300px"
-          [src]="'assets/images/books/' + book.ImageSrc + '.jpg'"
+          [src]="'data:image/jpeg;base64,'+book.ImageBase64"
+          [alt]="book.Title"
+          onerror="this.onerror=null; this.src='assets/images/fallbackBookImage.jpg'"
         />
       </div>
       <div id="description-holder">

@@ -23,5 +23,6 @@ namespace Application.DTOs.Books
         public ICollection<LanguageDTO> Languages { get; set; } = new List<LanguageDTO>();
         virtual public ICollection<BookPriceDTO> Prices { get; set; } = new List<BookPriceDTO>();
         virtual public ICollection<OrderInvoiceDTO>? OrderInvoices { get; set; } = new List<OrderInvoiceDTO>();
+        public byte[] Image { get; set; }
     }
 }
