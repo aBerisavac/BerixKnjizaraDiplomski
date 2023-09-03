@@ -20,6 +20,8 @@ import { FormsModule } from '@angular/forms';
 import { AdminGenreUpdateComponent } from './Components/admin-genre-update/admin-genre-update.component';
 import { AdminShippingMethodUpdateComponent } from './Components/admin-shipping-method-update/admin-shipping-method-update.component';
 import { AdminBookUpdateComponent } from './Components/admin-book-update/admin-book-update.component';
+import { AdminLanguagesComponent } from './Components/admin-languages/admin-languages.component';
+import { AdminLanguageInsertComponent } from './Components/admin-language-insert/admin-language-insert.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { AdminBookUpdateComponent } from './Components/admin-book-update/admin-b
     AdminAuthorUpdateComponent,
     AdminGenreUpdateComponent,
     AdminShippingMethodUpdateComponent,
-    AdminBookUpdateComponent
+    AdminBookUpdateComponent,
+    AdminLanguagesComponent,
+    AdminLanguageInsertComponent
   ],
   imports: [
     CommonModule,

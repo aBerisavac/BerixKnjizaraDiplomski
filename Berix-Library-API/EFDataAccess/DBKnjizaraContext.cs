@@ -30,7 +30,7 @@ namespace EFDataAccess
             modelBuilder.Entity<ShippingMethod>().HasQueryFilter(e => !e.IsDeleted);
             modelBuilder.Entity<UseCase>().HasQueryFilter(e => !e.IsDeleted);
             modelBuilder.Entity<BookPrice>().HasQueryFilter(e => !e.IsDeleted);
-            modelBuilder.Entity<BookLanguage>().HasQueryFilter(e => !e.IsDeleted);
+            modelBuilder.Entity<Language>().HasQueryFilter(e => !e.IsDeleted);
         }
 
         public override int SaveChanges()
