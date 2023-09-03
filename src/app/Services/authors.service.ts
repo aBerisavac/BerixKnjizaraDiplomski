@@ -1,13 +1,9 @@
 import { Injectable } from '@angular/core';
-import { AuthorModel } from 'src/tsBusinessLayer/Models/AuthorModel';
-import { BookModel } from 'src/tsBusinessLayer/Models/BookModel';
 import { AuthorDTO } from 'src/tsBusinessLayer/dtos/AuthorDTO';
-import { BookDTO } from 'src/tsBusinessLayer/dtos/BookDTO';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
 import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
 import { UsersService } from './users.service';
-import { BooksService } from './books.service';
 import { ErrorModalService } from './error-modal.service';
 
 @Injectable({

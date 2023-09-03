@@ -1,0 +1,7 @@
+<div id="home-paragraph-update-form-holder">
+    <form id="home-paragraph-update-form" (submit)="formSubmitted($event)" >
+        <label for="name">Home Paragraph Name:</label>
+        <input id="name" [value]="homeParagraphToEdit.Paragraph" name="name" type="text"/>
+        <input type="submit" value="Update" >
+    </form>
+</div>

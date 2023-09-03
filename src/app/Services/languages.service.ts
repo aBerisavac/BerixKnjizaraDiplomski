@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { LanguageModel } from 'src/tsBusinessLayer/Models/LanguageModel';
 import { LanguageDTO } from 'src/tsBusinessLayer/dtos/LanguageDTO';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
@@ -21,9 +20,8 @@ export class LanguagesService {
   private languages = new BehaviorSubject<Array<LanguageDTO>>([]);
   public languages$ = this.languages.asObservable();
 
-  private languageModel = new LanguageModel();
 
-  getLanguages(): LanguageDTO[] {
+  getLanguages() {
     this._http
     .get<any>('http://localhost:5000/api/language')
     .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
@@ -41,8 +39,6 @@ export class LanguagesService {
         this.languages.next(languagesFromBack)
       }
     });
-
-    return this.languageModel.getAll();
   }
 
   getLanguage(id: number): LanguageDTO {

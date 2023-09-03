@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
-import { UserModel } from 'src/tsBusinessLayer/Models/UserModel';
 import { UserDTO } from 'src/tsBusinessLayer/dtos/UserDTO';
 import { UserInsertDTO } from 'src/tsBusinessLayer/dtos/UserInsertDTO';
 import {TErrorMessagesFromBack} from 'src/app/types/TErrorMessagesFromBack'
@@ -44,7 +43,7 @@ export class UsersService {
       .subscribe({
         next: (data) => {
           this.errors = [];
-          this._router.navigateByUrl('/login');
+          this._router.navigateByUrl('/user/login');
           this.notificationMessage.next("You have successfully registered");
         }
       });

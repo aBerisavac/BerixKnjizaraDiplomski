@@ -9,8 +9,7 @@ import { IBookCart } from '../Interfaces/IBookCart';
 })
 export class CartService {
 
-  private cartDataFromJson = require("src/assets/data/cart.json");
-  private cart = new BehaviorSubject<Array<IBookCart>>(this.cartDataFromJson);
+  private cart = new BehaviorSubject<Array<IBookCart>>([]);
   public currentDataCart$ = this.cart.asObservable();
   private notificationMessage = new BehaviorSubject<String>("")
   public currentNotifyMessage$ = this.notificationMessage.asObservable();

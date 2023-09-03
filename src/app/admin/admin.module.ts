@@ -23,6 +23,9 @@ import { AdminBookUpdateComponent } from './Components/admin-book-update/admin-b
 import { AdminLanguagesComponent } from './Components/admin-languages/admin-languages.component';
 import { AdminLanguageInsertComponent } from './Components/admin-language-insert/admin-language-insert.component';
 import { AdminLanguageUpdateComponent } from './Components/admin-language-update/admin-language-update.component';
+import { AdminHomeParagraphsComponent } from './Components/admin-home-paragraphs/admin-home-paragraphs.component';
+import { AdminHomeParagraphInsertComponent } from './Components/admin-home-paragraph-insert/admin-home-paragraph-insert.component';
+import { AdminHomeParagraphUpdateComponent } from './Components/admin-home-paragraph-update/admin-home-paragraph-update.component';
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { AdminLanguageUpdateComponent } from './Components/admin-language-update
     AdminBookUpdateComponent,
     AdminLanguagesComponent,
     AdminLanguageInsertComponent,
-    AdminLanguageUpdateComponent
+    AdminLanguageUpdateComponent,
+    AdminHomeParagraphsComponent,
+    AdminHomeParagraphInsertComponent,
+    AdminHomeParagraphUpdateComponent
   ],
   imports: [
     CommonModule,

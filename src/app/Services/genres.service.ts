@@ -1,7 +1,4 @@
 import { Injectable } from '@angular/core';
-import { BookModel } from 'src/tsBusinessLayer/Models/BookModel';
-import { GenreModel } from 'src/tsBusinessLayer/Models/GenreModel';
-import { BookDTO } from 'src/tsBusinessLayer/dtos/BookDTO';
 import { GenreDTO } from 'src/tsBusinessLayer/dtos/GenreDTO';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
@@ -77,6 +74,7 @@ export class GenresService {
       }
     });
   }
+  
   deleteGenre(id: number) {
     const headers = { 'Authorization': `Bearer ${this._userService.getUserToken()}`};
     this._http

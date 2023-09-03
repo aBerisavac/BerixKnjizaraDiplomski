@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from 'src/app/Services/home.service';
-import { IHome } from 'src/app/Interfaces/IHome';
+import { HomeParagraphDTO } from 'src/tsBusinessLayer/dtos/HomeParagraphDTO';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +8,12 @@ import { IHome } from 'src/app/Interfaces/IHome';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  paragraphs:IHome[] = [];
+  paragraphs:HomeParagraphDTO[] = [];
   constructor(private homeService: HomeService) { }
 
   ngOnInit(): void {
-
-    this.homeService.getHome().subscribe({
-      next: data => {
-        this.paragraphs = data;
-      },
-      error: err => {
-        console.error(err)
-      }
+    this.homeService.homeParagraphs$.subscribe(x=>{
+      this.paragraphs=x;
     })
   }
 

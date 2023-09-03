@@ -17,6 +17,9 @@ import { AdminBookUpdateComponent } from './Components/admin-book-update/admin-b
 import { AdminLanguagesComponent } from './Components/admin-languages/admin-languages.component';
 import { AdminLanguageInsertComponent } from './Components/admin-language-insert/admin-language-insert.component';
 import { AdminLanguageUpdateComponent } from './Components/admin-language-update/admin-language-update.component';
+import { AdminHomeParagraphsComponent } from './Components/admin-home-paragraphs/admin-home-paragraphs.component';
+import { AdminHomeParagraphInsertComponent } from './Components/admin-home-paragraph-insert/admin-home-paragraph-insert.component';
+import { AdminHomeParagraphUpdateComponent } from './Components/admin-home-paragraph-update/admin-home-paragraph-update.component';
 
 const routes: Routes = [
   {
@@ -39,6 +42,18 @@ const routes: Routes = [
       {
         path:"authors/edit/:id",
         component: AdminAuthorUpdateComponent
+      },
+      {
+        path:"home_paragraphs",
+        component: AdminHomeParagraphsComponent
+      },
+      {
+        path:"home_paragraphs/insert",
+        component: AdminHomeParagraphInsertComponent
+      },
+      {
+        path:"home_paragraphs/edit/:id",
+        component: AdminHomeParagraphUpdateComponent
       },
       {
         path:"books",

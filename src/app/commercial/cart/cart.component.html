@@ -6,7 +6,11 @@
 <main>
   <h1>
     Your Shopping Cart:
-    <div (click)="showCheckoutForm()" id="checkout-button-holder" *ngIf="totalQuantity > 0">
+    <div
+      (click)="showCheckoutForm()"
+      id="checkout-button-holder"
+      *ngIf="totalQuantity > 0"
+    >
       <mat-icon>shopping_cart_checkout</mat-icon>
       <p>
         Checkout (<span *ngIf="totalQuantity > 0">{{ totalPrice }}$</span>)
@@ -27,7 +31,11 @@
       <tbody>
         <tr *ngFor="let item of items">
           <td>
-            <img [src]="'/assets/images/books/' + item.ImageSrc + '.jpg'" />
+            <img
+              [src]="'data:image/jpeg;base64,' + item.ImageBase64"
+              [alt]="item.Title"
+              onerror="this.onerror=null; this.src='assets/images/fallbackBookImage.jpg'"
+            />
           </td>
           <td>{{ item.Title }}</td>
           <td>{{ item.Prices[0].price }}$</td>

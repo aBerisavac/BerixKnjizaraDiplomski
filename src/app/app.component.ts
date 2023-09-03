@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from 'src/app/Services/users.service';
 import { AuthorsService } from './Services/authors.service';
 import { GenresService } from './Services/genres.service';
 import { LanguagesService } from './Services/languages.service';
 import { BooksService } from './Services/books.service';
 import { ShippingMethodsService } from './Services/shipping-methods.service';
 import { OrdersService } from './Services/orders.service';
+import { HomeService } from './Services/home.service';
 
 @Component({
   selector: 'app-root',
@@ -16,16 +16,17 @@ export class AppComponent implements OnInit{
   title = 'Berix Library';
 
   constructor(
-    private _usersService: UsersService,
     private _authorsService: AuthorsService,
     private _languageService: LanguagesService,
     private _genresService: GenresService,
     private _shippingMethodsService: ShippingMethodsService,
     private _booksService: BooksService,
     private _ordersService: OrdersService,
+    private _homeService: HomeService,
     ){
     }
   ngOnInit(): void {
+    this._homeService.getHomeParagraphs();
     this._authorsService.getAuthors();
     this._genresService.getGenres();
     this._shippingMethodsService.getShippingMethods();
