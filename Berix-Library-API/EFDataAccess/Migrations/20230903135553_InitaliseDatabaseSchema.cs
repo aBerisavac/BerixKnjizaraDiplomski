@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EFDataAccess.Migrations
 {
-    public partial class InitialiseDatabaseSchema : Migration
+    public partial class InitaliseDatabaseSchema : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -66,6 +66,24 @@ namespace EFDataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Genres", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "HomeParagraphs",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Paragraph = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    DeletedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false),
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_HomeParagraphs", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -530,6 +548,9 @@ namespace EFDataAccess.Migrations
 
             migrationBuilder.DropTable(
                 name: "BookPrices");
+
+            migrationBuilder.DropTable(
+                name: "HomeParagraphs");
 
             migrationBuilder.DropTable(
                 name: "Logs");

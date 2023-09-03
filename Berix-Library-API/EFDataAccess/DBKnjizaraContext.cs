@@ -31,6 +31,7 @@ namespace EFDataAccess
             modelBuilder.Entity<UseCase>().HasQueryFilter(e => !e.IsDeleted);
             modelBuilder.Entity<BookPrice>().HasQueryFilter(e => !e.IsDeleted);
             modelBuilder.Entity<Language>().HasQueryFilter(e => !e.IsDeleted);
+            modelBuilder.Entity<HomeParagraph>().HasQueryFilter(e => !e.IsDeleted);
         }
 
         public override int SaveChanges()
@@ -73,5 +74,6 @@ namespace EFDataAccess
         public DbSet<UseCase> UseCases { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<BookPrice> BookPrices { get; set; }
+        public DbSet<HomeParagraph> HomeParagraphs { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Application.Commands.Genres;
+using Application.Commands.Genres;
 using Application.DTOs.Genres;
 using AutoMapper;
 using Domain;

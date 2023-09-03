@@ -1,3 +1,4 @@
+using Application.DTOs.HomeParagraphs;
 using Domain;
 using EFDataAccess;
 using Implementation.Password;
@@ -27,6 +28,16 @@ namespace API.Controllers
                 new ShippingMethod { Name = "Express", Cost=45},
                 new ShippingMethod { Name = "Urgent", Cost=72}
             };
+
+      var homeParagraphs = new List<HomeParagraph>
+      {
+        new HomeParagraph { Paragraph="Welcome to Berix Library, where the pages whisper tales of wonder, where minds meet and expand, and where the power of books unites us all. We invite you to embark on an extraordinary journey within these walls, where each turn of a page can lead to boundless inspiration and transformation. Embrace the magic that awaits you and let the stories unfold."},
+        new HomeParagraph { Paragraph="At Berix Library, we believe that knowledge is the key to unlocking endless possibilities. Whether you are a passionate reader, a curious learner, or a dedicated researcher, our doors are open to enrich your intellectual journey. With a collection spanning various genres and subjects, we strive to provide a vibrant and welcoming environment where ideas thrive and imaginations soar."},
+        new HomeParagraph { Paragraph="Step into our library, and you'll be greeted by a tranquil haven that echoes with the whispers of literary treasures. Our shelves are lined with books that transport you to distant lands, evoke deep emotions, and ignite your imagination. From timeless classics to contemporary masterpieces, our vast selection caters to all tastes and interests."},
+        new HomeParagraph { Paragraph="But we don't stop at books alone. Berix Library embraces the digital age, offering an extensive array of e-books, audiobooks, and online resources that can be accessed from the comfort of your own home. Immerse yourself in the captivating world of literature, discover new voices, or delve into the depths of academic research—all at your fingertips."},
+        new HomeParagraph { Paragraph="Our dedicated team of librarians is here to guide and support you on your quest for knowledge. They possess a wealth of expertise and are always ready to assist you in finding the perfect book, navigating research databases, or answering any queries you may have. Feel free to approach them, for they are the guardians of knowledge within these walls."},
+        new HomeParagraph { Paragraph="We understand that a library should cater to the needs of all individuals, so we have curated a diverse range of materials and resources in multiple languages. Whether you prefer English or a foreign tongue, we endeavor to ensure that everyone feels included and empowered in their pursuit of knowledge."}
+      };
 
       var useCases = new List<UseCase>
             {
@@ -80,6 +91,11 @@ namespace API.Controllers
                 new UseCase { Name = "Update Language" },
                 new UseCase { Name = "Get Languages" },
                 new UseCase { Name = "Get Language" },
+                new UseCase { Name = "Create HomeParagraph" },
+                new UseCase { Name = "Delete HomeParagraph" },
+                new UseCase { Name = "Update HomeParagraph" },
+                new UseCase { Name = "Get HomeParagraphs" },
+                new UseCase { Name = "Get HomeParagraph" },
             };
 
       var roles = new List<Role>
@@ -738,7 +754,7 @@ namespace API.Controllers
 
       Random rnd = new Random();
       var bookPrices = new List<BookPrice>();
-      foreach(var book in books)
+      foreach (var book in books)
       {
         for (int j = 0; j <= rnd.Next(4); j++)
         {
@@ -757,7 +773,7 @@ namespace API.Controllers
         {
           var newAuthor = authors.ElementAt(rnd.Next(50));
           var i = 0;
-          while (book.ReleaseDate<newAuthor.BirthDate)
+          while (book.ReleaseDate < newAuthor.BirthDate)
           {
             if (i > 5) break;
             newAuthor = authors.ElementAt(rnd.Next(50));
@@ -776,7 +792,7 @@ namespace API.Controllers
           }
           else
           {
-            while (bookAuthors.Any(x => x.Author == newAuthor && x.Book==book))
+            while (bookAuthors.Any(x => x.Author == newAuthor && x.Book == book))
             {
               newAuthor = authors.ElementAt(rnd.Next(50));
 
@@ -815,7 +831,7 @@ namespace API.Controllers
           }
           else
           {
-            while (bookGenres.Any(x => x.Genre == newGenre && x.Book==book))
+            while (bookGenres.Any(x => x.Genre == newGenre && x.Book == book))
             {
               newGenre = genres.ElementAt(rnd.Next(30));
             }
@@ -906,8 +922,8 @@ namespace API.Controllers
         );
       }
 
-      //dodavanje nekih prava obicnom korisniku, za pocetak nista
-      var allowedUsecaseIds = new List<int> { 21, 25, 26, 27, 30, 31, 34, 35, 36, 37, 38, 39, 41, 42, 43, 49, 50 }; //niz id-jeva usecase-ova koji su dozvoljeni za ovu rolu
+      //dodavanje nekih prava obicnom korisniku
+      var allowedUsecaseIds = new List<int> { 21, 25, 26, 27, 30, 31, 34, 35, 36, 37, 38, 39, 41, 42, 43, 49, 50, 54, 55 }; //niz id-jeva usecase-ova koji su dozvoljeni za ovu rolu
       foreach (var useCaseId in allowedUsecaseIds)
       {
         roleUseCases.Add(
@@ -932,6 +948,7 @@ namespace API.Controllers
       _dbContext.BookLanguages.AddRange(bookLanguages);
       _dbContext.Users.AddRange(users);
       _dbContext.RoleUseCases.AddRange(roleUseCases);
+      _dbContext.HomeParagraphs.AddRange(homeParagraphs);
 
       _dbContext.SaveChanges();
 
