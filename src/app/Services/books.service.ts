@@ -84,6 +84,9 @@ export class BooksService {
   }
 
   getBook(id: number): BookDTO {
+    if(this.books.getValue().length==0){
+      this.getBooks();
+    }
     return this.books.getValue().filter((x) => x.id == id)[0];
   }
 

@@ -39,7 +39,6 @@ export class HomeService {
               ) as HomeParagraphDTO
             );
           }
-          console.log(homeParagraphsFromBack);
           this.homeParagraphs.next(homeParagraphsFromBack);
         },
       });
