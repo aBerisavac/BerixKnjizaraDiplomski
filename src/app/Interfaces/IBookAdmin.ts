@@ -5,5 +5,5 @@ export interface IBookAdmin{
     "Authors": String,
     "Genres": String,
     "Languages": String,
-    "Book price": number
+    "Book price": String
 }

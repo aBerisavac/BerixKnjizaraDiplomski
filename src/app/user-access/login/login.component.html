@@ -1,8 +1,15 @@
 <main>
   <div id="login-form-holder">
-    <form method="post" action="" id="login-form>" name="login-form">
+    <form
+      (submit)="login()"
+      method="post"
+      action=""
+      id="login-form>"
+      name="login-form"
+    >
       <label for="email"> Email: </label>
       <input
+        (keydown)="ifEnterIsPressedTryLogin($event)"
         id="email"
         type="text"
         placeholder="Enter your E-mail"
@@ -11,6 +18,7 @@
       />
       <label for="password"> Password: </label>
       <input
+        (keydown)="ifEnterIsPressedTryLogin($event)"
         id="password"
         type="password"
         placeholder="Enter your password"
@@ -23,7 +31,8 @@
       </div>
     </form>
     <div id="register-div-holder">
-      <p>Don't have an account? &nbsp;</p><a routerLink="/user/register">Register here</a>
+      <p>Don't have an account? &nbsp;</p>
+      <a routerLink="/user/register">Register here</a>
     </div>
     <div *ngIf="errors.length > 0" id="error-output">
       <h4>{{ errors.length > 1 ? "Errors:" : "Error:" }}</h4>

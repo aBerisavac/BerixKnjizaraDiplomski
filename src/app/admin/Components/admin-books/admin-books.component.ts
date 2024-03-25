@@ -48,7 +48,7 @@ export class AdminBooksComponent implements OnInit {
         id: book.id,
         Title: book.Title,
         'Release date': formatDate(book.ReleaseDate, 'MMM d, y', 'en'),
-        'Book price': price,
+        'Book price': (price + "$"),
         Authors: authors,
         Genres: genres,
         Languages: languages,

@@ -36,4 +36,10 @@ export class LoginComponent implements OnInit {
       this.errors.push('You need to enter both email and password.');
     }
   }
+
+  public ifEnterIsPressedTryLogin(event: KeyboardEvent){
+    if (event.key === "Enter") {
+      this.login();
+    }
+  }
 }
