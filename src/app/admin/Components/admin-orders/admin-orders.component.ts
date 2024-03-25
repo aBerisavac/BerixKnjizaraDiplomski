@@ -42,7 +42,7 @@ export class AdminOrdersComponent implements OnInit{
         "Customer address": order.Customer.Address,
         "Shipping method": order.ShippingMethod.Name,
         // "Price": order.ShippingMethod.Cost + price,
-        "Price": price,
+        "Price (shipping)": price + order.ShippingMethod.Cost + "$" + (" (" + order.ShippingMethod.Cost+"$)"),
       } as IOrderAdmin;
 
       this.jsonObjectArrayToDisplay.push(orderAdmin);
