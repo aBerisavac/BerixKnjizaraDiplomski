@@ -67,9 +67,7 @@ export class CartService {
   }
 
   public removeAllElements(){
-    for(let book of this.cart.getValue()){
-      this.removeElementCart(book);
-    }
+    this.cart.next([]);
   }
 
   public showPopupBottomRight(notificationMessage: String){

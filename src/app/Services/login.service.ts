@@ -3,6 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { UsersService } from './users.service';
+import { CartService } from './cart.service';
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +23,8 @@ export class LoginService {
   constructor(
     private http: HttpClient,
     private _router: Router,
-    private _userService: UsersService
+    private _userService: UsersService,
+    // private _cartService: CartService
   ) {
     if(localStorage.getItem("userToken")!=undefined && localStorage.getItem("userToken")!=""){
       this.isLoggedIn.next(true);
@@ -61,6 +63,7 @@ export class LoginService {
 
   public logout() {
     localStorage.clear();
+    // this._cartService.removeAllElements();
     this._userService.setUserToken('');
     this.isLoggedIn.next(false);
     this.notificationMessage.next("You have successfully logged out");

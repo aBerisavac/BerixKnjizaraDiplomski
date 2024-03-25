@@ -28,6 +28,8 @@ $berix-library-theme: mat.define-light-theme((
   )
 ));
 
+@import 'material-icons/iconfont/material-icons.css';
+
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
@@ -35,9 +37,27 @@ $berix-library-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 *{
+  font-family: 'Lora', sans-serif;
+
   @font-face {
-    font-family: lora-regular;
-    src: url("./assets/ttf/static/Lora-Regular.ttf");
+    font-family: "Lora";
+    src: url("./assets/ttf/static/Lora-Regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Lora";
+    src: url("./assets/ttf/static/Lora-Medium.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Lora";
+    src: url("./assets/ttf/static/Lora-Bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
   }
 
   /* width */
@@ -62,3 +82,7 @@ $berix-library-theme: mat.define-light-theme((
 }
 body { height: 100%; }
 body { margin: 0; background-color: #ebd7c2; }
+
+h1{
+  font-weight: 500;
+}

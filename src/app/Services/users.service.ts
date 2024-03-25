@@ -57,6 +57,7 @@ export class UsersService {
       this.setUserData();
     }  else{
       this.loggedInUserData.next(undefined)
+      this.loggedInUser = undefined;
     }
   }
   

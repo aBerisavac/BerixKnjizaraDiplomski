@@ -1,18 +1,21 @@
 <main>
-    <div id="author-card-holder">
-        <p>{{author.FirstName}} {{author.LastName}}</p>
-        <p>Birth Date: {{formattedDate}}</p>
-        <p id="align-center">Books:</p>
-        <div class="books-holder" >
-            <div class="book-holder" *ngFor="let book of booksByAuthor">
-                <a [routerLink]="'/book/'+book.id">
-                    <img 
-                    [src]="'data:image/jpeg;base64,'+book.ImageBase64"
-                    [alt]="book.Title"
-                    onerror="this.onerror=null; this.src='assets/images/fallbackBookImage.jpg'"/>
-                </a>
-                <p>{{book.Title}}</p>
-            </div>
-        </div>
+  <div id="author-card-holder">
+    <div id="author-details">
+      <p>{{ author.FirstName }} {{ author.LastName }}</p>
+      <p>Birth Date: {{ formattedDate }}</p>
+      <p id="align-center">Books:</p>
     </div>
+    <div class="books-holder">
+      <div class="book-holder" *ngFor="let book of booksByAuthor">
+        <a [routerLink]="'/book/' + book.id">
+          <img
+            [src]="'data:image/jpeg;base64,' + book.ImageBase64"
+            [alt]="book.Title"
+            onerror="this.onerror=null; this.src='assets/images/fallbackBookImage.jpg'"
+          />
+        </a>
+        <p>{{ book.Title }}</p>
+      </div>
+    </div>
+  </div>
 </main>

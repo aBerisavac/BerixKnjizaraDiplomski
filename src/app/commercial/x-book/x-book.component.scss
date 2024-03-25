@@ -3,11 +3,12 @@
   margin-top: 15px;
   box-shadow: -2px 2px 9px rgba(0, 0, 0, 0.459);
   padding: 5px;
+  transition: all ease-in-out .3s;
 
   a {
     text-decoration: none;
     color: inherit;
-    
+
     img {
       max-height: 250px;
 
@@ -20,11 +21,22 @@
       position: relative;
       text-align: left;
       margin-top: 0px;
-      z-index:2;
+      z-index: 2;
       box-shadow: -1px 1px 3px black;
       background-color: rgb(85, 30, 25);
       padding: 5px;
       color: #e6b17e;
+
+      display: flex;
+      justify-content: space-between;
+
+      .mat-icon {
+        border-radius: 0px;
+        margin-right: 0px;
+        padding: 0px;
+        color: #e6b17e;
+        background-color: transparent;
+      }
     }
 
     margin: 5px;
@@ -37,11 +49,11 @@
     top: 0px;
     height: fit-content;
     overflow: hidden;
-    padding-bottom:0px;
-    transition: all ease-in-out .3s;
+    padding-bottom: 0px;
+    transition: all ease-in-out 0.3s;
 
     .list {
-      transition: all ease-in-out .3s;
+      transition: all ease-in-out 0.3s;
       position: absolute;
       top: 0px;
       z-index: 1;
@@ -51,32 +63,42 @@
       position: relative;
       text-align: left;
       margin-top: 0px;
-      z-index:2;
+      z-index: 2;
       box-shadow: -1px 1px 3px black;
       background-color: rgb(85, 30, 25);
       padding: 5px;
       color: #e6b17e;
       cursor: pointer;
+      transition: all ease-in-out 0.3s;
 
-      &:hover{
+      &:hover {
         background-color: rgb(207, 120, 62);
         color: rgb(85, 30, 25);
+        font-weight: 500;
+
+        .mat-icon {
+          color: rgb(85, 30, 25);
+        }
       }
     }
   }
 
   .mat-icon {
-    border-radius: 100%;
     margin-right: 15px;
     padding: 7px;
     color: rgb(85, 30, 25);
-    background-color: rgba(167, 151, 150, 0.404);
     transition: all ease-in-out 0.3s;
     cursor: pointer;
+    rotate: 0deg;
 
     &:hover {
-      background-color: rgb(85, 30, 25);
-      color: #e6b17e;
+      transform: translateY(-2px);
+    }
+  }
+
+  .expanded {
+    .mat-icon {
+      rotate: 180deg;
     }
   }
 
@@ -94,7 +116,7 @@
     text-align: left;
   }
 
-  .clickable{
+  .clickable {
     &.info {
       margin-left: 15px;
       text-align: left;
@@ -103,5 +125,13 @@
         color: rgb(167, 45, 34);
       }
     }
+  }
+
+  &:hover {
+    box-shadow: -2px 2px 9px rgba(0, 0, 0, 0.459),
+    inset 5px 5px 10px -10px rgba(0,0,0,1),
+    inset -5px -5px 10px -10px rgba(0,0,0,1);
+
+    transform: translateY(-2px);
   }
 }

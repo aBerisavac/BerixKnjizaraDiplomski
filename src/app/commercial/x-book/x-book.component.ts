@@ -44,6 +44,7 @@ export class XBookComponent implements OnInit {
       '.info-holder'
     ) as HTMLDivElement;
     infoHolder.addEventListener('click', (e) => {
+      (e.currentTarget as HTMLDivElement).classList.toggle("expanded");
       if (parseInt(list.style.top) < 0) {
         list.style.top = infoHolder.clientHeight + 5 + 'px';
         (listHolder.nativeElement as HTMLDivElement).style.paddingBottom =

@@ -11,12 +11,13 @@ import { UsersService } from 'src/app/Services/users.service';
 export class PopupBottomRightComponent implements OnInit {
   public showComponent = false;
   public message = "";
+  private timerId: any;
 
   constructor(private _cartService: CartService, private _userService: UsersService, private _loginService: LoginService){ 
     this.showComponent=false;
   }
   ngOnInit(): void {
-    
+
     this._cartService.currentNotifyMessage$.subscribe(x=>{
       if(x){
         this.showComponent = true;
@@ -26,9 +27,8 @@ export class PopupBottomRightComponent implements OnInit {
           (document.querySelector("#popup-bottom-right") as HTMLDivElement).style.opacity = "1";
         }, 0)
 
-        setTimeout(()=>{
-          (document.querySelector("#popup-bottom-right") as HTMLDivElement).style.opacity = "0";
-        }, 3500)
+        this.cancelTimeout();
+        this.startTimeout();
 
         this.message = x as string;
       }
@@ -43,9 +43,8 @@ export class PopupBottomRightComponent implements OnInit {
           (document.querySelector("#popup-bottom-right") as HTMLDivElement).style.opacity = "1";
         }, 0)
 
-        setTimeout(()=>{
-          (document.querySelector("#popup-bottom-right") as HTMLDivElement).style.opacity = "0";
-        }, 3500)
+        this.cancelTimeout();
+        this.startTimeout();
 
         this.message = x as string;
       }
@@ -56,13 +55,12 @@ export class PopupBottomRightComponent implements OnInit {
         this.showComponent = true;
 
         //set style
+        this.cancelTimeout();
         setTimeout(()=>{
           (document.querySelector("#popup-bottom-right") as HTMLDivElement).style.opacity = "1";
         }, 0)
 
-        setTimeout(()=>{
-          (document.querySelector("#popup-bottom-right") as HTMLDivElement).style.opacity = "0";
-        }, 3500)
+       this.startTimeout();
 
         this.message = x as string;
       }
@@ -75,10 +73,21 @@ export class PopupBottomRightComponent implements OnInit {
 
   public closePopup(){
     (document.querySelector("#popup-bottom-right") as HTMLDivElement).style.opacity = "0";
+    this.cancelTimeout();
     setTimeout(()=>{
     this.showComponent=false;
     this.message = ""
     }, 300)
   }
 
+  startTimeout() {
+    this.timerId = setTimeout(() => {
+      // Your code to execute after the delay
+      (document.querySelector("#popup-bottom-right") as HTMLDivElement).style.opacity = "0";
+    }, 3500); // 2000 milliseconds delay (adjust as needed)
+  }
+
+  cancelTimeout() {
+    clearTimeout(this.timerId); // Cancels the timeout
+  }
 }

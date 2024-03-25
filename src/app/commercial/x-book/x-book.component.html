@@ -18,7 +18,7 @@
   </div>
 
   <div #listHolder class="list-holder">
-    <p class="info-holder">Authors:</p>
+    <p class="info-holder"><span>Authors: </span> <mat-icon>expand_more</mat-icon></p>
     <div class="list">
       <p class="info clickable" *ngFor="let author of book.Authors; index as i">
         <a [routerLink]="'/author/' + author.id">
@@ -29,7 +29,7 @@
   </div>
 
   <div #genresListHolder class="list-holder">
-    <p class="info-holder">Genres:</p>
+    <p class="info-holder"><span>Genres: </span> <mat-icon>expand_more</mat-icon></p>
     <div class="list">
       <p class="info" *ngFor="let genre of book.Genres; index as i">
         {{ i + 1 }}. {{ genre.Name }}
@@ -38,7 +38,7 @@
   </div>
 
   <div #languagesListHolder class="list-holder">
-    <p class="info-holder">Languages:</p>
+    <p class="info-holder"><span>Languages: </span> <mat-icon>expand_more</mat-icon></p>
     <div class="list">
       <p class="info" *ngFor="let language of book.Languages; index as i">
         {{ i + 1 }}. {{ language.Name }}
