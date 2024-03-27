@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDataAccess.Migrations
 {
     [DbContext(typeof(DBKnjizaraContext))]
-    [Migration("20230903135553_InitaliseDatabaseSchema")]
-    partial class InitaliseDatabaseSchema
+    [Migration("20240327091335_InitiallDatabase")]
+    partial class InitiallDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -390,6 +390,11 @@ namespace EFDataAccess.Migrations
 
                     b.Property<DateTime?>("ModifiedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("ShippingAddress")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<int>("ShippingMethodId")
                         .HasColumnType("int");

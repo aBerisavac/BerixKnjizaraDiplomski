@@ -1,4 +1,4 @@
-﻿using Application.DTOs.Books;
+using Application.DTOs.Books;
 using Application.DTOs.Orders;
 using Application.DTOs.ShippingMethods;
 using Application.DTOs.Users;
@@ -13,8 +13,10 @@ using System.Threading.Tasks;
 
 namespace Implementation.Profiles
 {
-    public class OrderProfile : Profile { 
-        public OrderProfile()
+    public class OrderProfile : Profile
+  {
+    private readonly DBKnjizaraContext _dbContext = new DBKnjizaraContext();
+    public OrderProfile()
         {
             CreateMap<OrderDTO, Order>();
             CreateMap<Order, OrderDTO>()
@@ -38,14 +40,14 @@ namespace Implementation.Profiles
                     Name = order.ShippingMethod.Name,
                     Cost = order.ShippingMethod.Cost,
                 }));
+
             CreateMap<OrderInsertDTO, Order>()
                 .ForMember(order => order.OrderInvoices, dtos => dtos.MapFrom(dto => dto.OrderInvoices.Select(x => new OrderInvoice
                 {
-                    BookId = x.BookId,
-                    NumberOfItems = x.NumberOfItems,
-
-                })));
-
+                  BookId = x.BookId,
+                  NumberOfItems = x.NumberOfItems,
+                })))
+                .ForMember(order => order.ShippingAddress, dtos => dtos.MapFrom(dto => dto.ShippingAddress == null ? _dbContext.Users.Find(dto.CustomerId).Address : dto.ShippingAddress));
             CreateMap<Order, OrderInsertDTO>();
 
         }

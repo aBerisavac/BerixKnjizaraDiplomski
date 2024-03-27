@@ -1,4 +1,4 @@
-﻿using Application.DTOs.ShippingMethods;
+using Application.DTOs.ShippingMethods;
 using Application.DTOs.Users;
 using System;
 using System.Collections.Generic;
@@ -10,6 +10,7 @@ namespace Application.DTOs.Orders
 {
     public class OrderInsertDTO
     {
+        public string? ShippingAddress { get; set; }
         public int CustomerId { get; set; }
         public int ShippingMethodId { get; set; }
         virtual public ICollection<OrderInvoiceInsertDTO> OrderInvoices { get; set; } = new List<OrderInvoiceInsertDTO>();

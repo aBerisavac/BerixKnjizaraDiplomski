@@ -6,5 +6,6 @@ export interface IOrder {
     "id": number,
     "Customer": IUser,
     "ShippingMethod": IShippingMethod,
-    "OrderInvoices": Array<IOrderInvoice>
+    "OrderInvoices": Array<IOrderInvoice>,
+    "ShippingAddress"?: string
 }

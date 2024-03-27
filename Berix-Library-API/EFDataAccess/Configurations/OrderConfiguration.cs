@@ -1,4 +1,4 @@
-﻿using Domain;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -13,8 +13,10 @@ namespace EFDataAccess.Configurations
     {
         public void Configure(EntityTypeBuilder<Order> builder)
         {
+            builder.Property(x=>x.ShippingAddress)
+                .HasMaxLength(255);
             builder.Property(x => x.CustomerId)
-               .IsRequired();
+                .IsRequired();
             builder.Property(x => x.ShippingMethodId)
                 .IsRequired();
 

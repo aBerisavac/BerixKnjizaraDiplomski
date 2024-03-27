@@ -39,7 +39,7 @@ export class AdminOrdersComponent implements OnInit{
         "id": order.id,
         "Customer name": order.Customer.FirstName+" "+order.Customer.LastName,
         "Customer email": order.Customer.Email,
-        "Customer address": order.Customer.Address,
+        "Customer address": order.ShippingAddress,
         "Shipping method": order.ShippingMethod.Name,
         // "Price": order.ShippingMethod.Cost + price,
         "Price (shipping)": price + order.ShippingMethod.Cost + "$" + (" (" + order.ShippingMethod.Cost+"$)"),

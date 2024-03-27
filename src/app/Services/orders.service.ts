@@ -88,7 +88,7 @@ export class OrdersService {
     this._http
       .post<any>(
         'http://localhost:5000/api/order',
-        {CustomerId: order.Customer.id, ShippingMethodId: order.ShippingMethod.id, OrderInvoices: orderInvoicesForBack },
+        {CustomerId: order.Customer.id, ShippingAddress: order.ShippingAddress, ShippingMethodId: order.ShippingMethod.id, OrderInvoices: orderInvoicesForBack },
         { headers }
       )
       .pipe(

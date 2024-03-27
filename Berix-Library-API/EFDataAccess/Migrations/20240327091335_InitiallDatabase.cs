@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EFDataAccess.Migrations
 {
-    public partial class InitaliseDatabaseSchema : Migration
+    public partial class InitiallDatabase : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -353,6 +353,7 @@ namespace EFDataAccess.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    ShippingAddress = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     CustomerId = table.Column<int>(type: "int", nullable: false),
                     ShippingMethodId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),

@@ -1,4 +1,4 @@
-﻿using Application.DTOs.Orders;
+using Application.DTOs.Orders;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -21,6 +21,9 @@ namespace Implementation.Validators
             RuleFor(x => x.CustomerId)
                 .NotEmpty()
                 .WithMessage("Customer is not selected");
+            RuleFor(x => x.ShippingAddress)
+                .MaximumLength(255)
+                .WithMessage("You excedeed maximum length of 255 characters for address");
         }
     }
 }

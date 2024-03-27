@@ -8,11 +8,15 @@ export class OrderDTO implements IOrder{
     public Customer: UserDTO;
     public ShippingMethod:ShippingMethodDTO;
     public OrderInvoices:Array<OrderInvoiceDTO>;
+    public ShippingAddress?:string;
 
-    constructor(id:number, customer: UserDTO, shippingMethod: ShippingMethodDTO, orderInvoices:Array<OrderInvoiceDTO>){
+    constructor(id:number, customer: UserDTO, shippingMethod: ShippingMethodDTO, orderInvoices:Array<OrderInvoiceDTO>, ShippingAddress?:string){
         this.id = id;
         this.Customer = customer;
         this.ShippingMethod = shippingMethod;
         this.OrderInvoices = orderInvoices;
+        if(ShippingAddress){
+            this.ShippingAddress = ShippingAddress;
+        }
     }
 }

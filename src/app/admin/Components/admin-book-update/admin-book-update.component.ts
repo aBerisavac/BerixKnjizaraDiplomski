@@ -65,7 +65,7 @@ export class AdminBookUpdateComponent {
     const data = new FormData(e.target as HTMLFormElement);
     let bookTitle = data.get('title') as String;
     let bookDescription = data.get('description') as String;
-    let bookPrice = data.get('price') as String;
+    let bookPrice = (data.get('price') as String);
     let bookImageSrc = data.get('image-src') as String;
     let bookReleaseDate = data.get('release-date') as String;
     let bookAuthors = data.getAll('authors');

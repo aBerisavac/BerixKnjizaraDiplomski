@@ -1,17 +1,31 @@
 <div id="checkout-form-root">
-    <div id="checkout-form-holder">
-      <label for="selectShippingMethod">
-        Shipping Method:
-      </label>
-      <select (change)="setShippingMethod($event)"  id="selectShippingMethod">
-        <option *ngFor="let shippingMethod of shippingMethods" [value]="shippingMethod.id+''">
-          {{shippingMethod.Name}} - {{shippingMethod.Cost}}$
-        </option>
-      </select>
+  <div id="checkout-form-holder">
+    <label for="selectShippingMethod"> Shipping Method: </label>
+    <select (change)="setShippingMethod($event)" id="selectShippingMethod">
+      <option
+        *ngFor="let shippingMethod of shippingMethods"
+        [value]="shippingMethod.id + ''"
+      >
+        {{ shippingMethod.Name }} - {{ shippingMethod.Cost }}$
+      </option>
+    </select>
 
-      <div id="form-actions">
-        <input (click)="checkout()" type="button" [value]="'Checkout: '+(totalCost+selectedShippingMethod.Cost)+'$'"/>
-        <input (click)="closeDialog.emit()" type="button" value="Close"/>
-      </div>
+    <label for="typeAddress"> Address: </label>
+    <input
+      #shippingAddress
+      id="shipping-address"
+      type="text"
+      placeholder="Enter address"
+      ngModel
+    />
+
+    <div id="form-actions">
+      <input
+        (click)="checkout()"
+        type="button"
+        [value]="'Checkout: ' + (totalCost + selectedShippingMethod.Cost) + '$'"
+      />
+      <input (click)="closeDialog.emit()" type="button" value="Close" />
     </div>
+  </div>
 </div>

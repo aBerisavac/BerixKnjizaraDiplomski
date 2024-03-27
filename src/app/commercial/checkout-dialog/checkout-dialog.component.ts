@@ -1,4 +1,11 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewChild,
+} from '@angular/core';
 import { VALIDATORS } from 'common';
 import { IBookCart } from 'src/app/Interfaces/IBookCart';
 import { CartService } from 'src/app/Services/cart.service';
@@ -15,6 +22,7 @@ import { ShippingMethodDTO } from 'src/tsBusinessLayer/dtos/ShippingMethodDTO';
 export class CheckoutDialogComponent implements OnInit {
   @Output() closeDialog = new EventEmitter<any>();
   @Output() successfullCheckout = new EventEmitter<FormData>();
+  @ViewChild('shippingAddress') shippingAddress: ElementRef | undefined;
 
   public shippingMethods: Array<ShippingMethodDTO> = [];
   public totalCost = 0;
@@ -25,9 +33,11 @@ export class CheckoutDialogComponent implements OnInit {
   constructor(
     private _errorModal: ErrorModalService,
     private _cartService: CartService,
-    private _shippingMethodsService: ShippingMethodsService,
+    private _shippingMethodsService: ShippingMethodsService
   ) {
-    this._shippingMethodsService.shippingMethods$.subscribe(x=>this.shippingMethods=x)
+    this._shippingMethodsService.shippingMethods$.subscribe(
+      (x) => (this.shippingMethods = x)
+    );
     this.selectedShippingMethod = this.shippingMethods[0];
   }
 
@@ -46,6 +56,13 @@ export class CheckoutDialogComponent implements OnInit {
       JSON.stringify(this.selectedShippingMethod)
     );
 
+    if (this.shippingAddress!.nativeElement.value.trim() != '') {
+      formData.append(
+        'ShippingAddress',
+        this.shippingAddress!.nativeElement.value.trim()
+      );
+    }
+   
     if (this.validateData()) {
       this._cartService.removeAllElements();
       this.successfullCheckout.emit(formData);
@@ -64,8 +81,6 @@ export class CheckoutDialogComponent implements OnInit {
   }
 
   public appendUserData(formData: FormData) {
-    // formData.set('Address', this.userAddress);
-
     return formData;
   }
 

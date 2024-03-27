@@ -63,13 +63,15 @@ export class CartComponent implements OnInit {
         data.get('ShippingMethod') as string
       ) as ShippingMethodDTO,
       Customer: this._userService.getUserData()!,
-      OrderInvoices: orderInvoices
+      OrderInvoices: orderInvoices,
+      ShippingAddress: data.get("ShippingAddress") as string
     };
 
+    console.log(dataOrder)
     this._ordersService.insertOrder(dataOrder)
 
     this.showCheckoutFormBool = false;
-    window.location.href = '/successfull_checkout';
+    // window.location.href = '/successfull_checkout';
   }
 
   public removeFromCart(book: IBookCart) {
