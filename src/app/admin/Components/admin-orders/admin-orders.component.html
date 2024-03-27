@@ -1,3 +1,4 @@
-<app-admin-panel-table [editable]="false" [deletable]="false" (editItem)="editItem($event)" (deleteItem)="deleteItem($event)" [jsonObjectArrayToDisplay]="jsonObjectArrayToDisplay">
+<app-admin-panel-table [editable]="false" [clickable]="true" [deletable]="false" (rowClick)="showOrderDetails($event)" (editItem)="editItem($event)" (deleteItem)="deleteItem($event)" [jsonObjectArrayToDisplay]="jsonObjectArrayToDisplay">
 
 </app-admin-panel-table>
+<app-order-details (close)="showOrderDetailsBool=false" [order]="selectedOrder" *ngIf="showOrderDetailsBool"></app-order-details>

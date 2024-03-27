@@ -24,6 +24,10 @@ export class OrdersService {
   private orders = new BehaviorSubject<Array<OrderDTO>>([]);
   public orders$ = this.orders.asObservable()
 
+  getOrder(id: number){
+    return this.orders.value.filter(x=>x.id==id)[0];
+  }
+
   getOrders(){
     
     const headers = {

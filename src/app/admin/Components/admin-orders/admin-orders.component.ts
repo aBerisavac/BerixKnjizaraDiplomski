@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { IOrderAdmin } from 'src/app/Interfaces/IOrderAdmin';
 import { BooksService } from 'src/app/Services/books.service';
@@ -12,7 +11,9 @@ import { OrderDTO } from 'src/tsBusinessLayer/dtos/OrderDTO';
 })
 export class AdminOrdersComponent implements OnInit{
   public jsonObjectArrayToDisplay: Array<IOrderAdmin> = [];
-
+  public showOrderDetailsBool: boolean = false;
+  public selectedOrder: OrderDTO | undefined = undefined;
+  
   constructor(
     private _ordersService: OrdersService,
     private _booksService: BooksService,
@@ -48,6 +49,18 @@ export class AdminOrdersComponent implements OnInit{
       this.jsonObjectArrayToDisplay.push(orderAdmin);
     }
   }
+
+  showOrderDetails(item: IOrderAdmin){
+    this.selectedOrder = this._ordersService.getOrder(item.id);
+    console.log(this.selectedOrder);
+    console.log(item);
+    this.showOrderDetailsBool = true;
+  }
+
+  closeOrderDetails(){
+    this.showOrderDetailsBool = false;
+  }
+
   editItem(item: IOrderAdmin){
     console.log(item)
   }

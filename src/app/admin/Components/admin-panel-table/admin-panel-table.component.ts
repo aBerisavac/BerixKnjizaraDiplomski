@@ -10,8 +10,10 @@ export class AdminPanelTableComponent implements OnInit {
   @Input() jsonObjectArrayToDisplay: Array<object> = [];
   @Input() editable: boolean = true;
   @Input() deletable: boolean = true;
+  @Input() clickable: boolean = true;
   @Output() editItem = new EventEmitter<any>();
   @Output() deleteItem = new EventEmitter<any>();
+  @Output() rowClick = new EventEmitter<any>();
 
   public columns: Array<string> =[]
   public columnsCapitalised: Array<string> =[]

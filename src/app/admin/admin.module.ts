@@ -58,6 +58,7 @@ import { AdminHomeParagraphUpdateComponent } from './Components/admin-home-parag
     MatIconModule,
     SharedModule,
     FormsModule,
+    SharedModule
   ]
 })
 export class AdminModule { }

@@ -1,0 +1,45 @@
+<div id="order-details-root">
+  <div id="order-details-holder">
+    <div id="close">
+      <mat-icon (click)="close.emit()" id="close-order-details">close</mat-icon>
+
+      <h2>Order details:</h2>
+      <p>
+        <span class="fw-500">Customer:</span>
+        {{ order?.Customer?.FirstName + " " + order?.Customer?.LastName }}
+      </p>
+      <p><span class="fw-500">Address: </span>{{ order?.Customer?.Address }}</p>
+      <p>
+        <span class="fw-500">Shipping method: </span
+        >{{ order?.ShippingMethod?.Name }} ({{ order?.ShippingMethod?.Cost }}$)
+      </p>
+
+      <table *ngIf="order != undefined">
+        <thead>
+          <tr>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Total Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let invoice of order.OrderInvoices">
+            <td>
+              <img
+                [src]="'data:image/jpeg;base64,' + invoice.Book.ImageBase64"
+                [alt]="invoice.Book.Title"
+                onerror="this.onerror=null; this.src='assets/images/fallbackBookImage.jpg'"
+              />
+            </td>
+            <td>{{ invoice.Book.Title }}</td>
+            <td>{{ invoice.Book.Prices[0].price }}$</td>
+            <td>{{ invoice.Book.Prices[0].price * invoice.NumberOfItems }}$</td>
+            <td>#{{ invoice.NumberOfItems }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

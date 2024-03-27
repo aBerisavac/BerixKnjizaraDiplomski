@@ -6,13 +6,15 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { MatIconModule } from '@angular/material/icon';
 import { PopupBottomRightComponent } from './popup-bottom-right/popup-bottom-right.component';
 import { ErrorModalComponent } from './error-modal/error-modal.component';
+import { OrderDetailsComponent } from './order-details/order-details.component';
 
 
 @NgModule({
   declarations: [
     NavigationComponent,
     PopupBottomRightComponent,
-    ErrorModalComponent
+    ErrorModalComponent,
+    OrderDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { ErrorModalComponent } from './error-modal/error-modal.component';
   exports: [
     NavigationComponent,
     PopupBottomRightComponent,
-    ErrorModalComponent
+    ErrorModalComponent,
+    OrderDetailsComponent
   ]
 })
 export class SharedModule { }
