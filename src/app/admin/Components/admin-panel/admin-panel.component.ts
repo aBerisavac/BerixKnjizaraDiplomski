@@ -67,7 +67,7 @@ export class AdminPanelComponent implements OnInit {
 
   getPath() {
     if(this.router.url.indexOf("insert")==-1){
-      return this.router.url + '/insert';
+      return this.router.url.slice(0, this.router.url.indexOf("edit") != -1 ? this.router.url.indexOf("edit"): this.router.url.length) + '/insert';
     } else {
       return this.router.url;
     }
