@@ -35,7 +35,7 @@ export class AdminHomeParagraphUpdateComponent {
       !VALIDATORS.variableNotUndefined(paragraphText) ||
       !VALIDATORS.stringNotNull(paragraphText)
     ) {
-      errors.push("Genre name can't be empty.");
+      errors.push("Paragraph can't be empty.");
     }
 
     if (errors.length > 0) {

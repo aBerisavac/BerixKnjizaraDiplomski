@@ -4,18 +4,25 @@ main {
     color: inherit;
   }
   #x-book-holder {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    box-shadow: -2px 2px 9px rgba(0, 0, 0, 0.459);
     #img-and-description-holder {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       flex-wrap: wrap;
+      width: 50%;
 
       #book-title {
         font-size: 24px;
         font-weight: 700;
         margin-block: 10px;
       }
-      
+
       #image-holder {
         img {
           box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.5);
@@ -28,11 +35,15 @@ main {
     }
 
     #x-book-data-holder {
+      min-width: 45%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
+      align-items: start;
 
       .data-holder {
+        width: 50%;
+        margin-top: 10px;
         height: fit-content;
         border-radius: 10px;
         box-shadow: -1px 1px 2px rgba(107, 107, 107, 0.514),
@@ -96,14 +107,37 @@ main {
   }
 }
 
-@media (min-width: 0px) and (max-width: 1100px) {
+@media (min-width: 645px) and (max-width: 1100px) {
   main {
     #x-book-holder {
       #x-book-data-holder {
-        flex-direction: column;
-
+        align-items: end;
         .data-holder {
-          margin-top: 10px;
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 645px) {
+  main {
+    #x-book-holder {
+      flex-direction: column;
+      box-shadow: none;
+      justify-content: center;
+      align-items: center;
+
+      #img-and-description-holder {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      #x-book-data-holder {
+        align-items: end;
+        width: 100%;
+        .data-holder {
+          width: 100%;
         }
       }
     }

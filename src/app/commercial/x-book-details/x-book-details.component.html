@@ -16,18 +16,6 @@
     </div>
 
     <div id="x-book-data-holder">
-      <div  class="data-holder">
-        <p class="info-holder">Release date:</p>
-        <p class="info">
-          {{formattedDate}}
-        </p>
-      </div>
-
-      <div class="data-holder">
-        <p class="info-holder">Price:</p>
-          <p class="info">{{ book.Prices[0].price }}$</p>
-      </div>
-
       <div class="data-holder">
         <p class="info-holder">Authors:</p>
         <p class="info author" *ngFor="let author of book.Authors; index as i">
@@ -49,6 +37,18 @@
         <p class="info" *ngFor="let language of book.Languages; index as i">
           {{ i + 1 }}. {{ language.Name }}
         </p>
+      </div>
+
+      <div  class="data-holder">
+        <p class="info-holder">Release date:</p>
+        <p class="info">
+          {{formattedDate}}
+        </p>
+      </div>
+
+      <div class="data-holder">
+        <p class="info-holder">Price:</p>
+          <p class="info">{{ book.Prices[0].price }}$</p>
       </div>
     </div>
   </div>
