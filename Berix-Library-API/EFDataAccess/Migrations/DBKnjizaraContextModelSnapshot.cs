@@ -397,6 +397,9 @@ namespace EFDataAccess.Migrations
                     b.Property<int>("ShippingMethodId")
                         .HasColumnType("int");
 
+                    b.Property<decimal>("ShippingMethodPrice")
+                        .HasColumnType("decimal(18,2)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CustomerId");
