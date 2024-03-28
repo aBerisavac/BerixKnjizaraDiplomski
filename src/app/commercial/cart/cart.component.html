@@ -52,6 +52,8 @@
       </tbody>
     </table>
 
+    <img id="empty-cart-gif" *ngIf="totalQuantity == 0" src="assets/images/empty-cart.gif"/>
+
     <p *ngIf="totalQuantity == 0">
       There are currently no items in your cart.
       <a routerLink="/books">

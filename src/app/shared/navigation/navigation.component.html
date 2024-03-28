@@ -3,26 +3,35 @@
     <img src="/assets/images/BerixLogo.png" />
   </div>
   <div id="navigation-menu-items">
-    <a routerLink="/home">
-        <p>Home</p>
-    </a>
-    <a routerLink="/books">
-        <p>Books</p>
-    </a>
-    <a routerLink="/shopping_cart">
-      <mat-icon>shopping_cart</mat-icon><span *ngIf="totalBooksInCart>0">{{totalBooksInCart}}</span>
-    </a>
-    <a [routerLink]="['/assets/docs/docs.pdf']" target="_blank">
-      <p>Docs</p>
-    </a>
-    <a *ngIf="isAdminLoggedIn" routerLink="/admin">
-      <p>Admin</p>
-    </a>
-    <a *ngIf="isLoggedIn" routerLink="/user/logout">
-        <p>Logout</p>
-    </a>
-    <a *ngIf="!isLoggedIn" routerLink="/user/login">
-        <p>Login</p>
-    </a>
+    <a routerLinkActive="active" routerLink="/home"><p>Home</p></a>
+    <a routerLinkActive="active" routerLink="/books"><p>Books</p></a>
+    <a routerLinkActive="active" routerLink="/shopping_cart"
+      ><mat-icon>shopping_cart</mat-icon
+      ><span *ngIf="totalBooksInCart > 0">{{ totalBooksInCart }}</span></a
+    >
+    <a [routerLink]="['/assets/docs/docs.pdf']" target="_blank"><p>Docs</p></a>
+    <a *ngIf="isAdminLoggedIn" routerLinkActive="active" routerLink="/admin"><p>Admin</p></a>
+    <a *ngIf="isLoggedIn" routerLinkActive="active" routerLink="/user/logout"><p>Logout</p></a>
+    <a *ngIf="!isLoggedIn" routerLinkActive="active" routerLink="/user/login"><p>Login</p></a>
+  </div>
+  <div id="burger-menu" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </div>
+
+  <div id="responsive-menu" (click)="toggleMenu()" [ngClass]="{ 'show-menu': showMenu }">
+    <div (click)="stopPropagation($event)" id="responsive-navigation-menu-items">
+      <a (click)="toggleMenu()" routerLinkActive="active" routerLink="/home"><p>Home</p></a>
+      <a (click)="toggleMenu()" routerLinkActive="active" routerLink="/books"><p>Books</p></a>
+      <a (click)="toggleMenu()" routerLinkActive="active" routerLink="/shopping_cart"
+        ><mat-icon>shopping_cart</mat-icon
+        ><span *ngIf="totalBooksInCart > 0">{{ totalBooksInCart }}</span></a
+      >
+      <a (click)="toggleMenu()" [routerLink]="['/assets/docs/docs.pdf']" target="_blank"
+        ><p>Docs</p></a
+      >
+      <a (click)="toggleMenu()" routerLinkActive="active" *ngIf="isAdminLoggedIn" routerLink="/admin"><p>Admin</p></a>
+      <a (click)="toggleMenu()" routerLinkActive="active" *ngIf="isLoggedIn" routerLink="/user/logout"><p>Logout</p></a>
+      <a (click)="toggleMenu()" routerLinkActive="active" *ngIf="!isLoggedIn" routerLink="/user/login"><p>Login</p></a>
+    </div>
   </div>
 </div>

@@ -71,7 +71,7 @@ export class CartComponent implements OnInit {
     this._ordersService.insertOrder(dataOrder)
 
     this.showCheckoutFormBool = false;
-    // window.location.href = '/successfull_checkout';
+    window.location.href = '/successfull_checkout';
   }
 
   public removeFromCart(book: IBookCart) {

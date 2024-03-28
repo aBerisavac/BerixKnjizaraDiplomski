@@ -83,6 +83,10 @@ $berix-library-theme: mat.define-light-theme((
 body { height: 100%; }
 body { margin: 0; background-color: #ebd7c2; }
 
+.disable-overflow{
+  overflow: hidden;
+}
+
 h1{
   font-weight: 500;
 }
