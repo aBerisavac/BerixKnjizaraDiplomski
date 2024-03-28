@@ -11,7 +11,7 @@
       <p><span class="fw-500">Address: </span>{{ order?.Customer?.Address }}</p>
       <p>
         <span class="fw-500">Shipping method: </span
-        >{{ order?.ShippingMethod?.Name }} ({{ order?.ShippingMethod?.Cost }}$)
+        >{{ order?.ShippingMethod?.Name }} ({{ order?.ShippingMethodPrice! }}$)
       </p>
 
       <table *ngIf="order != undefined">
