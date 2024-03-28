@@ -8,4 +8,5 @@ export interface IOrder {
     "ShippingMethod": IShippingMethod,
     "OrderInvoices": Array<IOrderInvoice>,
     "ShippingAddress"?: string
+    "CreatedAt"?: Date
 }
