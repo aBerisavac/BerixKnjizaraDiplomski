@@ -16,6 +16,7 @@ namespace Application.DTOs.Orders
         public int CustomerId { get; set; }
         public int ShippingMethodId { get; set; }
         public string ShippingAddress { get; set; }
+        public decimal ShippingMethodPrice { get; set; }
         public DateTime CreatedAt { get; set; }
         virtual public ICollection<OrderInvoiceDTO> OrderInvoices { get; set; } = new List<OrderInvoiceDTO>();
         virtual public ShippingMethodDTO ShippingMethod { get; set; }

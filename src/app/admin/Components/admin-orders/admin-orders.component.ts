@@ -50,14 +50,13 @@ export class AdminOrdersComponent implements OnInit {
           order.Customer.FirstName + ' ' + order.Customer.LastName,
         'Customer email': order.Customer.Email,
         'Customer address': order.ShippingAddress,
-        'Shipping method': order.ShippingMethod.Name,
+        'Shipping method': `${order.ShippingMethod.Name} (${order.ShippingMethodPrice}$)`,
         'Date': formatDate(order.CreatedAt!, 'MMM d, y, hh:mm', 'en'),
         // "Price": order.ShippingMethod.Cost + price,
-        'Price (shipping)':
+        'Price (with shipping)':
           price +
-          order.ShippingMethod.Cost +
-          '$' +
-          (' (' + order.ShippingMethod.Cost + '$)'),
+          order.ShippingMethodPrice! +
+          '$',
       } as IOrderAdmin;
 
       this.jsonObjectArrayToDisplay.push(orderAdmin);

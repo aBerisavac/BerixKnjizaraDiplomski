@@ -10,8 +10,9 @@ export class OrderDTO implements IOrder{
     public OrderInvoices:Array<OrderInvoiceDTO>;
     public ShippingAddress?:string;
     public CreatedAt?: Date;
+    public ShippingMethodPrice?: number;
 
-    constructor(id:number, customer: UserDTO, shippingMethod: ShippingMethodDTO, orderInvoices:Array<OrderInvoiceDTO>, ShippingAddress?:string, CreatedAt?: Date){
+    constructor(id:number, customer: UserDTO, shippingMethod: ShippingMethodDTO, orderInvoices:Array<OrderInvoiceDTO>, ShippingAddress?:string, CreatedAt?: Date, ShippingMethodPrice?:number){
         this.id = id;
         this.Customer = customer;
         this.ShippingMethod = shippingMethod;
@@ -21,6 +22,9 @@ export class OrderDTO implements IOrder{
         }
         if(CreatedAt){
             this.CreatedAt = CreatedAt;
+        }
+        if(ShippingMethodPrice){
+            this.ShippingMethodPrice = ShippingMethodPrice;
         }
     }
 }

@@ -19,6 +19,8 @@ namespace EFDataAccess.Configurations
                 .IsRequired();
             builder.Property(x => x.ShippingMethodId)
                 .IsRequired();
+            builder.Property(x => x.ShippingMethodPrice)
+                .IsRequired();
 
             builder.HasMany(x => x.OrderInvoices)
                 .WithOne(x => x.Order)

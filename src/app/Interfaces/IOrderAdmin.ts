@@ -4,5 +4,5 @@ export interface IOrderAdmin{
     "Customer email": String,
     "Customer address": String
     "Shipping method": String,
-    "Price (shipping)": string
+    "Price (with shipping)": string
 }

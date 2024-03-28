@@ -51,7 +51,8 @@ namespace Implementation.Profiles
                   NumberOfItems = x.NumberOfItems,
                   PricePerItem = books.Where(y=>y.Id == x.BookId).First().Prices.Where(price => price.CreatedAt == books.Where(y => y.Id == x.BookId).First().Prices.Max(x => x.CreatedAt)).ToList().First().Price
                 })))
-                .ForMember(order => order.ShippingAddress, dtos => dtos.MapFrom(dto => dto.ShippingAddress == null ? _dbContext.Users.Find(dto.CustomerId).Address : dto.ShippingAddress));
+                .ForMember(order => order.ShippingAddress, dtos => dtos.MapFrom(dto => dto.ShippingAddress == null ? _dbContext.Users.Find(dto.CustomerId).Address : dto.ShippingAddress))
+                .ForMember(order=>order.ShippingMethodPrice, dto=>dto.MapFrom(dto=>_dbContext.ShippingMethods.Find(dto.ShippingMethodId).Cost));
             CreateMap<Order, OrderInsertDTO>();
 
         }
