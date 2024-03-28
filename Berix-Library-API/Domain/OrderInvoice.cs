@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,7 @@ namespace Domain
         public int BookId { get; set; }
         public int OrderId { get; set; }
         public int NumberOfItems { get; set; }
+        public decimal PricePerItem { get; set; }
         virtual public Book Book { get; set; }
         virtual public Order Order { get; set; }
     }

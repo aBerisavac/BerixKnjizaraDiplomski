@@ -45,18 +45,21 @@
           border-bottom: solid 1px rgb(105, 105, 105);
 
           &.active {
+            background-color: #e4cdb4;
+
+            &:hover {
+              background-color: rgb(236, 216, 194);
+            }
+
             p,
             .mat-icon {
               text-decoration: underline;
               text-underline-offset: 6px;
             }
           }
-          &:hover {
-            background-color: #d1bba4;
-            p,
-            .mat-icon {
-              color: rgb(241, 97, 1);
-            }
+
+          &:hover { 
+            background-color: #e4cdb4;
           }
 
           p {

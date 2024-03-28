@@ -5,6 +5,7 @@ using Application.DTOs.Users;
 using AutoMapper;
 using Domain;
 using EFDataAccess;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace Implementation.Profiles
     private readonly DBKnjizaraContext _dbContext = new DBKnjizaraContext();
     public OrderProfile()
         {
+      var books = _dbContext.Books.Include(x => x.Prices);
             CreateMap<OrderDTO, Order>();
             CreateMap<Order, OrderDTO>()
                 .ForMember(dto => dto.OrderInvoices, orders => orders.MapFrom(order => order.OrderInvoices.Select(x => new OrderInvoiceDTO
@@ -25,6 +27,7 @@ namespace Implementation.Profiles
                     Id = x.Id,
                     BookId = x.BookId,
                     NumberOfItems = x.NumberOfItems,
+                    PricePerItem = x.PricePerItem,
                 })))
                 .ForMember(dto => dto.Customer, orders => orders.MapFrom(order => new UserDTO
                 {
@@ -46,6 +49,7 @@ namespace Implementation.Profiles
                 {
                   BookId = x.BookId,
                   NumberOfItems = x.NumberOfItems,
+                  PricePerItem = books.Where(y=>y.Id == x.BookId).First().Prices.Where(price => price.CreatedAt == books.Where(y => y.Id == x.BookId).First().Prices.Max(x => x.CreatedAt)).ToList().First().Price
                 })))
                 .ForMember(order => order.ShippingAddress, dtos => dtos.MapFrom(dto => dto.ShippingAddress == null ? _dbContext.Users.Find(dto.CustomerId).Address : dto.ShippingAddress));
             CreateMap<Order, OrderInsertDTO>();

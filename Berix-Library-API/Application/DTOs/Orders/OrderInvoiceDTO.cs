@@ -1,4 +1,4 @@
-﻿using Application.DTOs.Books;
+using Application.DTOs.Books;
 using Domain;
 using System;
 using System.Collections.Generic;
@@ -13,5 +13,6 @@ namespace Application.DTOs.Orders
         public int Id { get; set; }
         public int BookId { get; set; }
         public int NumberOfItems { get; set; }
+        public decimal PricePerItem { get; set; }
     }
 }

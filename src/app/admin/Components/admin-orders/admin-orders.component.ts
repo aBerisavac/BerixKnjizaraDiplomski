@@ -35,7 +35,7 @@ export class AdminOrdersComponent implements OnInit{
     this.jsonObjectArrayToDisplay = [];
     for(let order of orders){
       let price = 0;
-      order.OrderInvoices.forEach(x=>price+= x.NumberOfItems*x.Book.Prices[0].price)
+      order.OrderInvoices.forEach(x=>price+= x.NumberOfItems*x.PricePerItem!)
       let orderAdmin = {
         "id": order.id,
         "Customer name": order.Customer.FirstName+" "+order.Customer.LastName,

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDataAccess.Migrations
 {
     [DbContext(typeof(DBKnjizaraContext))]
-    [Migration("20240327091335_InitiallDatabase")]
-    partial class InitiallDatabase
+    [Migration("20240328134147_InitialDatabase")]
+    partial class InitialDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -439,6 +439,9 @@ namespace EFDataAccess.Migrations
 
                     b.Property<int>("OrderId")
                         .HasColumnType("int");
+
+                    b.Property<decimal>("PricePerItem")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 

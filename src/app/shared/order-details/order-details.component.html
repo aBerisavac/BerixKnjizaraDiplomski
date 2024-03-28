@@ -34,8 +34,8 @@
               />
             </td>
             <td>{{ invoice.Book.Title }}</td>
-            <td>{{ invoice.Book.Prices[0].price }}$</td>
-            <td>{{ invoice.Book.Prices[0].price * invoice.NumberOfItems }}$</td>
+            <td>{{ invoice.PricePerItem }}$</td>
+            <td>{{ invoice.PricePerItem! * invoice.NumberOfItems }}$</td>
             <td>#{{ invoice.NumberOfItems }}</td>
           </tr>
         </tbody>
