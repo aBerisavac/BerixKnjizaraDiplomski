@@ -52,8 +52,6 @@ export class AdminOrdersComponent implements OnInit{
 
   showOrderDetails(item: IOrderAdmin){
     this.selectedOrder = this._ordersService.getOrder(item.id);
-    console.log(this.selectedOrder);
-    console.log(item);
     this.showOrderDetailsBool = true;
   }
 
