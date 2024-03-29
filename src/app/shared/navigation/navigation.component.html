@@ -5,9 +5,9 @@
   <div id="navigation-menu-items">
     <a routerLinkActive="active" routerLink="/home"><p>Home</p></a>
     <a routerLinkActive="active" routerLink="/books"><p>Books</p></a>
-    <a routerLinkActive="active" routerLink="/shopping_cart"
-      ><mat-icon>shopping_cart</mat-icon
-      ><span *ngIf="totalBooksInCart > 0">{{ totalBooksInCart }}</span></a
+    <a routerLinkActive="active" routerLink="/shopping_cart">
+      <p><mat-icon>shopping_cart</mat-icon></p>
+      <span *ngIf="totalBooksInCart > 0">{{ totalBooksInCart }}</span></a
     >
     <a [routerLink]="['/assets/docs/docs.pdf']" target="_blank"><p>Docs</p></a>
     <a *ngIf="isAdminLoggedIn" routerLinkActive="active" routerLink="/admin"><p>Admin</p></a>

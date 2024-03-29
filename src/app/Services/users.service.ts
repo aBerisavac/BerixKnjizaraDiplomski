@@ -6,6 +6,7 @@ import { UserDTO } from 'src/tsBusinessLayer/dtos/UserDTO';
 import { UserInsertDTO } from 'src/tsBusinessLayer/dtos/UserInsertDTO';
 import {TErrorMessagesFromBack} from 'src/app/types/TErrorMessagesFromBack'
 import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
+import { IValidationError } from 'src/tsBusinessLayer/interfaces/IValidationError';
 
 @Injectable({
   providedIn: 'root'
@@ -34,9 +35,12 @@ export class UsersService {
     return this._http
       .post<any>('http://localhost:5000/api/user', userToInsert)
       .pipe(catchError((error: any, caught: Observable<any>): Observable<any> => {
-        // this.errorMessage = error.message;
-        let errors =  error.error.errors; 
-        this.loginErrors.next(errors)
+        if(error.status = 422){
+          let errors = error.error.errors as Array<IValidationError>
+          this.loginErrors.next(errors);
+        }else{
+          this.loginErrors.next([{"PropertyName": '', "ErrorMessage": error.error.message}] as IValidationError[])
+        }
 
         return of();
     }))

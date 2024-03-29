@@ -5,6 +5,7 @@ import { BehaviorSubject, Observable, catchError, of } from 'rxjs';
 import { capitalizePropertyNamesWithoutIdCapitalization } from 'common';
 import { UsersService } from './users.service';
 import { ErrorModalService } from './error-modal.service';
+import { IValidationError } from 'src/tsBusinessLayer/interfaces/IValidationError';
 
 @Injectable({
   providedIn: 'root',
@@ -63,8 +64,12 @@ export class AuthorsService {
       )
       .pipe(
         catchError((error: any, caught: Observable<any>): Observable<any> => {
-          console.log(error);
-          this._errorModalService.setErrors([error.error.message]);
+          if(error.status = 422){
+            let errors = error.error.errors as Array<IValidationError>
+            this._errorModalService.setErrors(errors.map(x=>x.ErrorMessage));
+          }else{
+            this._errorModalService.setErrors([error.error.message])
+          }
 
           return of();
         })
@@ -88,8 +93,12 @@ export class AuthorsService {
       )
       .pipe(
         catchError((error: any, caught: Observable<any>): Observable<any> => {
-          console.log(error);
-          this._errorModalService.setErrors([error.error.message]);
+          if(error.status = 422){
+            let errors = error.error.errors as Array<IValidationError>
+            this._errorModalService.setErrors(errors.map(x=>x.ErrorMessage));
+          }else{
+            this._errorModalService.setErrors([error.error.message])
+          }
 
           return of();
         })

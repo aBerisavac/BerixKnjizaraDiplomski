@@ -51,14 +51,18 @@
               background-color: rgb(236, 216, 194);
             }
 
-            p,
-            .mat-icon {
+            p {
               text-decoration: underline;
               text-underline-offset: 6px;
             }
+
+            .mat-icon {
+              text-decoration: underline;
+              text-underline-offset: -2px;
+            }
           }
 
-          &:hover { 
+          &:hover {
             background-color: #e4cdb4;
           }
 
@@ -144,10 +148,14 @@
       align-items: center;
 
       &.active {
-        p,
-        .mat-icon {
+        p {
           text-decoration: underline;
           text-underline-offset: 6px;
+        }
+
+        .mat-icon {
+          text-decoration: underline;
+          text-underline-offset: -2px;
         }
       }
       &:hover {
